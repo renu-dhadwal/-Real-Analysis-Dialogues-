@@ -6,5 +6,5 @@ Drop these files into a new GitHub repo (or upload via the web UI) and then use 
 Files included:
 - _quarto.yml
 - index.qmd
-- chapters/Completeness.qmd
+- chapters/level1_completeness.qmd
 - styles/course.css
