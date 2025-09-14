@@ -8,8 +8,6 @@ book:
   chapters:
     - index.qmd
     - chapters/level1_completeness.qmd
-    - chapters/level2_limits.qmd
-    - chapters/level3_continuity.qmd
     # add more as you write them
 
 format:
