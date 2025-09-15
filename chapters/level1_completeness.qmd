@@ -136,18 +136,18 @@ $?”
 
 ::: definition{#def:supremum}
 **Definition (Least Upper Bound / Supremum).**  
-The **least upper bound** (or **supremum**) of a set $A \subseteq \mathbb{R}$ is the smallest number $M$ such that $M$ is an upper bound of $A$.  
-Formally, $M = \sup A$ if
-1. $x \leq M$ for all $x \in A$, and  
-2. for any $\varepsilon > 0$, there exists $x \in A$ such that $x > M - \varepsilon$.
+Let $S$ be a nonempty subset of $\mathbb{R}$.
+If $S$ is bounded above then, a number $u$ is said to be a **supremum (least upper bound)** of $S$ if
+1. $s \leq u$ for all $s \in S$, and
+2. for any $\varepsilon > 0$, there exists $s_\varepsilon \in S$ such that $s_\varepsilon > u - \varepsilon$.
 :::
 
 ::: definition{#def:infimum}
-**Definition (Greatest Lower Bound / Infimum).**  
-The **greatest lower bound** (or **infimum**) of a set $A \subseteq \mathbb{R}$ is the greatest number $m$ such that $m$ is a lower bound of $A$.  
-Formally, $m = \inf A$ if
-1. $x \geq m$ for all $x \in A$, and  
-2. for any $\varepsilon > 0$, there exists $x \in A$ such that $x < m + \varepsilon$.
+**Definition (Greatest Lower Bound / Infinimum).**
+Let $S$ be a nonempty subset of $\mathbb{R}$.
+If $S$ is bounded below then, a number $u$ is said to be a **infinimum (greatest lower bound)** of $S$ if
+1. $s \geq u$ for all $s \in S$, and
+2. for any $\varepsilon > 0$, there exists $s_\varepsilon \in S$ such that $s_\varepsilon < u + \varepsilon$.
 :::
 
 
@@ -182,4 +182,35 @@ This axiom is what makes the real line whole.”
 1. (Optional) Give an example of a subset of $\mathbb{Q}$ that is bounded above in $\mathbb{Q}$ but has no least upper bound in $\mathbb{Q}$.
 
 ---
+## Proofs
+
+**Acharya Bhaskara**:  
+“Dear Lila, it is not enough that we make statements about numbers. We need to **prove** them too!”
+
+**Lila**:  
+“But Acharya, why do we need to prove them? If something feels obviously true, can’t we just accept it?”
+
+**Acharya Bhaskara**:  
+“Ah, that is the difference between intuition and mathematics. Intuition is helpful, but it can also mislead us. Proofs are what give mathematics its certainty. Without proof, we have only belief. With proof, we have knowledge.”
+
+**Lila**:  
+“Can you give me an example?”
+
+**Acharya Bhaskara**:  
+“Certainly. Take the statement: *‘The square root of 2 is irrational.’* Long ago, many believed that every number was a fraction. But through proof, we know with certainty that $\sqrt{2}$ cannot be expressed as $\tfrac{p}{q}$ with integers $p$ and $q$.”
+
+**Lila**:  
+“I see — so proofs are like the backbone that holds mathematics upright.”
+
+**Acharya Bhaskara**:  
+“Exactly! Proofs force us to use definitions carefully and follow logical steps. They protect us from hidden assumptions. And, more importantly, they reveal *why* a statement is true, not just *that* it is true.”
+
+**Lila**:  
+“So every time we state something in real analysis — like that every bounded set has a supremum — we must also prove it?”
+
+**Acharya Bhaskara**:  
+“Indeed. That completeness axiom we discussed is itself an assumption. But once accepted, we must prove all consequences from it rigorously. That is the art of analysis: building a tower of truth, brick by brick, proof by proof.”
+
+"In order to prove some results we will first write some equivalent statements that can be used interchangeably".
+
 

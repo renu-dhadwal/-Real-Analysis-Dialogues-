@@ -170,6 +170,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#completeness-axiom" id="toc-completeness-axiom" class="nav-link" data-scroll-target="#completeness-axiom"><span class="header-section-number">3.3</span> 🔹 Completeness Axiom</a></li>
   <li><a href="#try-it-yourself" id="toc-try-it-yourself" class="nav-link" data-scroll-target="#try-it-yourself"><span class="header-section-number">3.4</span> ✅ Try it yourself</a></li>
+  <li><a href="#proofs" id="toc-proofs" class="nav-link" data-scroll-target="#proofs"><span class="header-section-number">3.5</span> Proofs</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -291,15 +292,10 @@ Unbounded sets escape that cage, either upward, downward, or both.”</p>
 “This brings us to another definition:</p>
 <div class="definition{#def:supremum}">
 <p><strong>Definition (Least Upper Bound / Supremum).</strong><br>
-The <strong>least upper bound</strong> (or <strong>supremum</strong>) of a set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is the smallest number <span class="math inline">\(M\)</span> such that <span class="math inline">\(M\)</span> is an upper bound of <span class="math inline">\(A\)</span>.<br>
-Formally, <span class="math inline">\(M = \sup A\)</span> if 1. <span class="math inline">\(x \leq M\)</span> for all <span class="math inline">\(x \in A\)</span>, and<br>
-2. for any <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(x &gt; M - \varepsilon\)</span>.</p>
+Let <span class="math inline">\(S\)</span> be a nonempty subset of <span class="math inline">\(\mathbb{R}\)</span>. If <span class="math inline">\(S\)</span> is bounded above then, a number <span class="math inline">\(u\)</span> is said to be a <strong>supremum (least upper bound)</strong> of <span class="math inline">\(S\)</span> if 1. <span class="math inline">\(s \leq u\)</span> for all <span class="math inline">\(s \in S\)</span>, and 2. for any <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(s_\varepsilon \in S\)</span> such that <span class="math inline">\(s_\varepsilon &gt; u - \varepsilon\)</span>.</p>
 </div>
 <div class="definition{#def:infimum}">
-<p><strong>Definition (Greatest Lower Bound / Infimum).</strong><br>
-The <strong>greatest lower bound</strong> (or <strong>infimum</strong>) of a set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is the greatest number <span class="math inline">\(m\)</span> such that <span class="math inline">\(m\)</span> is a lower bound of <span class="math inline">\(A\)</span>.<br>
-Formally, <span class="math inline">\(m = \inf A\)</span> if 1. <span class="math inline">\(x \geq m\)</span> for all <span class="math inline">\(x \in A\)</span>, and<br>
-2. for any <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(x &lt; m + \varepsilon\)</span>.</p>
+<p><strong>Definition (Greatest Lower Bound / Infinimum).</strong> Let <span class="math inline">\(S\)</span> be a nonempty subset of <span class="math inline">\(\mathbb{R}\)</span>. If <span class="math inline">\(S\)</span> is bounded below then, a number <span class="math inline">\(u\)</span> is said to be a <strong>infinimum (greatest lower bound)</strong> of <span class="math inline">\(S\)</span> if 1. <span class="math inline">\(s \geq u\)</span> for all <span class="math inline">\(s \in S\)</span>, and 2. for any <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(s_\varepsilon \in S\)</span> such that <span class="math inline">\(s_\varepsilon &lt; u + \varepsilon\)</span>.</p>
 </div>
 <p>“So the problem with rationals is that some sets don’t have a supremum inside them?”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
@@ -328,6 +324,28 @@ Formally, <span class="math inline">\(m = \inf A\)</span> if 1. <span class="mat
 <li>(Optional) Give an example of a subset of <span class="math inline">\(\mathbb{Q}\)</span> that is bounded above in <span class="math inline">\(\mathbb{Q}\)</span> but has no least upper bound in <span class="math inline">\(\mathbb{Q}\)</span>.</li>
 </ol>
 <hr>
+</section>
+<section id="proofs" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="proofs"><span class="header-section-number">3.5</span> Proofs</h2>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Dear Lila, it is not enough that we make statements about numbers. We need to <strong>prove</strong> them too!”</p>
+<p><strong>Lila</strong>:<br>
+“But Acharya, why do we need to prove them? If something feels obviously true, can’t we just accept it?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Ah, that is the difference between intuition and mathematics. Intuition is helpful, but it can also mislead us. Proofs are what give mathematics its certainty. Without proof, we have only belief. With proof, we have knowledge.”</p>
+<p><strong>Lila</strong>:<br>
+“Can you give me an example?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Certainly. Take the statement: <em>‘The square root of 2 is irrational.’</em> Long ago, many believed that every number was a fraction. But through proof, we know with certainty that <span class="math inline">\(\sqrt{2}\)</span> cannot be expressed as <span class="math inline">\(\tfrac{p}{q}\)</span> with integers <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span>.”</p>
+<p><strong>Lila</strong>:<br>
+“I see — so proofs are like the backbone that holds mathematics upright.”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Exactly! Proofs force us to use definitions carefully and follow logical steps. They protect us from hidden assumptions. And, more importantly, they reveal <em>why</em> a statement is true, not just <em>that</em> it is true.”</p>
+<p><strong>Lila</strong>:<br>
+“So every time we state something in real analysis — like that every bounded set has a supremum — we must also prove it?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Indeed. That completeness axiom we discussed is itself an assumption. But once accepted, we must prove all consequences from it rigorously. That is the art of analysis: building a tower of truth, brick by brick, proof by proof.”</p>
+<p>“In order to prove some results we will first write some equivalent statements that can be used interchangeably”.</p>
 
 
 </section>
