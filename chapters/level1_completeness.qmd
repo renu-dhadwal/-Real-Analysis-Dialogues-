@@ -29,7 +29,7 @@ We get closer, but never exactly 2.”
 
 ---
 
-## 🔹 Bounds
+## 🔹 Boundedness
 
 **Acharya Bhaskara**:  
 “Let us capture this rigorously. Consider the set
@@ -68,7 +68,6 @@ $$
 
 ---
 
-## 🔹 Bounded Sets
 
 **Lila**:  
 “Acharya, you defined what it means for a number to be an upper bound. But what about the set itself? When do we call a set *bounded*?”
@@ -117,7 +116,9 @@ Thus, it is **not** bounded.
 Unbounded sets escape that cage, either upward, downward, or both.”
 
 **Acharya Bhaskara**:  
-“But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for $$S$$?”
+“But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for our set $
+S = \{ x \in \mathbb{Q} : x^2 < 2 \}.
+$?”
 
 **Lila**:  
 “It should be $\sqrt{2}$, since that’s where the set stops.”
@@ -127,15 +128,28 @@ Unbounded sets escape that cage, either upward, downward, or both.”
 
 ---
 
-## 🔹 Supremum
+### 🔹 Supremum
 
 **Acharya Bhaskara**:  
 “This brings us to another definition:
 
-- An **upper bound** of a set $A \subset \mathbb{R}$ is a number $M$ such that $x \le M$ for all $x \in A$.  
-- The **least upper bound** (also called the *supremum*) is the smallest such $$M$$, if it exists.”
+::: definition{#def:upper-bound}
+**Definition (Upper Bound).**  
+Let $A \subseteq \mathbb{R}$.  
+A number $M \in \mathbb{R}$ is called an **upper bound** of $A$ if
+$$
+x \le M \quad \text{for all } x \in A.
+$$
+:::
 
-**Lila**:  
+::: definition{#def:supremum}
+**Definition (Least Upper Bound / Supremum).**  
+The **least upper bound** (or **supremum**) of a set $A \subseteq \mathbb{R}$ is the smallest number $M$ such that $M$ is an upper bound of $A$.  
+Formally, $M = \sup A$ if
+1. $x \le M$ for all $x \in A$, and  
+2. for any $\varepsilon > 0$, there exists $x \in A$ such that $x > M - \varepsilon$.
+:::
+
 “So the problem with rationals is that some sets don’t have a supremum inside them?”
 
 **Acharya Bhaskara**:  
@@ -148,16 +162,16 @@ Unbounded sets escape that cage, either upward, downward, or both.”
 **Acharya Bhaskara**:  
 “The defining property of the real numbers is this:
 
-> **Completeness Axiom**: Every nonempty set of real numbers that is bounded above has a least upper bound (supremum) in $$\mathbb{R}$$.
+> **Completeness Axiom**: Every nonempty set of real numbers that is bounded above has a least upper bound (supremum) in $\mathbb{R}$.
 
 This axiom is what makes the real line whole.”
 
 ---
 
-## 🔹 Returning to $$S$$
+### 🔹 Returning to $S$
 
 **Lila**:  
-“So for $$S = \{ x : x^2 < 2 \}$$, the supremum is $$\sqrt{2}$$, which *does* exist in $$\mathbb{R}$$.”
+“So for $S = \{ x : x^2 < 2 \}$, the supremum is $\sqrt{2}$, which *does* exist in $\mathbb{R}$.”
 
 **Acharya Bhaskara**:  
 “Exactly. And that, Lila, is the difference between rationals and reals. Completeness fills the gaps and makes the real line continuous. Without it, calculus itself would crumble.”
@@ -166,8 +180,7 @@ This axiom is what makes the real line whole.”
 
 ## ✅ Try it yourself
 
-1. Show that the set $$[0,1)$$ has supremum $$1$$ but no maximum.
-2. (Optional) Give an example of a subset of $$\mathbb{Q}$$ that is bounded above in $$\mathbb{Q}$$ but has no least upper bound in $$\mathbb{Q}$$.
+1. (Optional) Give an example of a subset of $$\mathbb{Q}$$ that is bounded above in $$\mathbb{Q}$$ but has no least upper bound in $$\mathbb{Q}$$.
 
 ---
 
