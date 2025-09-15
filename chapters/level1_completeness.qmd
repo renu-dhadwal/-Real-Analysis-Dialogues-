@@ -78,10 +78,10 @@ $$
 
 ::: definition{#def:bounded-set}
 **Definition (Bounded Set).**  
-A set $$S \subseteq \mathbb{R}$$ is said to be **bounded above** if it has an upper bound.  
+A set $S \subseteq \mathbb{R}$ is said to be **bounded above** if it has an upper bound.  
 It is **bounded below** if it has a lower bound.  
-If $$S$$ is both bounded above and below, then $$S$$ is called a **bounded set**.  
-Formally, there exist real numbers $$m, M \in \mathbb{R}$$ such that
+If $S$ is both bounded above and below, then $S$ is called a **bounded set**.  
+Formally, there exist real numbers $m, M \in \mathbb{R}$ such that
 $$
 m \le x \le M \quad \text{for all } x \in S.
 $$
@@ -93,24 +93,24 @@ $$
 
 ::: example
 **Example 1.**  
-The interval $$[0,1]$$ is bounded above (by $$1, 2, \ldots$$) and bounded below (by $$0, -1, \ldots$$).  
-In fact, $$0$$ and $$1$$ are the *tightest* bounds, so the set is bounded.
+The interval [0,1] is bounded above by 1, 2, $\ldots$ and bounded below by 0, -1, $\ldots$.  
+In fact, 0 and 1 are the *tightest* bounds, so the set is bounded.
 :::
 
 ::: example
 **Example 2.**  
-The set $$\mathbb{N} = \{1,2,3,\ldots\}$$ is bounded below (by $$1, 0, -5, \ldots$$),  
+The set $\mathbb{N} = \{1,2,3,\ldots\}$ is bounded below (by $1, 0, -5, \ldots$),  
 but it is **not** bounded above — it grows without end.
 :::
 
 ::: example
 **Example 3.**  
-The set $$\mathbb{Z}$$ of all integers has no upper bound and no lower bound.  
+The set $\mathbb{Z}$ of all integers has no upper bound and no lower bound.  
 Thus, it is **not** bounded.
 :::
 
 **Lila**:  
-“So a set is bounded if it fits within some finite interval $$[m,M]$$ on the number line?”
+“So a set is bounded if it fits within some finite interval $[m,M]$ on the number line?”
 
 **Acharya Bhaskara**:  
 “Exactly! That’s the intuition — bounded sets live inside some finite cage on the real line.  
@@ -120,10 +120,10 @@ Unbounded sets escape that cage, either upward, downward, or both.”
 “But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for $$S$$?”
 
 **Lila**:  
-“It should be $$\sqrt{2}$$, since that’s where the set stops.”
+“It should be $\sqrt{2}$, since that’s where the set stops.”
 
 **Acharya Bhaskara**:  
-“Indeed. But here is the problem: $$\sqrt{2}$$ is not in $$\mathbb{Q}$$. So the rationals cannot capture the least upper bound of this set.”
+“Indeed. But here is the problem: $\sqrt{2}$ is not in $\mathbb{Q}$. So the rationals cannot capture the least upper bound of this set.”
 
 ---
 
@@ -132,7 +132,7 @@ Unbounded sets escape that cage, either upward, downward, or both.”
 **Acharya Bhaskara**:  
 “This brings us to another definition:
 
-- An **upper bound** of a set $$A \subset \mathbb{R}$$ is a number $$M$$ such that $$x \le M$$ for all $$x \in A$$.  
+- An **upper bound** of a set $A \subset \mathbb{R}$ is a number $M$ such that $x \le M$ for all $x \in A$.  
 - The **least upper bound** (also called the *supremum*) is the smallest such $$M$$, if it exists.”
 
 **Lila**:  
