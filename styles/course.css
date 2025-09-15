@@ -56,5 +56,23 @@ a { color: #0b63d6; }
   font-style: italic;
   border-radius: 4px;
 }
+.theorem {
+  border-left: 4px solid #b22222;
+  padding: 0.6em;
+  background: #fff5f5;
+}
+
+.definition {
+  border-left: 4px solid #1e90ff;
+  padding: 0.6em;
+  background: #f0f8ff;
+}
+
+.example {
+  border-left: 4px solid #228b22;
+  padding: 0.6em;
+  background: #f5fff5;
+}
+
 
 

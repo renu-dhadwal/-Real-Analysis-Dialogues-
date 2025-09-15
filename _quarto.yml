@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: docs   # GitHub Pages will serve from docs/
+  output-dir: docs
 
 book:
   title: "Dialogues in Real Analysis"
@@ -8,10 +8,26 @@ book:
   chapters:
     - index.qmd
     - chapters/level1_completeness.qmd
-    # add more as you write them
 
 format:
   html:
-    theme: cosmo    # clean bootstrap theme
+    theme: cosmo
     toc: true
     number-sections: true
+    html-math-method: mathjax
+    css: course.css
+    theorem: true
+
+theorems:
+  definition:
+    name: Definition
+    style: definition
+  theorem:
+    name: Theorem
+    style: theorem
+  example:
+    name: Example
+    style: example
+  remark:
+    name: Remark
+    style: remark
