@@ -15,7 +15,7 @@ format:
     toc: true
     number-sections: true
     html-math-method: mathjax
-    css: course.css
+    css: styles/course.css
     theorem: true
 
 theorems:
