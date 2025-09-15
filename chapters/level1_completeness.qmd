@@ -66,6 +66,56 @@ x \geq M \quad \text{for all } x \in S.
 $$
 :::
 
+---
+
+## 🔹 Bounded Sets
+
+**Lila**:  
+“Acharya, you defined what it means for a number to be an upper bound. But what about the set itself? When do we call a set *bounded*?”
+
+**Acharya Bhaskara**:  
+“A good question, Lila. Here is the precise definition.”
+
+::: definition{#def:bounded-set}
+**Definition (Bounded Set).**  
+A set $$S \subseteq \mathbb{R}$$ is said to be **bounded above** if it has an upper bound.  
+It is **bounded below** if it has a lower bound.  
+If $$S$$ is both bounded above and below, then $$S$$ is called a **bounded set**.  
+Formally, there exist real numbers $$m, M \in \mathbb{R}$$ such that
+$$
+m \le x \le M \quad \text{for all } x \in S.
+$$
+:::
+
+---
+
+## 🔹 Examples
+
+::: example
+**Example 1.**  
+The interval $$[0,1]$$ is bounded above (by $$1, 2, \ldots$$) and bounded below (by $$0, -1, \ldots$$).  
+In fact, $$0$$ and $$1$$ are the *tightest* bounds, so the set is bounded.
+:::
+
+::: example
+**Example 2.**  
+The set $$\mathbb{N} = \{1,2,3,\ldots\}$$ is bounded below (by $$1, 0, -5, \ldots$$),  
+but it is **not** bounded above — it grows without end.
+:::
+
+::: example
+**Example 3.**  
+The set $$\mathbb{Z}$$ of all integers has no upper bound and no lower bound.  
+Thus, it is **not** bounded.
+:::
+
+**Lila**:  
+“So a set is bounded if it fits within some finite interval $$[m,M]$$ on the number line?”
+
+**Acharya Bhaskara**:  
+“Exactly! That’s the intuition — bounded sets live inside some finite cage on the real line.  
+Unbounded sets escape that cage, either upward, downward, or both.”
+
 **Acharya Bhaskara**:  
 “But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for $$S$$?”
 

@@ -44,7 +44,27 @@
     "href": "chapters/level1_completeness.html#bounds",
     "title": "2  Level 1: Completeness of the Real Numbers",
     "section": "3.1 🔹 Bounds",
-    "text": "3.1 🔹 Bounds\nAcharya Bhaskara:\n“Let us capture this rigorously. Consider the set\n\\[\nS = \\{ x \\in \\mathbb{Q} : x^2 &lt; 2 \\}.\n\\]\nIs there a number that is always greater than every element of this set?”\nLila:\n“Sure, 2 is bigger than all of them. So is 1.5, or 1.42.”\nAcharya Bhaskara:\nExactly. We call such numbers upper bounds. Here is a precise definition.\n\nDefinition (Upper bound).\nA number \\(M\\) is an upper bound of a set \\(S \\subseteq \\mathbb{R}\\) if \\[\nx \\leq M \\quad \\text{for all } x \\in S.\n\\]\n\nSimilarly, we can define a lower bound.\n\nDefinition (Lower bound).\nA number \\(m\\) is an upper bound of a set \\(S \\subseteq \\mathbb{R}\\) if \\[\nx \\geq M \\quad \\text{for all } x \\in S.\n\\]\n\nAcharya Bhaskara:\n“But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for \\[S\\]?”\nLila:\n“It should be \\[\\sqrt{2}\\], since that’s where the set stops.”\nAcharya Bhaskara:\n“Indeed. But here is the problem: \\[\\sqrt{2}\\] is not in \\[\\mathbb{Q}\\]. So the rationals cannot capture the least upper bound of this set.”",
+    "text": "3.1 🔹 Bounds\nAcharya Bhaskara:\n“Let us capture this rigorously. Consider the set\n\\[\nS = \\{ x \\in \\mathbb{Q} : x^2 &lt; 2 \\}.\n\\]\nIs there a number that is always greater than every element of this set?”\nLila:\n“Sure, 2 is bigger than all of them. So is 1.5, or 1.42.”\nAcharya Bhaskara:\nExactly. We call such numbers upper bounds. Here is a precise definition.\n\nDefinition (Upper bound).\nA number \\(M\\) is an upper bound of a set \\(S \\subseteq \\mathbb{R}\\) if \\[\nx \\leq M \\quad \\text{for all } x \\in S.\n\\]\n\nSimilarly, we can define a lower bound.\n\nDefinition (Lower bound).\nA number \\(m\\) is an upper bound of a set \\(S \\subseteq \\mathbb{R}\\) if \\[\nx \\geq M \\quad \\text{for all } x \\in S.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Level 1: Completeness of the Real Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level1_completeness.html#bounded-sets",
+    "href": "chapters/level1_completeness.html#bounded-sets",
+    "title": "2  Level 1: Completeness of the Real Numbers",
+    "section": "3.2 🔹 Bounded Sets",
+    "text": "3.2 🔹 Bounded Sets\nLila:\n“Acharya, you defined what it means for a number to be an upper bound. But what about the set itself? When do we call a set bounded?”\nAcharya Bhaskara:\n“A good question, Lila. Here is the precise definition.”\n\nDefinition (Bounded Set).\nA set \\[S \\subseteq \\mathbb{R}\\] is said to be bounded above if it has an upper bound.\nIt is bounded below if it has a lower bound.\nIf \\[S\\] is both bounded above and below, then \\[S\\] is called a bounded set.\nFormally, there exist real numbers \\[m, M \\in \\mathbb{R}\\] such that \\[\nm \\le x \\le M \\quad \\text{for all } x \\in S.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Level 1: Completeness of the Real Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level1_completeness.html#examples",
+    "href": "chapters/level1_completeness.html#examples",
+    "title": "2  Level 1: Completeness of the Real Numbers",
+    "section": "3.3 🔹 Examples",
+    "text": "3.3 🔹 Examples\n\nExample 1.\nThe interval \\[[0,1]\\] is bounded above (by \\[1, 2, \\ldots\\]) and bounded below (by \\[0, -1, \\ldots\\]).\nIn fact, \\[0\\] and \\[1\\] are the tightest bounds, so the set is bounded.\n\n\nExample 2.\nThe set \\[\\mathbb{N} = \\{1,2,3,\\ldots\\}\\] is bounded below (by \\[1, 0, -5, \\ldots\\]),\nbut it is not bounded above — it grows without end.\n\n\nExample 3.\nThe set \\[\\mathbb{Z}\\] of all integers has no upper bound and no lower bound.\nThus, it is not bounded.\n\nLila:\n“So a set is bounded if it fits within some finite interval \\[[m,M]\\] on the number line?”\nAcharya Bhaskara:\n“Exactly! That’s the intuition — bounded sets live inside some finite cage on the real line.\nUnbounded sets escape that cage, either upward, downward, or both.”\nAcharya Bhaskara:\n“But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for \\[S\\]?”\nLila:\n“It should be \\[\\sqrt{2}\\], since that’s where the set stops.”\nAcharya Bhaskara:\n“Indeed. But here is the problem: \\[\\sqrt{2}\\] is not in \\[\\mathbb{Q}\\]. So the rationals cannot capture the least upper bound of this set.”",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Level 1: Completeness of the Real Numbers</span>"
     ]
@@ -53,8 +73,8 @@
     "objectID": "chapters/level1_completeness.html#supremum",
     "href": "chapters/level1_completeness.html#supremum",
     "title": "2  Level 1: Completeness of the Real Numbers",
-    "section": "3.2 🔹 Supremum",
-    "text": "3.2 🔹 Supremum\nAcharya Bhaskara:\n“This brings us to another definition:\n\nAn upper bound of a set \\[A \\subset \\mathbb{R}\\] is a number \\[M\\] such that \\[x \\le M\\] for all \\[x \\in A\\].\n\nThe least upper bound (also called the supremum) is the smallest such \\[M\\], if it exists.”\n\nLila:\n“So the problem with rationals is that some sets don’t have a supremum inside them?”\nAcharya Bhaskara:\n“Precisely. The rationals are dense but not complete. The missing piece is the completeness property of the real numbers.”",
+    "section": "3.4 🔹 Supremum",
+    "text": "3.4 🔹 Supremum\nAcharya Bhaskara:\n“This brings us to another definition:\n\nAn upper bound of a set \\[A \\subset \\mathbb{R}\\] is a number \\[M\\] such that \\[x \\le M\\] for all \\[x \\in A\\].\n\nThe least upper bound (also called the supremum) is the smallest such \\[M\\], if it exists.”\n\nLila:\n“So the problem with rationals is that some sets don’t have a supremum inside them?”\nAcharya Bhaskara:\n“Precisely. The rationals are dense but not complete. The missing piece is the completeness property of the real numbers.”",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Level 1: Completeness of the Real Numbers</span>"
     ]
@@ -63,8 +83,8 @@
     "objectID": "chapters/level1_completeness.html#completeness-axiom",
     "href": "chapters/level1_completeness.html#completeness-axiom",
     "title": "2  Level 1: Completeness of the Real Numbers",
-    "section": "3.3 🔹 Completeness Axiom",
-    "text": "3.3 🔹 Completeness Axiom\nAcharya Bhaskara:\n“The defining property of the real numbers is this:\n\nCompleteness Axiom: Every nonempty set of real numbers that is bounded above has a least upper bound (supremum) in \\[\\mathbb{R}\\].\n\nThis axiom is what makes the real line whole.”",
+    "section": "3.5 🔹 Completeness Axiom",
+    "text": "3.5 🔹 Completeness Axiom\nAcharya Bhaskara:\n“The defining property of the real numbers is this:\n\nCompleteness Axiom: Every nonempty set of real numbers that is bounded above has a least upper bound (supremum) in \\[\\mathbb{R}\\].\n\nThis axiom is what makes the real line whole.”",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Level 1: Completeness of the Real Numbers</span>"
     ]
@@ -73,8 +93,8 @@
     "objectID": "chapters/level1_completeness.html#returning-to-s",
     "href": "chapters/level1_completeness.html#returning-to-s",
     "title": "2  Level 1: Completeness of the Real Numbers",
-    "section": "3.4 🔹 Returning to \\[S\\]",
-    "text": "3.4 🔹 Returning to \\[S\\]\nLila:\n“So for \\[S = \\{ x : x^2 &lt; 2 \\}\\], the supremum is \\[\\sqrt{2}\\], which does exist in \\[\\mathbb{R}\\].”\nAcharya Bhaskara:\n“Exactly. And that, Lila, is the difference between rationals and reals. Completeness fills the gaps and makes the real line continuous. Without it, calculus itself would crumble.”",
+    "section": "3.6 🔹 Returning to \\[S\\]",
+    "text": "3.6 🔹 Returning to \\[S\\]\nLila:\n“So for \\[S = \\{ x : x^2 &lt; 2 \\}\\], the supremum is \\[\\sqrt{2}\\], which does exist in \\[\\mathbb{R}\\].”\nAcharya Bhaskara:\n“Exactly. And that, Lila, is the difference between rationals and reals. Completeness fills the gaps and makes the real line continuous. Without it, calculus itself would crumble.”",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Level 1: Completeness of the Real Numbers</span>"
     ]
@@ -83,8 +103,8 @@
     "objectID": "chapters/level1_completeness.html#try-it-yourself",
     "href": "chapters/level1_completeness.html#try-it-yourself",
     "title": "2  Level 1: Completeness of the Real Numbers",
-    "section": "3.5 ✅ Try it yourself",
-    "text": "3.5 ✅ Try it yourself\n\nShow that the set \\[[0,1)\\] has supremum \\[1\\] but no maximum.\n(Optional) Give an example of a subset of \\[\\mathbb{Q}\\] that is bounded above in \\[\\mathbb{Q}\\] but has no least upper bound in \\[\\mathbb{Q}\\].",
+    "section": "3.7 ✅ Try it yourself",
+    "text": "3.7 ✅ Try it yourself\n\nShow that the set \\[[0,1)\\] has supremum \\[1\\] but no maximum.\n(Optional) Give an example of a subset of \\[\\mathbb{Q}\\] that is bounded above in \\[\\mathbb{Q}\\] but has no least upper bound in \\[\\mathbb{Q}\\].",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Level 1: Completeness of the Real Numbers</span>"
     ]

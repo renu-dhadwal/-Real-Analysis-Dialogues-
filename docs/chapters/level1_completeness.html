@@ -100,7 +100,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="course.css">
+<link rel="stylesheet" href="../styles/course.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -164,10 +164,12 @@ window.Quarto = {
   <li><a href="#level-1-completeness-of-the-real-numbers" id="toc-level-1-completeness-of-the-real-numbers" class="nav-link active" data-scroll-target="#level-1-completeness-of-the-real-numbers"><span class="header-section-number">3</span> 🌊 Level 1: Completeness of the Real Numbers</a>
   <ul class="collapse">
   <li><a href="#bounds" id="toc-bounds" class="nav-link" data-scroll-target="#bounds"><span class="header-section-number">3.1</span> 🔹 Bounds</a></li>
-  <li><a href="#supremum" id="toc-supremum" class="nav-link" data-scroll-target="#supremum"><span class="header-section-number">3.2</span> 🔹 Supremum</a></li>
-  <li><a href="#completeness-axiom" id="toc-completeness-axiom" class="nav-link" data-scroll-target="#completeness-axiom"><span class="header-section-number">3.3</span> 🔹 Completeness Axiom</a></li>
-  <li><a href="#returning-to-s" id="toc-returning-to-s" class="nav-link" data-scroll-target="#returning-to-s"><span class="header-section-number">3.4</span> 🔹 Returning to <span class="math display">\[S\]</span></a></li>
-  <li><a href="#try-it-yourself" id="toc-try-it-yourself" class="nav-link" data-scroll-target="#try-it-yourself"><span class="header-section-number">3.5</span> ✅ Try it yourself</a></li>
+  <li><a href="#bounded-sets" id="toc-bounded-sets" class="nav-link" data-scroll-target="#bounded-sets"><span class="header-section-number">3.2</span> 🔹 Bounded Sets</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">3.3</span> 🔹 Examples</a></li>
+  <li><a href="#supremum" id="toc-supremum" class="nav-link" data-scroll-target="#supremum"><span class="header-section-number">3.4</span> 🔹 Supremum</a></li>
+  <li><a href="#completeness-axiom" id="toc-completeness-axiom" class="nav-link" data-scroll-target="#completeness-axiom"><span class="header-section-number">3.5</span> 🔹 Completeness Axiom</a></li>
+  <li><a href="#returning-to-s" id="toc-returning-to-s" class="nav-link" data-scroll-target="#returning-to-s"><span class="header-section-number">3.6</span> 🔹 Returning to <span class="math display">\[S\]</span></a></li>
+  <li><a href="#try-it-yourself" id="toc-try-it-yourself" class="nav-link" data-scroll-target="#try-it-yourself"><span class="header-section-number">3.7</span> ✅ Try it yourself</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -238,6 +240,47 @@ A number <span class="math inline">\(m\)</span> is an upper bound of a set <span
 x \geq M \quad \text{for all } x \in S.
 \]</span></p>
 </div>
+<hr>
+</section>
+<section id="bounded-sets" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="bounded-sets"><span class="header-section-number">3.2</span> 🔹 Bounded Sets</h2>
+<p><strong>Lila</strong>:<br>
+“Acharya, you defined what it means for a number to be an upper bound. But what about the set itself? When do we call a set <em>bounded</em>?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“A good question, Lila. Here is the precise definition.”</p>
+<div class="definition{#def:bounded-set}">
+<p><strong>Definition (Bounded Set).</strong><br>
+A set <span class="math display">\[S \subseteq \mathbb{R}\]</span> is said to be <strong>bounded above</strong> if it has an upper bound.<br>
+It is <strong>bounded below</strong> if it has a lower bound.<br>
+If <span class="math display">\[S\]</span> is both bounded above and below, then <span class="math display">\[S\]</span> is called a <strong>bounded set</strong>.<br>
+Formally, there exist real numbers <span class="math display">\[m, M \in \mathbb{R}\]</span> such that <span class="math display">\[
+m \le x \le M \quad \text{for all } x \in S.
+\]</span></p>
+</div>
+<hr>
+</section>
+<section id="examples" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="examples"><span class="header-section-number">3.3</span> 🔹 Examples</h2>
+<div class="example">
+<p><strong>Example 1.</strong><br>
+The interval <span class="math display">\[[0,1]\]</span> is bounded above (by <span class="math display">\[1, 2, \ldots\]</span>) and bounded below (by <span class="math display">\[0, -1, \ldots\]</span>).<br>
+In fact, <span class="math display">\[0\]</span> and <span class="math display">\[1\]</span> are the <em>tightest</em> bounds, so the set is bounded.</p>
+</div>
+<div class="example">
+<p><strong>Example 2.</strong><br>
+The set <span class="math display">\[\mathbb{N} = \{1,2,3,\ldots\}\]</span> is bounded below (by <span class="math display">\[1, 0, -5, \ldots\]</span>),<br>
+but it is <strong>not</strong> bounded above — it grows without end.</p>
+</div>
+<div class="example">
+<p><strong>Example 3.</strong><br>
+The set <span class="math display">\[\mathbb{Z}\]</span> of all integers has no upper bound and no lower bound.<br>
+Thus, it is <strong>not</strong> bounded.</p>
+</div>
+<p><strong>Lila</strong>:<br>
+“So a set is bounded if it fits within some finite interval <span class="math display">\[[m,M]\]</span> on the number line?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Exactly! That’s the intuition — bounded sets live inside some finite cage on the real line.<br>
+Unbounded sets escape that cage, either upward, downward, or both.”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for <span class="math display">\[S\]</span>?”</p>
 <p><strong>Lila</strong>:<br>
@@ -246,8 +289,8 @@ x \geq M \quad \text{for all } x \in S.
 “Indeed. But here is the problem: <span class="math display">\[\sqrt{2}\]</span> is not in <span class="math display">\[\mathbb{Q}\]</span>. So the rationals cannot capture the least upper bound of this set.”</p>
 <hr>
 </section>
-<section id="supremum" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="supremum"><span class="header-section-number">3.2</span> 🔹 Supremum</h2>
+<section id="supremum" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="supremum"><span class="header-section-number">3.4</span> 🔹 Supremum</h2>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “This brings us to another definition:</p>
 <ul>
@@ -261,8 +304,8 @@ x \geq M \quad \text{for all } x \in S.
 “Precisely. The rationals are dense but <strong>not complete</strong>. The missing piece is the <em>completeness property</em> of the real numbers.”</p>
 <hr>
 </section>
-<section id="completeness-axiom" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="completeness-axiom"><span class="header-section-number">3.3</span> 🔹 Completeness Axiom</h2>
+<section id="completeness-axiom" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="completeness-axiom"><span class="header-section-number">3.5</span> 🔹 Completeness Axiom</h2>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “The defining property of the real numbers is this:</p>
 <blockquote class="blockquote">
@@ -271,16 +314,16 @@ x \geq M \quad \text{for all } x \in S.
 <p>This axiom is what makes the real line whole.”</p>
 <hr>
 </section>
-<section id="returning-to-s" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="returning-to-s"><span class="header-section-number">3.4</span> 🔹 Returning to <span class="math display">\[S\]</span></h2>
+<section id="returning-to-s" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="returning-to-s"><span class="header-section-number">3.6</span> 🔹 Returning to <span class="math display">\[S\]</span></h2>
 <p><strong>Lila</strong>:<br>
 “So for <span class="math display">\[S = \{ x : x^2 &lt; 2 \}\]</span>, the supremum is <span class="math display">\[\sqrt{2}\]</span>, which <em>does</em> exist in <span class="math display">\[\mathbb{R}\]</span>.”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “Exactly. And that, Lila, is the difference between rationals and reals. Completeness fills the gaps and makes the real line continuous. Without it, calculus itself would crumble.”</p>
 <hr>
 </section>
-<section id="try-it-yourself" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="try-it-yourself"><span class="header-section-number">3.5</span> ✅ Try it yourself</h2>
+<section id="try-it-yourself" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="try-it-yourself"><span class="header-section-number">3.7</span> ✅ Try it yourself</h2>
 <ol type="1">
 <li>Show that the set <span class="math display">\[[0,1)\]</span> has supremum <span class="math display">\[1\]</span> but no maximum.</li>
 <li>(Optional) Give an example of a subset of <span class="math display">\[\mathbb{Q}\]</span> that is bounded above in <span class="math display">\[\mathbb{Q}\]</span> but has no least upper bound in <span class="math display">\[\mathbb{Q}\]</span>.</li>
