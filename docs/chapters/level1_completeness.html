@@ -168,10 +168,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#supremum" id="toc-supremum" class="nav-link" data-scroll-target="#supremum"><span class="header-section-number">3.2.1</span> 🔹 Supremum</a></li>
   </ul></li>
-  <li><a href="#completeness-axiom" id="toc-completeness-axiom" class="nav-link" data-scroll-target="#completeness-axiom"><span class="header-section-number">3.3</span> 🔹 Completeness Axiom</a>
-  <ul class="collapse">
-  <li><a href="#returning-to-s" id="toc-returning-to-s" class="nav-link" data-scroll-target="#returning-to-s"><span class="header-section-number">3.3.1</span> 🔹 Returning to <span class="math inline">\(S\)</span></a></li>
-  </ul></li>
+  <li><a href="#completeness-axiom" id="toc-completeness-axiom" class="nav-link" data-scroll-target="#completeness-axiom"><span class="header-section-number">3.3</span> 🔹 Completeness Axiom</a></li>
   <li><a href="#try-it-yourself" id="toc-try-it-yourself" class="nav-link" data-scroll-target="#try-it-yourself"><span class="header-section-number">3.4</span> ✅ Try it yourself</a></li>
   </ul></li>
   </ul>
@@ -292,22 +289,21 @@ Unbounded sets escape that cage, either upward, downward, or both.”</p>
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="supremum"><span class="header-section-number">3.2.1</span> 🔹 Supremum</h3>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “This brings us to another definition:</p>
-<div class="definition{#def:upper-bound}">
-<p><strong>Definition (Upper Bound).</strong><br>
-Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>.<br>
-A number <span class="math inline">\(M \in \mathbb{R}\)</span> is called an <strong>upper bound</strong> of <span class="math inline">\(A\)</span> if <span class="math display">\[
-x \le M \quad \text{for all } x \in A.
-\]</span></p>
-</div>
 <div class="definition{#def:supremum}">
 <p><strong>Definition (Least Upper Bound / Supremum).</strong><br>
 The <strong>least upper bound</strong> (or <strong>supremum</strong>) of a set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is the smallest number <span class="math inline">\(M\)</span> such that <span class="math inline">\(M\)</span> is an upper bound of <span class="math inline">\(A\)</span>.<br>
-Formally, <span class="math inline">\(M = \sup A\)</span> if 1. <span class="math inline">\(x \le M\)</span> for all <span class="math inline">\(x \in A\)</span>, and<br>
+Formally, <span class="math inline">\(M = \sup A\)</span> if 1. <span class="math inline">\(x \leq M\)</span> for all <span class="math inline">\(x \in A\)</span>, and<br>
 2. for any <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(x &gt; M - \varepsilon\)</span>.</p>
+</div>
+<div class="definition{#def:infimum}">
+<p><strong>Definition (Greatest Lower Bound / Infimum).</strong><br>
+The <strong>greatest lower bound</strong> (or <strong>infimum</strong>) of a set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is the greatest number <span class="math inline">\(m\)</span> such that <span class="math inline">\(m\)</span> is a lower bound of <span class="math inline">\(A\)</span>.<br>
+Formally, <span class="math inline">\(m = \inf A\)</span> if 1. <span class="math inline">\(x \geq m\)</span> for all <span class="math inline">\(x \in A\)</span>, and<br>
+2. for any <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(x &lt; m + \varepsilon\)</span>.</p>
 </div>
 <p>“So the problem with rationals is that some sets don’t have a supremum inside them?”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
-“Precisely. The rationals are dense but <strong>not complete</strong>. The missing piece is the <em>completeness property</em> of the real numbers.”</p>
+“Precisely. The rationals are <strong>dense</strong> but <strong>not complete</strong>. The missing piece is the <em>completeness property</em> of the real numbers.”</p>
 <hr>
 </section>
 </section>
@@ -320,19 +316,16 @@ Formally, <span class="math inline">\(M = \sup A\)</span> if 1. <span class="mat
 </blockquote>
 <p>This axiom is what makes the real line whole.”</p>
 <hr>
-<section id="returning-to-s" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="returning-to-s"><span class="header-section-number">3.3.1</span> 🔹 Returning to <span class="math inline">\(S\)</span></h3>
 <p><strong>Lila</strong>:<br>
 “So for <span class="math inline">\(S = \{ x : x^2 &lt; 2 \}\)</span>, the supremum is <span class="math inline">\(\sqrt{2}\)</span>, which <em>does</em> exist in <span class="math inline">\(\mathbb{R}\)</span>.”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “Exactly. And that, Lila, is the difference between rationals and reals. Completeness fills the gaps and makes the real line continuous. Without it, calculus itself would crumble.”</p>
 <hr>
 </section>
-</section>
 <section id="try-it-yourself" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="try-it-yourself"><span class="header-section-number">3.4</span> ✅ Try it yourself</h2>
 <ol type="1">
-<li>(Optional) Give an example of a subset of <span class="math display">\[\mathbb{Q}\]</span> that is bounded above in <span class="math display">\[\mathbb{Q}\]</span> but has no least upper bound in <span class="math display">\[\mathbb{Q}\]</span>.</li>
+<li>(Optional) Give an example of a subset of <span class="math inline">\(\mathbb{Q}\)</span> that is bounded above in <span class="math inline">\(\mathbb{Q}\)</span> but has no least upper bound in <span class="math inline">\(\mathbb{Q}\)</span>.</li>
 </ol>
 <hr>
 

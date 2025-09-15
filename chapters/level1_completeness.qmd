@@ -133,27 +133,28 @@ $?”
 **Acharya Bhaskara**:  
 “This brings us to another definition:
 
-::: definition{#def:upper-bound}
-**Definition (Upper Bound).**  
-Let $A \subseteq \mathbb{R}$.  
-A number $M \in \mathbb{R}$ is called an **upper bound** of $A$ if
-$$
-x \le M \quad \text{for all } x \in A.
-$$
-:::
 
 ::: definition{#def:supremum}
 **Definition (Least Upper Bound / Supremum).**  
 The **least upper bound** (or **supremum**) of a set $A \subseteq \mathbb{R}$ is the smallest number $M$ such that $M$ is an upper bound of $A$.  
 Formally, $M = \sup A$ if
-1. $x \le M$ for all $x \in A$, and  
+1. $x \leq M$ for all $x \in A$, and  
 2. for any $\varepsilon > 0$, there exists $x \in A$ such that $x > M - \varepsilon$.
 :::
+
+::: definition{#def:infimum}
+**Definition (Greatest Lower Bound / Infimum).**  
+The **greatest lower bound** (or **infimum**) of a set $A \subseteq \mathbb{R}$ is the greatest number $m$ such that $m$ is a lower bound of $A$.  
+Formally, $m = \inf A$ if
+1. $x \geq m$ for all $x \in A$, and  
+2. for any $\varepsilon > 0$, there exists $x \in A$ such that $x < m + \varepsilon$.
+:::
+
 
 “So the problem with rationals is that some sets don’t have a supremum inside them?”
 
 **Acharya Bhaskara**:  
-“Precisely. The rationals are dense but **not complete**. The missing piece is the *completeness property* of the real numbers.”
+“Precisely. The rationals are **dense** but **not complete**. The missing piece is the *completeness property* of the real numbers.”
 
 ---
 
@@ -168,8 +169,6 @@ This axiom is what makes the real line whole.”
 
 ---
 
-### 🔹 Returning to $S$
-
 **Lila**:  
 “So for $S = \{ x : x^2 < 2 \}$, the supremum is $\sqrt{2}$, which *does* exist in $\mathbb{R}$.”
 
@@ -180,7 +179,7 @@ This axiom is what makes the real line whole.”
 
 ## ✅ Try it yourself
 
-1. (Optional) Give an example of a subset of $$\mathbb{Q}$$ that is bounded above in $$\mathbb{Q}$$ but has no least upper bound in $$\mathbb{Q}$$.
+1. (Optional) Give an example of a subset of $\mathbb{Q}$ that is bounded above in $\mathbb{Q}$ but has no least upper bound in $\mathbb{Q}$.
 
 ---
 
