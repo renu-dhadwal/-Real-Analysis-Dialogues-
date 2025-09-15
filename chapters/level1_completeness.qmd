@@ -13,19 +13,19 @@ format: html
 
 **Lila**:  
 “Well… if I try,  
-- $$1.4^2 = 1.96$$,  
-- $$1.41^2 = 1.9881$$,  
-- $$1.414^2 = 1.999396$$…  
+- $1.4^2 = 1.96$,  
+- $1.41^2 = 1.9881$,  
+- $1.414^2 = 1.999396$…  
 We get closer, but never exactly 2.”
 
 **Acharya Bhaskara**:  
-“So, do you think there is a rational number $$q$$ with $$q^2 = 2$$?”
+“So, do you think there is a rational number $q$ with $q^2 = 2$?”
 
 **Lila**:  
-“No. I’ve seen the proof that $$\sqrt{2}$$ is irrational.”
+“No. I’ve seen the proof that $\sqrt{2}$ is irrational.”
 
 **Acharya Bhaskara**:  
-“Correct. But notice this: even if $$\sqrt{2}$$ is not rational, we can approximate it as closely as we like using rationals — $$1.4, 1.41, 1.414\ldots$$ The rationals are *dense*: between any two rationals there is another. Yet something is still missing.”
+“Correct. But notice this: even if $\sqrt{2}$ is not rational, we can approximate it as closely as we like using rationals — $$1.4, 1.41, 1.414\ldots$$ The rationals are *dense*: between any two rationals there is another. Yet something is still missing.”
 
 ---
 
