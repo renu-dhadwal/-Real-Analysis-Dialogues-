@@ -1,0 +1,85 @@
+---
+title: "Level 2: Intervals and Their Characterization"
+format: html
+---
+
+# 🌉 Level 2: Intervals and Their Characterization
+
+**Acharya Bhaskara**:  
+“Lila, now that we understand completeness, let us move to another fundamental idea in real analysis — *intervals*.”  
+
+---
+
+## 🔹 What Are Intervals?
+
+**Acharya Bhaskara**:  
+“An **interval** is simply a stretch of the real line without gaps. Formally:  
+
+- A set of the form $[a,b] = \{x \in \mathbb{R} : a \le x \le b\}$ is a **closed interval**.  
+- $(a,b) = \{x \in \mathbb{R} : a < x < b\}$ is an **open interval**.  
+- Similarly, we have half-open intervals $(a,b], [a,b)$.  
+- And we allow intervals to extend infinitely: $(-\infty,a), [a,\infty), (-\infty,\infty) = \mathbb{R}$.  
+
+All of these are examples of intervals.”  
+
+---
+
+**Lila**:  
+“So intervals are just stretches of the real line. Isn’t that obvious?”  
+
+**Acharya Bhaskara**:  
+“It looks obvious, yes, but let us be precise. What makes these sets *intervals* and not just any arbitrary subset of $\mathbb{R}$? The essence is that they have **no gaps**. This brings us to an important theorem.”  
+
+---
+
+## 🔹 Characterization Theorem
+
+::: theorem
+**Characterization Theorem of Intervals.**  
+A nonempty subset $S \subseteq \mathbb{R}$ is an **interval** if and only if it has the following property:  
+
+- Whenever $x,y \in S$ with $x < y$, then every real number $z$ with $x < z < y$ also belongs to $S$.  
+
+Equivalently, if $x,y \in S$ and $x < y$, then the entire closed segment $[x,y]$ is contained in $S$.  
+:::
+
+---
+
+## 🔹 Examples
+
+::: example
+**Example 1.**  
+Take $S = (0,1)$. If $x,y \in S$ and $x < y$, then any $z$ with $x < z < y$ also satisfies $0 < z < 1$, so $z \in S$.  
+Thus $(0,1)$ is an interval.
+:::
+
+::: example
+**Example 2.**  
+Take $S = (0,1) \cup (2,3)$. Here $0.5 \in S$ and $2.5 \in S$, but the point $1.5$ between them is **not** in $S$.  
+So $S$ fails the characterization property and is not an interval.
+:::
+
+---
+
+**Lila**:  
+“So the theorem says: intervals are exactly those sets that never leave out the points in between.”  
+
+**Acharya Bhaskara**:  
+“Exactly, Lila. And notice — this depends on working inside the real numbers. In the rationals, for example, the set  
+$$
+S = \{x \in \mathbb{Q} : x^2 < 2\}
+$$  
+fails the property, because the real point $\sqrt{2}$ between some rationals is missing.”  
+
+---
+
+## ✅ Try it yourself
+
+::: exercise-box
+**Exercise.**  
+Decide whether the following sets are intervals:  
+
+1. $[0,1) \cup (1,2]$  
+2. $(-\infty,0) \cup (0,\infty)$  
+3. $\mathbb{Z}$ (the set of all integers)  
+:::
