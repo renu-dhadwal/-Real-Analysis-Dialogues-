@@ -92,6 +92,7 @@ Decide whether the following sets are intervals:
 
 3. **$\mathbb{Z}$** → ❌ Not an interval. There are infinitely many gaps (e.g., between $2$ and $3$ there is no integer).  
 :::
+
 :::
 
 
