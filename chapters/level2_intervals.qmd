@@ -77,6 +77,8 @@ fails the property, because the real point $\sqrt{2}$ between some rationals is 
 
 1. $[0,1)\cup(1,2]$  
 2. $(-\infty,0)\cup(0,\infty)$
+3. $\mathbb{Z}$ (the set of all integers)  
+
 
 ---
 
@@ -87,29 +89,10 @@ fails the property, because the real point $\sqrt{2}$ between some rationals is 
 
 2. **$(-\infty,0)\cup(0,\infty)$** → ❌ Not an interval. $0$ is missing.
 
+3. **$\mathbb{Z}$** → ❌ Not an interval. There are infinitely many gaps (e.g., between $2$ and $3$ there is no integer).  
+
 </details>
 :::
-
-::: exercise-box
-**Exercise.**  
-Decide whether the following sets are intervals:  
-
-1. $[0,1) \cup (1,2]$  
-2. $(-\infty,0) \cup (0,\infty)$  
-3. $\mathbb{Z}$ (the set of all integers)  
-
----
-
-::: {.callout-collapse title="Show Answers"}
-1. **$[0,1) \cup (1,2]$** → ❌ Not an interval. The point $1$ is missing, so the set has a gap.  
-
-2. **$(-\infty,0) \cup (0,\infty)$** → ❌ Not an interval. $0$ is missing, so the property fails.  
-
-3. **$\mathbb{Z}$** → ❌ Not an interval. There are infinitely many gaps (e.g., between $2$ and $3$ there is no integer).  
-:::
-
-:::
-
 
 
 
@@ -175,17 +158,16 @@ $$
 
 1. Are the intervals nested?  
 2. What is $\bigcap_{n=1}^\infty I_n$?  
-:::
 
 ---
-
-💡 Answer
-
-::: {.callout-collapse title="Show Answer"}
+<details>
+<summary><strong>Show Answers</strong></summary>
 Yes, the intervals are nested since each $I_{n+1} \subseteq I_n$.  
 The lengths $b_n - a_n = \tfrac{1}{n} \to 0$.  
 Hence,
 $$
 \bigcap_{n=1}^\infty I_n = \{1\}.
 $$
+</details>
 :::
+

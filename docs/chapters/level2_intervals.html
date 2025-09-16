@@ -264,6 +264,7 @@ fails the property, because the real point <span class="math inline">\(\sqrt{2}\
 <li><span class="math inline">\([0,1)\cup(1,2]\)</span><br>
 </li>
 <li><span class="math inline">\((-\infty,0)\cup(0,\infty)\)</span></li>
+<li><span class="math inline">\(\mathbb{Z}\)</span> (the set of all integers)</li>
 </ol>
 <hr>
 <details>
@@ -273,28 +274,9 @@ fails the property, because the real point <span class="math inline">\(\sqrt{2}\
 <ol type="1">
 <li><p><strong><span class="math inline">\([0,1)\cup(1,2]\)</span></strong> → ❌ Not an interval. The point <span class="math inline">\(1\)</span> is missing, so the set has a gap.</p></li>
 <li><p><strong><span class="math inline">\((-\infty,0)\cup(0,\infty)\)</span></strong> → ❌ Not an interval. <span class="math inline">\(0\)</span> is missing.</p></li>
+<li><p><strong><span class="math inline">\(\mathbb{Z}\)</span></strong> → ❌ Not an interval. There are infinitely many gaps (e.g., between <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> there is no integer).</p></li>
 </ol>
 </details>
-</div>
-<div class="exercise-box">
-<p><strong>Exercise.</strong><br>
-Decide whether the following sets are intervals:</p>
-<ol type="1">
-<li><span class="math inline">\([0,1) \cup (1,2]\)</span><br>
-</li>
-<li><span class="math inline">\((-\infty,0) \cup (0,\infty)\)</span><br>
-</li>
-<li><span class="math inline">\(\mathbb{Z}\)</span> (the set of all integers)</li>
-</ol>
-<hr>
-<div class="callout-collapse" title="Show Answers">
-<ol type="1">
-<li><p><strong><span class="math inline">\([0,1) \cup (1,2]\)</span></strong> → ❌ Not an interval. The point <span class="math inline">\(1\)</span> is missing, so the set has a gap.</p></li>
-<li><p><strong><span class="math inline">\((-\infty,0) \cup (0,\infty)\)</span></strong> → ❌ Not an interval. <span class="math inline">\(0\)</span> is missing, so the property fails.</p></li>
-<li><p><strong><span class="math inline">\(\mathbb{Z}\)</span></strong> → ❌ Not an interval. There are infinitely many gaps (e.g., between <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> there is no integer).<br>
-</p></li>
-</ol>
-</div>
 </div>
 </section>
 </section>
@@ -347,18 +329,19 @@ I_n = \left[1, 1 + \tfrac{1}{n}\right].
 <ol type="1">
 <li>Are the intervals nested?<br>
 </li>
-<li>What is <span class="math inline">\(\bigcap_{n=1}^\infty I_n\)</span>?<br>
-</li>
+<li>What is <span class="math inline">\(\bigcap_{n=1}^\infty I_n\)</span>?</li>
 </ol>
-</div>
 <hr>
-<p>💡 Answer</p>
-<div class="callout-collapse" title="Show Answer">
-<p>Yes, the intervals are nested since each <span class="math inline">\(I_{n+1} \subseteq I_n\)</span>.<br>
+<details>
+<summary>
+<strong>Show Answers</strong>
+</summary>
+Yes, the intervals are nested since each <span class="math inline">\(I_{n+1} \subseteq I_n\)</span>.<br>
 The lengths <span class="math inline">\(b_n - a_n = \tfrac{1}{n} \to 0\)</span>.<br>
 Hence, <span class="math display">\[
 \bigcap_{n=1}^\infty I_n = \{1\}.
-\]</span></p>
+\]</span>
+</details>
 </div>
 
 
