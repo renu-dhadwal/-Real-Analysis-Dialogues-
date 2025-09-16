@@ -3,8 +3,6 @@ title: "Level 2: Intervals and Their Characterization"
 format: html
 ---
 
-# 🌉 Level 2: Intervals and Their Characterization
-
 **Acharya Bhaskara**:  
 “Lila, now that we understand completeness, let us move to another fundamental idea in real analysis — *intervals*.”  
 
@@ -32,7 +30,7 @@ All of these are examples of intervals.”
 
 ---
 
-## 🔹 Characterization Theorem
+### 🔹 Characterization Theorem
 
 ::: theorem
 **Characterization Theorem of Intervals.**  
@@ -45,7 +43,7 @@ Equivalently, if $x,y \in S$ and $x < y$, then the entire closed segment $[x,y]$
 
 ---
 
-## 🔹 Examples
+#### 🔹 Examples
 
 ::: example
 **Example 1.**  
@@ -73,7 +71,7 @@ fails the property, because the real point $\sqrt{2}$ between some rationals is 
 
 ---
 
-## ✅ Try it yourself
+#### ✅ Try it yourself
 
 ::: exercise-box
 **Exercise.**  
@@ -99,7 +97,7 @@ Decide whether the following sets are intervals:
 
 
 
-## 🔹 The Nested Interval Property
+### 🔹 The Nested Interval Property
 
 **Acharya Bhaskara**:  
 “Lila, now that you understand what intervals are, let me show you one of their most remarkable features — the *Nested Interval Property*. It is a direct consequence of completeness.”  
@@ -132,7 +130,7 @@ $$
 
 ---
 
-## 🔹 Example
+### 🔹 Example
 
 ::: example
 **Example.**  
@@ -149,7 +147,7 @@ $$
 
 ---
 
-## ✅ Try it Yourself
+### ✅ Try it Yourself
 
 ::: exercise-box
 **Exercise.**  
@@ -164,7 +162,7 @@ $$
 
 ---
 
-## 💡 Answer
+💡 Answer
 
 ::: {.callout-collapse title="Show Answer"}
 Yes, the intervals are nested since each $I_{n+1} \subseteq I_n$.  
