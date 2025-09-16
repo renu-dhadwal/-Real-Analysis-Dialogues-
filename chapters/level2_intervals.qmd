@@ -72,6 +72,23 @@ fails the property, because the real point $\sqrt{2}$ between some rationals is 
 ---
 
 #### ✅ Try it yourself
+::: exercise-box
+**Exercise.** Decide whether the following sets are intervals:
+
+1. $[0,1)\cup(1,2]$  
+2. $(-\infty,0)\cup(0,\infty)$
+
+---
+
+<details>
+<summary><strong>Show Answers</strong></summary>
+
+1. **$[0,1)\cup(1,2]$** → ❌ Not an interval. The point $1$ is missing, so the set has a gap.
+
+2. **$(-\infty,0)\cup(0,\infty)$** → ❌ Not an interval. $0$ is missing.
+
+</details>
+:::
 
 ::: exercise-box
 **Exercise.**  
