@@ -213,24 +213,6 @@ This axiom is what makes the real line whole.”
 
 ---
 
-## Example Proof: Supremum of $[0,1]$
-
-**Lila**:  
-“Acharya, can we try a real proof? For example, what is the supremum of $S = [0,1]$?”
-
-**Acharya Bhaskara**:  
-“Excellent idea. Let us prove that $\sup S = 1$.”
-
-::: proof
-**Proof.**  
-1. *Upper bound:* For every $x \in [0,1]$, clearly $x \le 1$. So $1$ is an upper bound.  
-2. *Leastness:* Suppose $M < 1$. Then choose $x = \tfrac{M+1}{2}$. Since $0 \le x \le 1$ and $x > M$, $M$ is not an upper bound.  
-
-Hence, $\sup [0,1] = 1$.
-:::
-
----
-
 ## Worked Example: Supremum and Infimum of $(0,1)$
 
 **Lila**:  
