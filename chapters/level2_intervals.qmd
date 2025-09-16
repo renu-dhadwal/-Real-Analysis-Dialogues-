@@ -82,17 +82,19 @@ Decide whether the following sets are intervals:
 1. $[0,1) \cup (1,2]$  
 2. $(-\infty,0) \cup (0,\infty)$  
 3. $\mathbb{Z}$ (the set of all integers)  
-:::
 
-## 💡 Answers
+---
 
-::: {.callout-collapse title="Show Answers"}
+ {.callout-collapse title="Show Answers"}
 1. **$[0,1) \cup (1,2]$** → ❌ Not an interval. The point $1$ is missing, so the set has a gap.  
 
 2. **$(-\infty,0) \cup (0,\infty)$** → ❌ Not an interval. $0$ is missing, so the property fails.  
 
 3. **$\mathbb{Z}$** → ❌ Not an interval. There are infinitely many gaps (e.g., between $2$ and $3$ there is no integer).  
 :::
+
+
+
 
 ## 🔹 The Nested Interval Property
 
