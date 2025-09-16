@@ -94,3 +94,78 @@ Decide whether the following sets are intervals:
 3. **$\mathbb{Z}$** → ❌ Not an interval. There are infinitely many gaps (e.g., between $2$ and $3$ there is no integer).  
 :::
 
+## 🔹 The Nested Interval Property
+
+**Acharya Bhaskara**:  
+“Lila, now that you understand what intervals are, let me show you one of their most remarkable features — the *Nested Interval Property*. It is a direct consequence of completeness.”  
+
+---
+
+::: theorem
+**Nested Interval Property.**  
+Let $(I_n)$ be a sequence of closed intervals
+$$
+I_n = [a_n, b_n], \quad n=1,2,3,\ldots
+$$
+such that  
+
+1. The intervals are nested:  
+   $$
+   I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots
+   $$  
+
+2. The lengths shrink to $0$:  
+   $$
+   \lim_{n \to \infty} (b_n - a_n) = 0.
+   $$  
+
+Then there exists a **unique point** $c \in \mathbb{R}$ such that
+$$
+\bigcap_{n=1}^\infty I_n = \{c\}.
+$$
+:::
+
+---
+
+## 🔹 Example
+
+::: example
+**Example.**  
+Take
+$$
+I_n = \left[0, \tfrac{1}{n}\right].
+$$
+Clearly $I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots$, and the lengths $b_n - a_n = \tfrac{1}{n} \to 0$.  
+Thus
+$$
+\bigcap_{n=1}^\infty I_n = \{0\}.
+$$
+:::
+
+---
+
+## ✅ Try it Yourself
+
+::: exercise-box
+**Exercise.**  
+Consider the nested intervals
+$$
+I_n = \left[1, 1 + \tfrac{1}{n}\right].
+$$
+
+1. Are the intervals nested?  
+2. What is $\bigcap_{n=1}^\infty I_n$?  
+:::
+
+---
+
+## 💡 Answer
+
+::: {.callout-collapse title="Show Answer"}
+Yes, the intervals are nested since each $I_{n+1} \subseteq I_n$.  
+The lengths $b_n - a_n = \tfrac{1}{n} \to 0$.  
+Hence,
+$$
+\bigcap_{n=1}^\infty I_n = \{1\}.
+$$
+:::

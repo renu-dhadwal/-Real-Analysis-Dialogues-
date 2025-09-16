@@ -178,5 +178,45 @@
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Level 2: Intervals and Their Characterization</span>"
     ]
+  },
+  {
+    "objectID": "chapters/level2_intervals.html#the-nested-interval-property",
+    "href": "chapters/level2_intervals.html#the-nested-interval-property",
+    "title": "3  Level 2: Intervals and Their Characterization",
+    "section": "4.6 🔹 The Nested Interval Property",
+    "text": "4.6 🔹 The Nested Interval Property\nAcharya Bhaskara:\n“Lila, now that you understand what intervals are, let me show you one of their most remarkable features — the Nested Interval Property. It is a direct consequence of completeness.”\n\n\nNested Interval Property.\nLet \\((I_n)\\) be a sequence of closed intervals \\[\nI_n = [a_n, b_n], \\quad n=1,2,3,\\ldots\n\\] such that\n\nThe intervals are nested:\n\\[\nI_1 \\supseteq I_2 \\supseteq I_3 \\supseteq \\cdots\n\\]\nThe lengths shrink to \\(0\\):\n\\[\n\\lim_{n \\to \\infty} (b_n - a_n) = 0.\n\\]\n\nThen there exists a unique point \\(c \\in \\mathbb{R}\\) such that \\[\n\\bigcap_{n=1}^\\infty I_n = \\{c\\}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Level 2: Intervals and Their Characterization</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level2_intervals.html#example",
+    "href": "chapters/level2_intervals.html#example",
+    "title": "3  Level 2: Intervals and Their Characterization",
+    "section": "4.7 🔹 Example",
+    "text": "4.7 🔹 Example\n\nExample.\nTake \\[\nI_n = \\left[0, \\tfrac{1}{n}\\right].\n\\] Clearly \\(I_1 \\supseteq I_2 \\supseteq I_3 \\supseteq \\cdots\\), and the lengths \\(b_n - a_n = \\tfrac{1}{n} \\to 0\\).\nThus \\[\n\\bigcap_{n=1}^\\infty I_n = \\{0\\}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Level 2: Intervals and Their Characterization</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level2_intervals.html#try-it-yourself-1",
+    "href": "chapters/level2_intervals.html#try-it-yourself-1",
+    "title": "3  Level 2: Intervals and Their Characterization",
+    "section": "4.8 ✅ Try it Yourself",
+    "text": "4.8 ✅ Try it Yourself\n\nExercise.\nConsider the nested intervals \\[\nI_n = \\left[1, 1 + \\tfrac{1}{n}\\right].\n\\]\n\nAre the intervals nested?\n\nWhat is \\(\\bigcap_{n=1}^\\infty I_n\\)?",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Level 2: Intervals and Their Characterization</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level2_intervals.html#answer",
+    "href": "chapters/level2_intervals.html#answer",
+    "title": "3  Level 2: Intervals and Their Characterization",
+    "section": "4.9 💡 Answer",
+    "text": "4.9 💡 Answer\n\nYes, the intervals are nested since each \\(I_{n+1} \\subseteq I_n\\).\nThe lengths \\(b_n - a_n = \\tfrac{1}{n} \\to 0\\).\nHence, \\[\n\\bigcap_{n=1}^\\infty I_n = \\{1\\}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Level 2: Intervals and Their Characterization</span>"
+    ]
   }
 ]
