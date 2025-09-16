@@ -108,5 +108,15 @@
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Level 1: Completeness of the Real Numbers</span>"
     ]
+  },
+  {
+    "objectID": "chapters/level1_completeness.html#density",
+    "href": "chapters/level1_completeness.html#density",
+    "title": "2  Level 1: Completeness of the Real Numbers",
+    "section": "3.8 🔹 Density",
+    "text": "3.8 🔹 Density\nLila:\n“Acharya, earlier you said the rationals are dense. What exactly does that mean?”\nAcharya Bhaskara:\n“Good question, Lila. Let me give you the formal definition.”\n\nDefinition (Density).\nA subset \\(D \\subseteq \\mathbb{R}\\) is said to be dense in \\(\\mathbb{R}\\) if\nfor every pair of real numbers \\(a,b\\) with \\(a &lt; b\\), there exists \\(x \\in D\\) such that \\[\na &lt; x &lt; b.\n\\]\n\nLila:\n“So, no matter how small the interval, there’s always a rational inside it?”\nAcharya Bhaskara:\n“Exactly! The rationals \\(\\mathbb{Q}\\) are dense in \\(\\mathbb{R}\\).\nIn contrast, the integers \\(\\mathbb{Z}\\) are not dense, because between two consecutive integers, like \\(2\\) and \\(3\\), no integer lies strictly in between.” ## 🔹 Example: Rationals are Dense\nLila:\n“Acharya, can we prove that the rationals are really dense in \\(\\mathbb{R}\\)?”\nAcharya Bhaskara:\n“Of course. This is a fundamental fact: between any two real numbers, there lies a rational.”\n\n\nProof. Proof.\nLet \\(a,b \\in \\mathbb{R}\\) with \\(a &lt; b\\).\nWe need to show there exists a rational \\(q \\in \\mathbb{Q}\\) such that \\(a &lt; q &lt; b\\).\nSince \\(b-a &gt; 0\\), by the Archimedean Property there exists a natural number \\(n\\) such that \\[\n\\frac{1}{n} &lt; b - a.\n\\]\nNow consider the integers \\(k\\) satisfying \\[\nk &gt; a n.\n\\] Let \\(k\\) be the smallest such integer.\nThen \\[\nk-1 \\le a n &lt; k.\n\\] Dividing by \\(n\\) gives \\[\n\\frac{k-1}{n} \\le a &lt; \\frac{k}{n}.\n\\]\nSo \\(\\tfrac{k}{n}\\) is a rational number greater than \\(a\\).\nMoreover, since \\(\\tfrac{1}{n} &lt; b-a\\), we have \\[\n\\frac{k}{n} &lt; a + \\frac{1}{n} &lt; b.\n\\]\nThus \\[\na &lt; \\frac{k}{n} &lt; b,\n\\] and \\(\\frac{k}{n} \\in \\mathbb{Q}\\) lies strictly between \\(a\\) and \\(b\\).\nTherefore, \\(\\mathbb{Q}\\) is dense in \\(\\mathbb{R}\\).\n\n\nLila:\n“So we used the Archimedean Property to trap a rational in between \\(a\\) and \\(b\\)!”\nAcharya Bhaskara:\n“Exactly. This proof not only shows that rationals are dense, it also highlights how the structure of the real numbers — via the Archimedean Property — guarantees their richness.”",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Level 1: Completeness of the Real Numbers</span>"
+    ]
   }
 ]

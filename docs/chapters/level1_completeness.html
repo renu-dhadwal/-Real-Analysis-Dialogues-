@@ -170,6 +170,7 @@ window.Quarto = {
   <li><a href="#try-it-yourself" id="toc-try-it-yourself" class="nav-link" data-scroll-target="#try-it-yourself"><span class="header-section-number">3.5</span> ✅ Try it yourself</a></li>
   <li><a href="#proofs" id="toc-proofs" class="nav-link" data-scroll-target="#proofs"><span class="header-section-number">3.6</span> Proofs</a></li>
   <li><a href="#worked-example-supremum-and-infimum-of-01" id="toc-worked-example-supremum-and-infimum-of-01" class="nav-link" data-scroll-target="#worked-example-supremum-and-infimum-of-01"><span class="header-section-number">3.7</span> Worked Example: Supremum and Infimum of <span class="math inline">\((0,1)\)</span></a></li>
+  <li><a href="#density" id="toc-density" class="nav-link" data-scroll-target="#density"><span class="header-section-number">3.8</span> 🔹 Density</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -406,6 +407,59 @@ Hence, <span class="math inline">\(\inf S = 0\)</span>.</li>
 “So even though neither <span class="math inline">\(0\)</span> nor <span class="math inline">\(1\)</span> are in the set <span class="math inline">\((0,1)\)</span>, they still serve as its infimum and supremum?”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “Exactly! That’s one of the key ideas in real analysis: bounds need not belong to the set itself. Supremum and infimum live in the real line, not necessarily inside the set.”</p>
+</section>
+<section id="density" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="density"><span class="header-section-number">3.8</span> 🔹 Density</h2>
+<p><strong>Lila</strong>:<br>
+“Acharya, earlier you said the rationals are <em>dense</em>. What exactly does that mean?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Good question, Lila. Let me give you the formal definition.”</p>
+<div class="definition{#def:dense}">
+<p><strong>Definition (Density).</strong><br>
+A subset <span class="math inline">\(D \subseteq \mathbb{R}\)</span> is said to be <strong>dense in <span class="math inline">\(\mathbb{R}\)</span></strong> if<br>
+for every pair of real numbers <span class="math inline">\(a,b\)</span> with <span class="math inline">\(a &lt; b\)</span>, there exists <span class="math inline">\(x \in D\)</span> such that <span class="math display">\[
+a &lt; x &lt; b.
+\]</span></p>
+</div>
+<p><strong>Lila</strong>:<br>
+“So, no matter how small the interval, there’s always a rational inside it?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Exactly! The rationals <span class="math inline">\(\mathbb{Q}\)</span> are dense in <span class="math inline">\(\mathbb{R}\)</span>.<br>
+In contrast, the integers <span class="math inline">\(\mathbb{Z}\)</span> are <strong>not</strong> dense, because between two consecutive integers, like <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>, no integer lies strictly in between.” ## 🔹 Example: Rationals are Dense</p>
+<p><strong>Lila</strong>:<br>
+“Acharya, can we prove that the rationals are really dense in <span class="math inline">\(\mathbb{R}\)</span>?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Of course. This is a fundamental fact: between any two real numbers, there lies a rational.”</p>
+<hr>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Proof.</strong><br>
+Let <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a &lt; b\)</span>.<br>
+We need to show there exists a rational <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math inline">\(a &lt; q &lt; b\)</span>.</p>
+<p>Since <span class="math inline">\(b-a &gt; 0\)</span>, by the Archimedean Property there exists a natural number <span class="math inline">\(n\)</span> such that <span class="math display">\[
+\frac{1}{n} &lt; b - a.
+\]</span></p>
+<p>Now consider the integers <span class="math inline">\(k\)</span> satisfying <span class="math display">\[
+k &gt; a n.
+\]</span> Let <span class="math inline">\(k\)</span> be the smallest such integer.<br>
+Then <span class="math display">\[
+k-1 \le a n &lt; k.
+\]</span> Dividing by <span class="math inline">\(n\)</span> gives <span class="math display">\[
+\frac{k-1}{n} \le a &lt; \frac{k}{n}.
+\]</span></p>
+<p>So <span class="math inline">\(\tfrac{k}{n}\)</span> is a rational number greater than <span class="math inline">\(a\)</span>.<br>
+Moreover, since <span class="math inline">\(\tfrac{1}{n} &lt; b-a\)</span>, we have <span class="math display">\[
+\frac{k}{n} &lt; a + \frac{1}{n} &lt; b.
+\]</span></p>
+<p>Thus <span class="math display">\[
+a &lt; \frac{k}{n} &lt; b,
+\]</span> and <span class="math inline">\(\frac{k}{n} \in \mathbb{Q}\)</span> lies strictly between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p>Therefore, <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<hr>
+<p><strong>Lila</strong>:<br>
+“So we used the Archimedean Property to trap a rational in between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>!”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Exactly. This proof not only shows that rationals are dense, it also highlights how the structure of the real numbers — via the Archimedean Property — guarantees their richness.”</p>
 
 
 </section>

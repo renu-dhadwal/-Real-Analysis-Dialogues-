@@ -259,3 +259,83 @@ Let $S = (0,1)$.
 
 **Acharya Bhaskara**:  
 “Exactly! That’s one of the key ideas in real analysis: bounds need not belong to the set itself. Supremum and infimum live in the real line, not necessarily inside the set.”
+
+## 🔹 Density
+
+**Lila**:  
+“Acharya, earlier you said the rationals are *dense*. What exactly does that mean?”
+
+**Acharya Bhaskara**:  
+“Good question, Lila. Let me give you the formal definition.”
+
+::: definition{#def:dense}
+**Definition (Density).**  
+A subset $D \subseteq \mathbb{R}$ is said to be **dense in $\mathbb{R}$** if  
+for every pair of real numbers $a,b$ with $a < b$, there exists $x \in D$ such that
+$$
+a < x < b.
+$$
+:::
+
+**Lila**:  
+“So, no matter how small the interval, there’s always a rational inside it?”
+
+**Acharya Bhaskara**:  
+“Exactly! The rationals $\mathbb{Q}$ are dense in $\mathbb{R}$.  
+In contrast, the integers $\mathbb{Z}$ are **not** dense, because between two consecutive integers, like $2$ and $3$, no integer lies strictly in between.”
+## 🔹 Example: Rationals are Dense
+
+**Lila**:  
+“Acharya, can we prove that the rationals are really dense in $\mathbb{R}$?”
+
+**Acharya Bhaskara**:  
+“Of course. This is a fundamental fact: between any two real numbers, there lies a rational.”
+
+---
+
+::: proof
+**Proof.**  
+Let $a,b \in \mathbb{R}$ with $a < b$.  
+We need to show there exists a rational $q \in \mathbb{Q}$ such that $a < q < b$.
+
+Since $b-a > 0$, by the Archimedean Property there exists a natural number $n$ such that
+$$
+\frac{1}{n} < b - a.
+$$
+
+Now consider the integers $k$ satisfying
+$$
+k > a n.
+$$
+Let $k$ be the smallest such integer.  
+Then
+$$
+k-1 \le a n < k.
+$$
+Dividing by $n$ gives
+$$
+\frac{k-1}{n} \le a < \frac{k}{n}.
+$$
+
+So $\tfrac{k}{n}$ is a rational number greater than $a$.  
+Moreover, since $\tfrac{1}{n} < b-a$, we have
+$$
+\frac{k}{n} < a + \frac{1}{n} < b.
+$$
+
+Thus
+$$
+a < \frac{k}{n} < b,
+$$
+and $\frac{k}{n} \in \mathbb{Q}$ lies strictly between $a$ and $b$.
+
+Therefore, $\mathbb{Q}$ is dense in $\mathbb{R}$.
+:::
+
+---
+
+**Lila**:  
+“So we used the Archimedean Property to trap a rational in between $a$ and $b$!”
+
+**Acharya Bhaskara**:  
+“Exactly. This proof not only shows that rationals are dense, it also highlights how the structure of the real numbers — via the Archimedean Property — guarantees their richness.”
