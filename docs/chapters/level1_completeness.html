@@ -164,13 +164,13 @@ window.Quarto = {
   <li><a href="#level-1-completeness-of-the-real-numbers" id="toc-level-1-completeness-of-the-real-numbers" class="nav-link active" data-scroll-target="#level-1-completeness-of-the-real-numbers"><span class="header-section-number">3</span> 🌊 Level 1: Completeness of the Real Numbers</a>
   <ul class="collapse">
   <li><a href="#boundedness" id="toc-boundedness" class="nav-link" data-scroll-target="#boundedness"><span class="header-section-number">3.1</span> 🔹 Boundedness</a></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">3.2</span> 🔹 Examples</a>
-  <ul class="collapse">
-  <li><a href="#supremum" id="toc-supremum" class="nav-link" data-scroll-target="#supremum"><span class="header-section-number">3.2.1</span> 🔹 Supremum</a></li>
-  </ul></li>
-  <li><a href="#completeness-axiom" id="toc-completeness-axiom" class="nav-link" data-scroll-target="#completeness-axiom"><span class="header-section-number">3.3</span> 🔹 Completeness Axiom</a></li>
-  <li><a href="#try-it-yourself" id="toc-try-it-yourself" class="nav-link" data-scroll-target="#try-it-yourself"><span class="header-section-number">3.4</span> ✅ Try it yourself</a></li>
-  <li><a href="#proofs" id="toc-proofs" class="nav-link" data-scroll-target="#proofs"><span class="header-section-number">3.5</span> Proofs</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">3.2</span> 🔹 Examples</a></li>
+  <li><a href="#supremum" id="toc-supremum" class="nav-link" data-scroll-target="#supremum"><span class="header-section-number">3.3</span> 🔹 Supremum</a></li>
+  <li><a href="#completeness-axiom" id="toc-completeness-axiom" class="nav-link" data-scroll-target="#completeness-axiom"><span class="header-section-number">3.4</span> 🔹 Completeness Axiom</a></li>
+  <li><a href="#try-it-yourself" id="toc-try-it-yourself" class="nav-link" data-scroll-target="#try-it-yourself"><span class="header-section-number">3.5</span> ✅ Try it yourself</a></li>
+  <li><a href="#proofs" id="toc-proofs" class="nav-link" data-scroll-target="#proofs"><span class="header-section-number">3.6</span> Proofs</a></li>
+  <li><a href="#example-proof-supremum-of-01" id="toc-example-proof-supremum-of-01" class="nav-link" data-scroll-target="#example-proof-supremum-of-01"><span class="header-section-number">3.7</span> Example Proof: Supremum of <span class="math inline">\([0,1]\)</span></a></li>
+  <li><a href="#worked-example-supremum-and-infimum-of-01" id="toc-worked-example-supremum-and-infimum-of-01" class="nav-link" data-scroll-target="#worked-example-supremum-and-infimum-of-01"><span class="header-section-number">3.8</span> Worked Example: Supremum and Infimum of <span class="math inline">\((0,1)\)</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -214,7 +214,7 @@ We get closer, but never exactly 2.”</p>
 <p><strong>Lila</strong>:<br>
 “No.&nbsp;I’ve seen the proof that <span class="math inline">\(\sqrt{2}\)</span> is irrational.”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
-“Correct. But notice this: even if <span class="math inline">\(\sqrt{2}\)</span> is not rational, we can approximate it as closely as we like using rationals — <span class="math display">\[1.4, 1.41, 1.414\ldots\]</span> The rationals are <em>dense</em>: between any two rationals there is another. Yet something is still missing.”</p>
+“Correct. But notice this: even if <span class="math inline">\(\sqrt{2}\)</span> is not rational, we can approximate it as closely as we like using rationals — <span class="math inline">\(1.4, 1.41, 1.414\ldots\)</span> The rationals are <em>dense</em>: between any two rationals there is another. Yet something is still missing.”</p>
 <hr>
 <section id="boundedness" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="boundedness"><span class="header-section-number">3.1</span> 🔹 Boundedness</h2>
@@ -227,23 +227,23 @@ S = \{ x \in \mathbb{Q} : x^2 &lt; 2 \}.
 <p><strong>Lila</strong>:<br>
 “Sure, 2 is bigger than all of them. So is 1.5, or 1.42.”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
-Exactly. We call such numbers <em>upper bounds</em>. Here is a precise definition.</p>
+“Exactly. We call such numbers <em>upper bounds</em>. Here is a precise definition.”</p>
 <div class="definition{#def:upper-bound}">
 <p><strong>Definition (Upper bound).</strong><br>
-A number <span class="math inline">\(M\)</span> is an upper bound of a set <span class="math inline">\(S \subseteq \mathbb{R}\)</span> if <span class="math display">\[
+A number <span class="math inline">\(M\)</span> is an <strong>upper bound</strong> of a set <span class="math inline">\(S \subseteq \mathbb{R}\)</span> if <span class="math display">\[
 x \leq M \quad \text{for all } x \in S.
 \]</span></p>
 </div>
 <p>Similarly, we can define a <em>lower bound</em>.</p>
 <div class="definition{#def:lower-bound}">
 <p><strong>Definition (Lower bound).</strong><br>
-A number <span class="math inline">\(m\)</span> is an upper bound of a set <span class="math inline">\(S \subseteq \mathbb{R}\)</span> if <span class="math display">\[
-x \geq M \quad \text{for all } x \in S.
+A number <span class="math inline">\(m\)</span> is a <strong>lower bound</strong> of a set <span class="math inline">\(S \subseteq \mathbb{R}\)</span> if <span class="math display">\[
+x \geq m \quad \text{for all } x \in S.
 \]</span></p>
 </div>
 <hr>
 <p><strong>Lila</strong>:<br>
-“Acharya, you defined what it means for a number to be an upper bound. But what about the set itself? When do we call a set <em>bounded</em>?”</p>
+“Acharya, you defined what it means for a number to be an upper or lower bound. But what about the set itself? When do we call a set <em>bounded</em>?”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “A good question, Lila. Here is the precise definition.”</p>
 <div class="definition{#def:bounded-set}">
@@ -261,8 +261,8 @@ m \le x \le M \quad \text{for all } x \in S.
 <h2 data-number="3.2" class="anchored" data-anchor-id="examples"><span class="header-section-number">3.2</span> 🔹 Examples</h2>
 <div class="example">
 <p><strong>Example 1.</strong><br>
-The interval [0,1] is bounded above by 1, 2, <span class="math inline">\(\ldots\)</span> and bounded below by 0, -1, <span class="math inline">\(\ldots\)</span>.<br>
-In fact, 0 and 1 are the <em>tightest</em> bounds, so the set is bounded.</p>
+The interval <span class="math inline">\([0,1]\)</span> is bounded above by <span class="math inline">\(1, 2, \ldots\)</span> and bounded below by <span class="math inline">\(0, -1, \ldots\)</span>.<br>
+In fact, <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> are the <em>tightest</em> bounds, so the set is bounded.</p>
 </div>
 <div class="example">
 <p><strong>Example 2.</strong><br>
@@ -280,31 +280,48 @@ Thus, it is <strong>not</strong> bounded.</p>
 “Exactly! That’s the intuition — bounded sets live inside some finite cage on the real line.<br>
 Unbounded sets escape that cage, either upward, downward, or both.”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
-“But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for our set $ S = { x : x^2 &lt; 2 }. $?”</p>
+“But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for our set<br>
+<span class="math display">\[
+S = \{ x \in \mathbb{Q} : x^2 &lt; 2 \}?
+\]</span>”</p>
 <p><strong>Lila</strong>:<br>
 “It should be <span class="math inline">\(\sqrt{2}\)</span>, since that’s where the set stops.”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “Indeed. But here is the problem: <span class="math inline">\(\sqrt{2}\)</span> is not in <span class="math inline">\(\mathbb{Q}\)</span>. So the rationals cannot capture the least upper bound of this set.”</p>
 <hr>
-<section id="supremum" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="supremum"><span class="header-section-number">3.2.1</span> 🔹 Supremum</h3>
+</section>
+<section id="supremum" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="supremum"><span class="header-section-number">3.3</span> 🔹 Supremum</h2>
 <p><strong>Acharya Bhaskara</strong>:<br>
-“This brings us to another definition:</p>
+“This brings us to another definition:”</p>
 <div class="definition{#def:supremum}">
 <p><strong>Definition (Least Upper Bound / Supremum).</strong><br>
-Let <span class="math inline">\(S\)</span> be a nonempty subset of <span class="math inline">\(\mathbb{R}\)</span>. If <span class="math inline">\(S\)</span> is bounded above then, a number <span class="math inline">\(u\)</span> is said to be a <strong>supremum (least upper bound)</strong> of <span class="math inline">\(S\)</span> if 1. <span class="math inline">\(s \leq u\)</span> for all <span class="math inline">\(s \in S\)</span>, and 2. for any <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(s_\varepsilon \in S\)</span> such that <span class="math inline">\(s_\varepsilon &gt; u - \varepsilon\)</span>.</p>
+Let <span class="math inline">\(A\)</span> be a nonempty subset of <span class="math inline">\(\mathbb{R}\)</span>.<br>
+If <span class="math inline">\(A\)</span> is bounded above, then a number <span class="math inline">\(M\)</span> is said to be the <strong>supremum</strong> (least upper bound) of <span class="math inline">\(A\)</span> if:</p>
+<ol type="1">
+<li><span class="math inline">\(x \le M\)</span> for all <span class="math inline">\(x \in A\)</span>, and<br>
+</li>
+<li>for any <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(x &gt; M - \varepsilon\)</span>.</li>
+</ol>
 </div>
 <div class="definition{#def:infimum}">
-<p><strong>Definition (Greatest Lower Bound / Infinimum).</strong> Let <span class="math inline">\(S\)</span> be a nonempty subset of <span class="math inline">\(\mathbb{R}\)</span>. If <span class="math inline">\(S\)</span> is bounded below then, a number <span class="math inline">\(u\)</span> is said to be a <strong>infinimum (greatest lower bound)</strong> of <span class="math inline">\(S\)</span> if 1. <span class="math inline">\(s \geq u\)</span> for all <span class="math inline">\(s \in S\)</span>, and 2. for any <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(s_\varepsilon \in S\)</span> such that <span class="math inline">\(s_\varepsilon &lt; u + \varepsilon\)</span>.</p>
+<p><strong>Definition (Greatest Lower Bound / Infimum).</strong><br>
+Let <span class="math inline">\(A\)</span> be a nonempty subset of <span class="math inline">\(\mathbb{R}\)</span>.<br>
+If <span class="math inline">\(A\)</span> is bounded below, then a number <span class="math inline">\(m\)</span> is said to be the <strong>infimum</strong> (greatest lower bound) of <span class="math inline">\(A\)</span> if:</p>
+<ol type="1">
+<li><span class="math inline">\(m \le x\)</span> for all <span class="math inline">\(x \in A\)</span>, and<br>
+</li>
+<li>for any <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(x &lt; m + \varepsilon\)</span>.</li>
+</ol>
 </div>
-<p>“So the problem with rationals is that some sets don’t have a supremum inside them?”</p>
+<p><strong>Lila</strong>:<br>
+“So the problem with rationals is that some sets don’t have a supremum inside them?”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “Precisely. The rationals are <strong>dense</strong> but <strong>not complete</strong>. The missing piece is the <em>completeness property</em> of the real numbers.”</p>
 <hr>
 </section>
-</section>
-<section id="completeness-axiom" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="completeness-axiom"><span class="header-section-number">3.3</span> 🔹 Completeness Axiom</h2>
+<section id="completeness-axiom" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="completeness-axiom"><span class="header-section-number">3.4</span> 🔹 Completeness Axiom</h2>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “The defining property of the real numbers is this:</p>
 <blockquote class="blockquote">
@@ -318,15 +335,15 @@ Let <span class="math inline">\(S\)</span> be a nonempty subset of <span class="
 “Exactly. And that, Lila, is the difference between rationals and reals. Completeness fills the gaps and makes the real line continuous. Without it, calculus itself would crumble.”</p>
 <hr>
 </section>
-<section id="try-it-yourself" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="try-it-yourself"><span class="header-section-number">3.4</span> ✅ Try it yourself</h2>
+<section id="try-it-yourself" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="try-it-yourself"><span class="header-section-number">3.5</span> ✅ Try it yourself</h2>
 <ol type="1">
 <li>(Optional) Give an example of a subset of <span class="math inline">\(\mathbb{Q}\)</span> that is bounded above in <span class="math inline">\(\mathbb{Q}\)</span> but has no least upper bound in <span class="math inline">\(\mathbb{Q}\)</span>.</li>
 </ol>
 <hr>
 </section>
-<section id="proofs" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="proofs"><span class="header-section-number">3.5</span> Proofs</h2>
+<section id="proofs" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="proofs"><span class="header-section-number">3.6</span> Proofs</h2>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “Dear Lila, it is not enough that we make statements about numbers. We need to <strong>prove</strong> them too!”</p>
 <p><strong>Lila</strong>:<br>
@@ -345,7 +362,65 @@ Let <span class="math inline">\(S\)</span> be a nonempty subset of <span class="
 “So every time we state something in real analysis — like that every bounded set has a supremum — we must also prove it?”</p>
 <p><strong>Acharya Bhaskara</strong>:<br>
 “Indeed. That completeness axiom we discussed is itself an assumption. But once accepted, we must prove all consequences from it rigorously. That is the art of analysis: building a tower of truth, brick by brick, proof by proof.”</p>
-<p>“In order to prove some results we will first write some equivalent statements that can be used interchangeably”.</p>
+<hr>
+</section>
+<section id="example-proof-supremum-of-01" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="example-proof-supremum-of-01"><span class="header-section-number">3.7</span> Example Proof: Supremum of <span class="math inline">\([0,1]\)</span></h2>
+<p><strong>Lila</strong>:<br>
+“Acharya, can we try a real proof? For example, what is the supremum of <span class="math inline">\(S = [0,1]\)</span>?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Excellent idea. Let us prove that <span class="math inline">\(\sup S = 1\)</span>.”</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Proof.</strong><br>
+1. <em>Upper bound:</em> For every <span class="math inline">\(x \in [0,1]\)</span>, clearly <span class="math inline">\(x \le 1\)</span>. So <span class="math inline">\(1\)</span> is an upper bound.<br>
+2. <em>Leastness:</em> Suppose <span class="math inline">\(M &lt; 1\)</span>. Then choose <span class="math inline">\(x = \tfrac{M+1}{2}\)</span>. Since <span class="math inline">\(0 \le x \le 1\)</span> and <span class="math inline">\(x &gt; M\)</span>, <span class="math inline">\(M\)</span> is not an upper bound.</p>
+<p>Hence, <span class="math inline">\(\sup [0,1] = 1\)</span>.</p>
+</div>
+<hr>
+</section>
+<section id="worked-example-supremum-and-infimum-of-01" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="worked-example-supremum-and-infimum-of-01"><span class="header-section-number">3.8</span> Worked Example: Supremum and Infimum of <span class="math inline">\((0,1)\)</span></h2>
+<p><strong>Lila</strong>:<br>
+“Acharya, can we apply these definitions right away? Let’s take the open interval <span class="math inline">\(S = (0,1)\)</span>. What are <span class="math inline">\(\sup S\)</span> and <span class="math inline">\(\inf S\)</span>?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Excellent! Let’s prove that <span class="math inline">\(\sup S = 1\)</span> and <span class="math inline">\(\inf S = 0\)</span>.”</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Proof.</strong><br>
+Let <span class="math inline">\(S = (0,1)\)</span>.</p>
+<ol type="1">
+<li><strong>Supremum.</strong>
+<ul>
+<li><em>Upper bound:</em> For every <span class="math inline">\(x \in S\)</span>, we have <span class="math inline">\(x &lt; 1\)</span>, so <span class="math inline">\(1\)</span> is an upper bound.<br>
+</li>
+<li><em>Leastness:</em> Suppose <span class="math inline">\(M &lt; 1\)</span>. Then choose<br>
+<span class="math display">\[
+x = \tfrac{M+1}{2}.
+\]</span> Clearly <span class="math inline">\(0 &lt; x &lt; 1\)</span>, so <span class="math inline">\(x \in S\)</span>, but <span class="math inline">\(x &gt; M\)</span>.<br>
+Thus <span class="math inline">\(M\)</span> is not an upper bound.<br>
+Hence, <span class="math inline">\(\sup S = 1\)</span>.</li>
+</ul></li>
+<li><strong>Infimum.</strong>
+<ul>
+<li><em>Lower bound:</em> For every <span class="math inline">\(x \in S\)</span>, we have <span class="math inline">\(x &gt; 0\)</span>, so <span class="math inline">\(0\)</span> is a lower bound.<br>
+</li>
+<li><em>Greatestness:</em> Suppose <span class="math inline">\(m &gt; 0\)</span>. Then choose<br>
+<span class="math display">\[
+x = \tfrac{m}{2}.
+\]</span> Since <span class="math inline">\(0 &lt; x &lt; m\)</span>, we have <span class="math inline">\(x \in S\)</span> but <span class="math inline">\(x &lt; m\)</span>.<br>
+Thus <span class="math inline">\(m\)</span> is not a lower bound.<br>
+Hence, <span class="math inline">\(\inf S = 0\)</span>.</li>
+</ul></li>
+</ol>
+</div>
+<hr>
+<p><strong>Lila</strong>:<br>
+“So the trick was to show that <span class="math inline">\(1\)</span> works as an upper bound, but anything smaller fails.”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Exactly, Lila. That is the essence of supremum proofs: two steps — upper bound, and leastness. Once you master this structure, many proofs in analysis will follow the same pattern.”</p>
+<p><strong>Lila</strong>:<br>
+“So even though neither <span class="math inline">\(0\)</span> nor <span class="math inline">\(1\)</span> are in the set <span class="math inline">\((0,1)\)</span>, they still serve as its infimum and supremum?”</p>
+<p><strong>Acharya Bhaskara</strong>:<br>
+“Exactly! That’s one of the key ideas in real analysis: bounds need not belong to the set itself. Supremum and infimum live in the real line, not necessarily inside the set.”</p>
 
 
 </section>

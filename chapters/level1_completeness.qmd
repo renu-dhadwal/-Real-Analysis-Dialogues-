@@ -25,7 +25,7 @@ We get closer, but never exactly 2.”
 “No. I’ve seen the proof that $\sqrt{2}$ is irrational.”
 
 **Acharya Bhaskara**:  
-“Correct. But notice this: even if $\sqrt{2}$ is not rational, we can approximate it as closely as we like using rationals — $$1.4, 1.41, 1.414\ldots$$ The rationals are *dense*: between any two rationals there is another. Yet something is still missing.”
+“Correct. But notice this: even if $\sqrt{2}$ is not rational, we can approximate it as closely as we like using rationals — $1.4, 1.41, 1.414\ldots$ The rationals are *dense*: between any two rationals there is another. Yet something is still missing.”
 
 ---
 
@@ -44,12 +44,11 @@ Is there a number that is always greater than every element of this set?”
 “Sure, 2 is bigger than all of them. So is 1.5, or 1.42.”
 
 **Acharya Bhaskara**:  
-Exactly. We call such numbers *upper bounds*. Here is a precise definition.
+“Exactly. We call such numbers *upper bounds*. Here is a precise definition.”
 
 ::: definition{#def:upper-bound}
-
 **Definition (Upper bound).**  
-A number $M$ is an upper bound of a set $S \subseteq \mathbb{R}$ if
+A number $M$ is an **upper bound** of a set $S \subseteq \mathbb{R}$ if
 $$
 x \leq M \quad \text{for all } x \in S.
 $$
@@ -58,19 +57,17 @@ $$
 Similarly, we can define a *lower bound*.
 
 ::: definition{#def:lower-bound}
-
 **Definition (Lower bound).**  
-A number $m$ is an upper bound of a set $S \subseteq \mathbb{R}$ if
+A number $m$ is a **lower bound** of a set $S \subseteq \mathbb{R}$ if
 $$
-x \geq M \quad \text{for all } x \in S.
+x \geq m \quad \text{for all } x \in S.
 $$
 :::
 
 ---
 
-
 **Lila**:  
-“Acharya, you defined what it means for a number to be an upper bound. But what about the set itself? When do we call a set *bounded*?”
+“Acharya, you defined what it means for a number to be an upper or lower bound. But what about the set itself? When do we call a set *bounded*?”
 
 **Acharya Bhaskara**:  
 “A good question, Lila. Here is the precise definition.”
@@ -92,8 +89,8 @@ $$
 
 ::: example
 **Example 1.**  
-The interval [0,1] is bounded above by 1, 2, $\ldots$ and bounded below by 0, -1, $\ldots$.  
-In fact, 0 and 1 are the *tightest* bounds, so the set is bounded.
+The interval $[0,1]$ is bounded above by $1, 2, \ldots$ and bounded below by $0, -1, \ldots$.  
+In fact, $0$ and $1$ are the *tightest* bounds, so the set is bounded.
 :::
 
 ::: example
@@ -116,9 +113,10 @@ Thus, it is **not** bounded.
 Unbounded sets escape that cage, either upward, downward, or both.”
 
 **Acharya Bhaskara**:  
-“But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for our set $
-S = \{ x \in \mathbb{Q} : x^2 < 2 \}.
-$?”
+“But among upper bounds some are tighter than others. Which number feels like the ‘tightest’ upper bound for our set  
+$$
+S = \{ x \in \mathbb{Q} : x^2 < 2 \}?
+$$”
 
 **Lila**:  
 “It should be $\sqrt{2}$, since that’s where the set stops.”
@@ -128,29 +126,30 @@ $?”
 
 ---
 
-### 🔹 Supremum
+## 🔹 Supremum
 
 **Acharya Bhaskara**:  
-“This brings us to another definition:
-
+“This brings us to another definition:”
 
 ::: definition{#def:supremum}
 **Definition (Least Upper Bound / Supremum).**  
-Let $S$ be a nonempty subset of $\mathbb{R}$.
-If $S$ is bounded above then, a number $u$ is said to be a **supremum (least upper bound)** of $S$ if
-1. $s \leq u$ for all $s \in S$, and
-2. for any $\varepsilon > 0$, there exists $s_\varepsilon \in S$ such that $s_\varepsilon > u - \varepsilon$.
+Let $A$ be a nonempty subset of $\mathbb{R}$.  
+If $A$ is bounded above, then a number $M$ is said to be the **supremum** (least upper bound) of $A$ if:
+
+1. $x \le M$ for all $x \in A$, and  
+2. for any $\varepsilon > 0$, there exists $x \in A$ such that $x > M - \varepsilon$.
 :::
 
 ::: definition{#def:infimum}
-**Definition (Greatest Lower Bound / Infinimum).**
-Let $S$ be a nonempty subset of $\mathbb{R}$.
-If $S$ is bounded below then, a number $u$ is said to be a **infinimum (greatest lower bound)** of $S$ if
-1. $s \geq u$ for all $s \in S$, and
-2. for any $\varepsilon > 0$, there exists $s_\varepsilon \in S$ such that $s_\varepsilon < u + \varepsilon$.
+**Definition (Greatest Lower Bound / Infimum).**  
+Let $A$ be a nonempty subset of $\mathbb{R}$.  
+If $A$ is bounded below, then a number $m$ is said to be the **infimum** (greatest lower bound) of $A$ if:
+
+1. $m \le x$ for all $x \in A$, and  
+2. for any $\varepsilon > 0$, there exists $x \in A$ such that $x < m + \varepsilon$.
 :::
 
-
+**Lila**:  
 “So the problem with rationals is that some sets don’t have a supremum inside them?”
 
 **Acharya Bhaskara**:  
@@ -182,6 +181,7 @@ This axiom is what makes the real line whole.”
 1. (Optional) Give an example of a subset of $\mathbb{Q}$ that is bounded above in $\mathbb{Q}$ but has no least upper bound in $\mathbb{Q}$.
 
 ---
+
 ## Proofs
 
 **Acharya Bhaskara**:  
@@ -211,6 +211,69 @@ This axiom is what makes the real line whole.”
 **Acharya Bhaskara**:  
 “Indeed. That completeness axiom we discussed is itself an assumption. But once accepted, we must prove all consequences from it rigorously. That is the art of analysis: building a tower of truth, brick by brick, proof by proof.”
 
-"In order to prove some results we will first write some equivalent statements that can be used interchangeably".
+---
 
+## Example Proof: Supremum of $[0,1]$
 
+**Lila**:  
+“Acharya, can we try a real proof? For example, what is the supremum of $S = [0,1]$?”
+
+**Acharya Bhaskara**:  
+“Excellent idea. Let us prove that $\sup S = 1$.”
+
+::: proof
+**Proof.**  
+1. *Upper bound:* For every $x \in [0,1]$, clearly $x \le 1$. So $1$ is an upper bound.  
+2. *Leastness:* Suppose $M < 1$. Then choose $x = \tfrac{M+1}{2}$. Since $0 \le x \le 1$ and $x > M$, $M$ is not an upper bound.  
+
+Hence, $\sup [0,1] = 1$.
+:::
+
+---
+
+## Worked Example: Supremum and Infimum of $(0,1)$
+
+**Lila**:  
+“Acharya, can we apply these definitions right away? Let’s take the open interval $S = (0,1)$. What are $\sup S$ and $\inf S$?”
+
+**Acharya Bhaskara**:  
+“Excellent! Let’s prove that $\sup S = 1$ and $\inf S = 0$.”
+
+::: proof
+**Proof.**  
+Let $S = (0,1)$.
+
+1. **Supremum.**  
+   - *Upper bound:* For every $x \in S$, we have $x < 1$, so $1$ is an upper bound.  
+   - *Leastness:* Suppose $M < 1$. Then choose  
+     $$
+     x = \tfrac{M+1}{2}.
+     $$
+     Clearly $0 < x < 1$, so $x \in S$, but $x > M$.  
+     Thus $M$ is not an upper bound.  
+   Hence, $\sup S = 1$.
+
+2. **Infimum.**  
+   - *Lower bound:* For every $x \in S$, we have $x > 0$, so $0$ is a lower bound.  
+   - *Greatestness:* Suppose $m > 0$. Then choose  
+     $$
+     x = \tfrac{m}{2}.
+     $$
+     Since $0 < x < m$, we have $x \in S$ but $x < m$.  
+     Thus $m$ is not a lower bound.  
+   Hence, $\inf S = 0$.
+:::
+
+---
+
+**Lila**:  
+“So the trick was to show that $1$ works as an upper bound, but anything smaller fails.”
+
+**Acharya Bhaskara**:  
+“Exactly, Lila. That is the essence of supremum proofs: two steps — upper bound, and leastness. Once you master this structure, many proofs in analysis will follow the same pattern.”
+
+**Lila**:  
+“So even though neither $0$ nor $1$ are in the set $(0,1)$, they still serve as its infimum and supremum?”
+
+**Acharya Bhaskara**:  
+“Exactly! That’s one of the key ideas in real analysis: bounds need not belong to the set itself. Supremum and infimum live in the real line, not necessarily inside the set.”
