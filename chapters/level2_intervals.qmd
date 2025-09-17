@@ -68,6 +68,42 @@ $$
 S = \{x \in \mathbb{Q} : x^2 < 2\}
 $$  
 fails the property, because the real point $\sqrt{2}$ between some rationals is missing.”  
+---
+
+## 🔹 A Subtle Example: Working in $\mathbb{Q}$
+
+**Lila**:  
+“Acharya, what about the set  
+$$
+S = \{x \in \mathbb{Q} : x^2 < 2\}?
+$$  
+Is that an interval?”
+
+**Acharya Bhaskara**:  
+“An excellent question! Let us analyze carefully.”
+
+---
+
+::: rule-box
+**Remark (Intervals in $\mathbb{Q}$ vs $\mathbb{R}$).**
+
+- In $\mathbb{Q}$:  
+  $$
+  S = \{x \in \mathbb{Q} : x^2 < 2\}
+  $$
+  contains all rationals with $x^2 < 2$, e.g. $1.41 \in S$, but excludes any rational $y$ with $y^2 > 2$, such as $1.42$.  
+  Crucially, it also excludes $\sqrt{2}$, because $\sqrt{2} \notin \mathbb{Q}$.  
+  So $S$ “stops” at $\sqrt{2}$ but never includes it. This breaks the interval property inside $\mathbb{Q}$.
+
+- In $\mathbb{R}$:  
+  The same description becomes  
+  $$
+  \{x \in \mathbb{R} : x^2 < 2\} = (-\sqrt{2}, \sqrt{2}),
+  $$  
+  which **is** an interval, because the reals contain the missing boundary points.
+
+👉 This shows the difference between **density** (rationals are everywhere between rationals) and **completeness** (the reals include all limit points, like $\sqrt{2}$).
+:::
 
 ---
 
