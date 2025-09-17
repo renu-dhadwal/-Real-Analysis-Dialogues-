@@ -3,7 +3,6 @@ title: "Level 1: Completeness of the Real Numbers"
 format: html
 ---
 
-# 🌊 Level 1: Completeness of the Real Numbers
 
 **Lila**:  
 “Acharya, we already have natural numbers, integers, rationals. Why do we need *real* numbers? Aren’t rationals enough?”
