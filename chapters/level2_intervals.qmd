@@ -62,13 +62,6 @@ So $S$ fails the characterization property and is not an interval.
 **Lila**:  
 “So the theorem says: intervals are exactly those sets that never leave out the points in between.”  
 
-**Acharya Bhaskara**:  
-“Exactly, Lila. And notice — this depends on working inside the real numbers. In the rationals, for example, the set  
-$$
-S = \{x \in \mathbb{Q} : x^2 < 2\}
-$$  
-fails the property, because the real point $\sqrt{2}$ between some rationals is missing.”  
----
 
 ## 🔹 A Subtle Example: Working in $\mathbb{Q}$
 
