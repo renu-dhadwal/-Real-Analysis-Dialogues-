@@ -84,9 +84,7 @@ Is that an interval?”
   $$
   S = \{x \in \mathbb{Q} : x^2 < 2\}
   $$
-  contains all rationals with $x^2 < 2$, e.g. $1.41 \in S$, but excludes any rational $y$ with $y^2 > 2$, such as $1.42$.  
-  Crucially, it also excludes $\sqrt{2}$, because $\sqrt{2} \notin \mathbb{Q}$.  
-  So $S$ “stops” at $\sqrt{2}$ but never includes it. This breaks the interval property inside $\mathbb{Q}$.
+  contains all rationals with $x^2 < 2$, e.g. $1.41 \in S$,but since $\sqrt{2}$, which is the least upper bound of this set is an irrational number, this set cannot be expressed as an interval using only rational numbers.
 
 - In $\mathbb{R}$:  
   The same description becomes  
