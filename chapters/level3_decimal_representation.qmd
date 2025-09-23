@@ -126,26 +126,29 @@ $$
 
 ---
 
-### Example
+### Example: $x = \tfrac{2}{7}$
 
-**Lila:** Could we try $x=\tfrac{457}{1000}$?  
+**Lila:** Can we try an example, say $x=\tfrac{2}{7}$?  
 
-**Acharya Bhaskar:** Certainly.  
+**Acharya Bhaskar:** Certainly. Let’s locate it step by step.  
 
-- First step: $x \in [0.4,0.5]$, so $d_1=4$.  
-- Second step: within that interval, $x \in [0.45,0.46]$, so $d_2=5$.  
-- Third step: then $x \in [0.457,0.458]$, so $d_3=7$.  
+- First step: $2/7 \approx 0.2857$. It lies in the third subinterval $[2/10,3/10]$, so $d_1=2$.  
+- Second step: within $[2/10,3/10]$, divide into tenths: $[28/100,29/100]$ contains $2/7$, so $d_2=8$.  
+- Third step: now inside $[28/100,29/100]$, we find $2/7$ in $[285/1000,286/1000]$, so $d_3=5$.  
+- Fourth step: inside $[285/1000,286/1000]$, we find $2/7$ in $[2857/10000,2858/10000]$, so $d_4=7$.  
 
-Thus,
+Continuing this way, we uncover the repeating decimal expansion:
 $$
-x = 0.457.
+\frac{2}{7} = 0.285714285714\ldots
 $$
+
+**Lila:** That’s neat! The digits appear directly from locating $x$ in finer and finer tenths.
 
 ---
 
 ### A subtlety: non-uniqueness
 
-**Lila:** Acharya, are decimal representations always unique?
+**Lila:** Are decimal representations always unique?
 
 **Acharya Bhaskar:** A very sharp question, Lila. In fact, they are *not always unique*. For example,
 $$
