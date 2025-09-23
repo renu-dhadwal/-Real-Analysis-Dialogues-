@@ -173,11 +173,12 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#step-4-example" id="toc-step-4-example" class="nav-link active" data-scroll-target="#step-4-example"><span class="header-section-number">4.1</span> Step 4: Example</a></li>
-  <li><a href="#decimal-representation-via-01" id="toc-decimal-representation-via-01" class="nav-link" data-scroll-target="#decimal-representation-via-01"><span class="header-section-number">4.2</span> Decimal Representation via [0,1]</a>
+  <li><a href="#binary-representation" id="toc-binary-representation" class="nav-link active" data-scroll-target="#binary-representation"><span class="header-section-number">4.1</span> Binary representation</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">4.2</span> Example</a></li>
+  <li><a href="#decimal-representation-via-01" id="toc-decimal-representation-via-01" class="nav-link" data-scroll-target="#decimal-representation-via-01"><span class="header-section-number">4.3</span> Decimal Representation via [0,1]</a>
   <ul class="collapse">
-  <li><a href="#example-find-the-decimal-repersentation-of-x-tfrac27" id="toc-example-find-the-decimal-repersentation-of-x-tfrac27" class="nav-link" data-scroll-target="#example-find-the-decimal-repersentation-of-x-tfrac27"><span class="header-section-number">4.2.1</span> Example: Find the decimal repersentation of <span class="math inline">\(x = \tfrac{2}{7}\)</span></a></li>
-  <li><a href="#a-subtlety-non-uniqueness" id="toc-a-subtlety-non-uniqueness" class="nav-link" data-scroll-target="#a-subtlety-non-uniqueness"><span class="header-section-number">4.2.2</span> A subtlety: non-uniqueness</a></li>
+  <li><a href="#example-find-the-decimal-repersentation-of-x-tfrac27" id="toc-example-find-the-decimal-repersentation-of-x-tfrac27" class="nav-link" data-scroll-target="#example-find-the-decimal-repersentation-of-x-tfrac27"><span class="header-section-number">4.3.1</span> Example: Find the decimal repersentation of <span class="math inline">\(x = \tfrac{2}{7}\)</span></a></li>
+  <li><a href="#a-subtlety-non-uniqueness" id="toc-a-subtlety-non-uniqueness" class="nav-link" data-scroll-target="#a-subtlety-non-uniqueness"><span class="header-section-number">4.3.2</span> A subtlety: non-uniqueness</a></li>
   </ul></li>
   <li><a href="#cantors-diagonal-argument-uncountability-of-01" id="toc-cantors-diagonal-argument-uncountability-of-01" class="nav-link" data-scroll-target="#cantors-diagonal-argument-uncountability-of-01"><span class="header-section-number">5</span> Cantor’s Diagonal Argument — Uncountability of <span class="math inline">\([0,1]\)</span></a>
   <ul class="collapse">
@@ -216,7 +217,8 @@ window.Quarto = {
 <p><strong>Acharya Bhaskar:</strong> A very good question, Lila! To understand decimal representations properly, it is helpful to first look at the binary representation of numbers.</p>
 <p><strong>Lila:</strong> Ah! I know that computers use binary numbers to represent data. But I’m curious—how can real numbers be expressed in binary? And does this have any connection with the Nested Interval Property?</p>
 <p><strong>Acharya Bhaskar:</strong> Excellent thought, Lila. Indeed, binary representation arises quite naturally if we repeatedly bisect the interval <span class="math inline">\([0,1]\)</span>. Let’s explore how this works.</p>
-<p>##Binary representation</p>
+<section id="binary-representation" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="binary-representation"><span class="header-section-number">4.1</span> Binary representation</h2>
 <p><strong>Step 1:</strong> First division Take any real number <span class="math inline">\(x \in [0,1]\)</span>. Divide <span class="math inline">\([0,1]\)</span> into two halves: <span class="math display">\[
 [0,\tfrac{1}{2}] \quad \text{and} \quad [\tfrac{1}{2}, 1].
 \]</span></p>
@@ -248,8 +250,9 @@ x = \sum_{n=1}^{\infty} \frac{a_n}{2^n}.
 <p><strong>Lila:</strong> Ah, so each digit corresponds to a left-or-right choice in successive subdivisions of <span class="math inline">\([0,1]\)</span>. That’s just like building a nested sequence of intervals!</p>
 <p><strong>Acharya Bhaskar:</strong> Well observed. In fact, the intersection of these nested intervals is exactly the single point <span class="math inline">\(x\)</span>. The binary expansion records the entire path of choices.</p>
 <hr>
-<section id="step-4-example" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="step-4-example"><span class="header-section-number">4.1</span> Step 4: Example</h2>
+</section>
+<section id="example" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="example"><span class="header-section-number">4.2</span> Example</h2>
 <p>Take <span class="math inline">\(x=\tfrac{5}{8}\)</span>.<br>
 - First step: <span class="math inline">\(x\in [\tfrac{1}{2},1]\)</span>, so <span class="math inline">\(a_1=1\)</span>.<br>
 - Second step: <span class="math inline">\(x\in [\tfrac{1}{2},\tfrac{3}{4}]\)</span>, so <span class="math inline">\(a_2=0\)</span>.<br>
@@ -262,8 +265,8 @@ x = 0.101_2 = \tfrac{1}{2} + 0 + \tfrac{1}{8} = \tfrac{5}{8}.
 <p><strong>Acharya Bhaskar:</strong> Exactly, and this construction shows how every <span class="math inline">\(x \in [0,1]\)</span> can be encoded as an infinite binary string. It connects the geometry of intervals with the arithmetic of expansions.</p>
 <hr>
 </section>
-<section id="decimal-representation-via-01" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="decimal-representation-via-01"><span class="header-section-number">4.2</span> Decimal Representation via [0,1]</h2>
+<section id="decimal-representation-via-01" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="decimal-representation-via-01"><span class="header-section-number">4.3</span> Decimal Representation via [0,1]</h2>
 <p><strong>Lila:</strong> Acharya, now that I understand binary representation, what about <em>decimal</em> representation of real numbers? How do we obtain that?</p>
 <p><strong>Acharya Bhaskar:</strong> Very good question, Lila. The idea is very similar to binary, except instead of dividing into two parts, we divide the interval <span class="math inline">\([0,1]\)</span> into ten equal parts.</p>
 <hr>
@@ -295,8 +298,8 @@ x = 0.d_1d_2d_3\ldots \quad \text{(in base 10)}.
 x = \sum_{n=1}^{\infty} \frac{d_n}{10^n}.
 \]</span></p>
 <hr>
-<section id="example-find-the-decimal-repersentation-of-x-tfrac27" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="example-find-the-decimal-repersentation-of-x-tfrac27"><span class="header-section-number">4.2.1</span> Example: Find the decimal repersentation of <span class="math inline">\(x = \tfrac{2}{7}\)</span></h3>
+<section id="example-find-the-decimal-repersentation-of-x-tfrac27" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="example-find-the-decimal-repersentation-of-x-tfrac27"><span class="header-section-number">4.3.1</span> Example: Find the decimal repersentation of <span class="math inline">\(x = \tfrac{2}{7}\)</span></h3>
 <ul>
 <li>First step: <span class="math inline">\(2/7\)</span> lies in the third subinterval <span class="math inline">\([2/10,3/10]\)</span>, so <span class="math inline">\(d_1=2\)</span>.<br>
 </li>
@@ -312,8 +315,8 @@ x = \sum_{n=1}^{\infty} \frac{d_n}{10^n}.
 <p><strong>Lila:</strong> That’s neat! The digits appear directly from locating <span class="math inline">\(x\)</span> in finer and finer tenths.</p>
 <hr>
 </section>
-<section id="a-subtlety-non-uniqueness" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="a-subtlety-non-uniqueness"><span class="header-section-number">4.2.2</span> A subtlety: non-uniqueness</h3>
+<section id="a-subtlety-non-uniqueness" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="a-subtlety-non-uniqueness"><span class="header-section-number">4.3.2</span> A subtlety: non-uniqueness</h3>
 <p><strong>Lila:</strong> Are decimal representations always unique?</p>
 <p><strong>Acharya Bhaskar:</strong> A very sharp question, Lila. In fact, they are <em>not always unique</em>. For example, <span class="math display">\[
 0.5000\ldots = 0.4999\ldots

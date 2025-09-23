@@ -8,7 +8,7 @@
 
 **Acharya Bhaskar:** Excellent thought, Lila. Indeed, binary representation arises quite naturally if we repeatedly bisect the interval $[0,1]$. Let’s explore how this works.
 
-##Binary representation
+## Binary representation
 
 **Step 1:** First division
 Take any real number $x \in [0,1]$. Divide $[0,1]$ into two halves:
@@ -58,7 +58,7 @@ $$
 
 ---
 
-## Step 4: Example
+## Example
 Take $x=\tfrac{5}{8}$.  
 - First step: $x\in [\tfrac{1}{2},1]$, so $a_1=1$.  
 - Second step: $x\in [\tfrac{1}{2},\tfrac{3}{4}]$, so $a_2=0$.  
