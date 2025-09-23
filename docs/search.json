@@ -224,17 +224,7 @@
     "href": "chapters/level3_decimal_representation.html#why-this-is-a-contradiction",
     "title": "4  Level 3: Binary and Decimal Representation via [0,1]",
     "section": "5.4 Why this is a contradiction",
-    "text": "5.4 Why this is a contradiction\nLila: How do we know \\(y\\) is not on the list?\nAcharya Bhaskar: For each \\(n\\), the \\(n\\)-th digit of \\(y\\) equals \\(y_n\\), which by construction differs from \\(d_{nn}\\), the \\(n\\)-th digit of \\(x_n\\). Therefore \\(y\\neq x_n\\) for every \\(n\\). In other words, \\(y\\) is a point of \\([0,1]\\) not appearing in the supposed complete list. This contradicts the assumption that \\([0,1]\\) was countable.\nHence \\([0,1]\\), and therefore \\(\\mathbb{R}\\), is uncountable. ∎",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Level 3: Binary and Decimal Representation via [0,1]</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/level3_decimal_representation.html#short-remarks",
-    "href": "chapters/level3_decimal_representation.html#short-remarks",
-    "title": "4  Level 3: Binary and Decimal Representation via [0,1]",
-    "section": "5.5 Short remarks",
-    "text": "5.5 Short remarks\n\nAvoiding the infinite-\\(9\\) expansions was necessary so that each listed number had a unique expansion; our choice of the terminating expansion makes the diagonal flip unambiguous.\n\nThe same argument works with any base \\(b\\ge2\\); in base \\(b\\) choose a digit different from the diagonal one (for example add \\(1\\) modulo \\(b\\)) to guarantee the new number differs on every diagonal position.",
+    "text": "5.4 Why this is a contradiction\nLila: How do we know \\(y\\) is not on the list?\nAcharya Bhaskar: For each \\(n\\), the \\(n\\)-th digit of \\(y\\) equals \\(y_n\\), which by construction differs from \\(d_{nn}\\), the \\(n\\)-th digit of \\(x_n\\). Therefore \\(y\\neq x_n\\) for every \\(n\\). In other words, \\(y\\) is a point of \\([0,1]\\) not appearing in the supposed complete list. This contradicts the assumption that \\([0,1]\\) was countable.\nHence \\([0,1]\\), and therefore \\(\\mathbb{R}\\), is uncountable. ∎\n\n&lt;– ## Short remarks\n\nAvoiding the infinite-\\(9\\) expansions was necessary so that each listed number had a unique expansion; our choice of the terminating expansion makes the diagonal flip unambiguous.\n\nThe same argument works with any base \\(b\\ge2\\); in base \\(b\\) choose a digit different from the diagonal one (for example add \\(1\\) modulo \\(b\\)) to guarantee the new number differs on every diagonal position. –&gt;",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Level 3: Binary and Decimal Representation via [0,1]</span>"
     ]
