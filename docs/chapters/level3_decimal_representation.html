@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Level 3: Binary Representation via [0,1] – Dialogues in Real Analysis</title>
+<title>4&nbsp; Level 3: Binary and Decimal Representation via [0,1] – Dialogues in Real Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/level3_decimal_representation.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary Representation via [0,1]</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/level3_decimal_representation.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary and Decimal Representation via [0,1]</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -160,7 +160,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/level3_decimal_representation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary Representation via [0,1]</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary and Decimal Representation via [0,1]</span></span></a>
   </div>
 </li>
     </ul>
@@ -174,9 +174,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#step-1-first-division" id="toc-step-1-first-division" class="nav-link active" data-scroll-target="#step-1-first-division"><span class="header-section-number">4.1</span> Step 1: First division</a></li>
-  <li><a href="#step-2-second-division" id="toc-step-2-second-division" class="nav-link" data-scroll-target="#step-2-second-division"><span class="header-section-number">4.2</span> Step 2: Second division</a></li>
-  <li><a href="#step-3-infinite-process" id="toc-step-3-infinite-process" class="nav-link" data-scroll-target="#step-3-infinite-process"><span class="header-section-number">4.3</span> Step 3: Infinite process</a></li>
-  <li><a href="#step-4-example" id="toc-step-4-example" class="nav-link" data-scroll-target="#step-4-example"><span class="header-section-number">4.4</span> Step 4: Example</a></li>
+  <li><a href="#step-4-example" id="toc-step-4-example" class="nav-link" data-scroll-target="#step-4-example"><span class="header-section-number">4.2</span> Step 4: Example</a></li>
   </ul>
 </nav>
     </div>
@@ -185,7 +183,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary Representation via [0,1]</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary and Decimal Representation via [0,1]</span></h1>
 </div>
 
 
@@ -217,10 +215,7 @@ window.Quarto = {
 </ul>
 <p>So the first binary digit <span class="math inline">\(a_1\)</span> tells us whether <span class="math inline">\(x\)</span> lies in the left or right half.</p>
 <hr>
-</section>
-<section id="step-2-second-division" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="step-2-second-division"><span class="header-section-number">4.2</span> Step 2: Second division</h2>
-<p>Now, take the half chosen in Step 1 and bisect it again.</p>
+<p><strong>Step 2: Second division</strong> Now, take the half chosen in Step 1 and bisect it again.</p>
 <ul>
 <li>If <span class="math inline">\(a_1=0\)</span>, then we split <span class="math inline">\([0,\tfrac{1}{2}]\)</span> into <span class="math inline">\([0,\tfrac{1}{4}]\)</span> and <span class="math inline">\([\tfrac{1}{4},\tfrac{1}{2}]\)</span>.<br>
 </li>
@@ -231,10 +226,7 @@ window.Quarto = {
 <p><strong>Lila:</strong> So <span class="math inline">\(a_2\)</span> refines the position of <span class="math inline">\(x\)</span> within the chosen half?</p>
 <p><strong>Acharya Bhaskar:</strong> Exactly. Continuing this process, at the <span class="math inline">\(n\)</span>-th step we decide whether <span class="math inline">\(x\)</span> lies in the left or right subinterval, and record the digit <span class="math inline">\(a_n\)</span>.</p>
 <hr>
-</section>
-<section id="step-3-infinite-process" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="step-3-infinite-process"><span class="header-section-number">4.3</span> Step 3: Infinite process</h2>
-<p>Thus we build a sequence of digits <span class="math inline">\(a_1,a_2,a_3,\dots\)</span> where each <span class="math inline">\(a_i \in \{0,1\}\)</span>. These digits define the binary expansion: <span class="math display">\[
+<p>Step 3: Infinite process** Thus we build a sequence of digits <span class="math inline">\(a_1,a_2,a_3,\dots\)</span> where each <span class="math inline">\(a_i \in \{0,1\}\)</span>. These digits define the binary expansion: <span class="math display">\[
 x = 0.a_1a_2a_3\ldots \quad \text{(in base 2)}.
 \]</span></p>
 <p>Formally, <span class="math display">\[
@@ -245,8 +237,8 @@ x = \sum_{n=1}^{\infty} \frac{a_n}{2^n}.
 <p><strong>Acharya Bhaskar:</strong> Well observed. In fact, the intersection of these nested intervals is exactly the single point <span class="math inline">\(x\)</span>. The binary expansion records the entire path of choices.</p>
 <hr>
 </section>
-<section id="step-4-example" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="step-4-example"><span class="header-section-number">4.4</span> Step 4: Example</h2>
+<section id="step-4-example" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="step-4-example"><span class="header-section-number">4.2</span> Step 4: Example</h2>
 <p>Take <span class="math inline">\(x=\tfrac{5}{8}\)</span>.<br>
 - First step: <span class="math inline">\(x\in [\tfrac{1}{2},1]\)</span>, so <span class="math inline">\(a_1=1\)</span>.<br>
 - Second step: <span class="math inline">\(x\in [\tfrac{1}{2},\tfrac{3}{4}]\)</span>, so <span class="math inline">\(a_2=0\)</span>.<br>
