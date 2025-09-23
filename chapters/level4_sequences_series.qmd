@@ -47,7 +47,7 @@ $$
 
 **Lila:** Why are these so important?
 
-**Acharya Bhaskar:** Because they are the language of approximation and analysis:
+**Acharya Bhaskar:** Because they are the language of approximation and analysis: 
 1. Important numbers like $e$ and $\pi$ appear as limits of sequences or sums of series.  
 2. Functions like $\sin x$, $\cos x$, and $e^x$ can be expressed as infinite series — that’s how we calculate them on computers!  
 3. Understanding limits of sequences helps us define continuity, derivatives, and integrals.  
@@ -93,7 +93,7 @@ $$
 
 ---
 
-### Example: $a_n = \tfrac{1}{n}$
+**Example:** $a_n = \tfrac{1}{n}$
 
 **Lila:** Could we test this definition with $a_n = \tfrac{1}{n}$ and $L=0$?
 
@@ -109,7 +109,7 @@ So if we choose $K(\varepsilon) = \lceil \tfrac{1}{\varepsilon}\rceil$, then for
 
 ---
 
-### Example: $a_n = (-1)^n$
+**Example:** $a_n = (-1)^n$
 
 **Lila:** And what about $a_n = (-1)^n$?
 
@@ -127,7 +127,7 @@ So if we choose $K(\varepsilon) = \lceil \tfrac{1}{\varepsilon}\rceil$, then for
 
 **Acharya Bhaskar:** Because the notion of **limit** is the cornerstone of analysis. Continuity, derivatives, integrals, and infinite series all depend on it. Mastering limits of sequences is the first step toward the deeper structures of calculus.  
 
-## Limit of a function via sequences
+**Limit of a function via sequences**
 
 ::: {.callout-note collapse="true"}
 ## Connecting sequence limits and function limits

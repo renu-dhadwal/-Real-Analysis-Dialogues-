@@ -185,11 +185,8 @@ window.Quarto = {
   <li><a href="#why-study-sequences-and-series" id="toc-why-study-sequences-and-series" class="nav-link" data-scroll-target="#why-study-sequences-and-series"><span class="header-section-number">5.4</span> Why study sequences and series?</a>
   <ul class="collapse">
   <li><a href="#the-formal-definition" id="toc-the-formal-definition" class="nav-link" data-scroll-target="#the-formal-definition"><span class="header-section-number">5.4.1</span> The formal definition</a></li>
-  <li><a href="#example-a_n-tfrac1n" id="toc-example-a_n-tfrac1n" class="nav-link" data-scroll-target="#example-a_n-tfrac1n"><span class="header-section-number">5.4.2</span> Example: <span class="math inline">\(a_n = \tfrac{1}{n}\)</span></a></li>
-  <li><a href="#example-a_n--1n" id="toc-example-a_n--1n" class="nav-link" data-scroll-target="#example-a_n--1n"><span class="header-section-number">5.4.3</span> Example: <span class="math inline">\(a_n = (-1)^n\)</span></a></li>
-  <li><a href="#why-limits-matter" id="toc-why-limits-matter" class="nav-link" data-scroll-target="#why-limits-matter"><span class="header-section-number">5.4.4</span> Why limits matter</a></li>
+  <li><a href="#why-limits-matter" id="toc-why-limits-matter" class="nav-link" data-scroll-target="#why-limits-matter"><span class="header-section-number">5.4.2</span> Why limits matter</a></li>
   </ul></li>
-  <li><a href="#limit-of-a-function-via-sequences" id="toc-limit-of-a-function-via-sequences" class="nav-link" data-scroll-target="#limit-of-a-function-via-sequences"><span class="header-section-number">5.5</span> Limit of a function via sequences</a></li>
   </ul>
 </nav>
     </div>
@@ -274,9 +271,7 @@ And when you add the footsteps together, you create the story of a series.”<br
 <p><strong>Lila:</strong> Let me see if I understand. This means: no matter how small an error margin <span class="math inline">\(\varepsilon\)</span> I choose, if I go far enough in the sequence (beyond some <span class="math inline">\(K\)</span> that depends on the given <span class="math inline">\(\varepsilon\)</span>), all terms stay within that margin around <span class="math inline">\(L\)</span>.</p>
 <p><strong>Acharya Bhaskar:</strong> Well said. That is the precise meaning of convergence.</p>
 <hr>
-</section>
-<section id="example-a_n-tfrac1n" class="level3" data-number="5.4.2">
-<h3 data-number="5.4.2" class="anchored" data-anchor-id="example-a_n-tfrac1n"><span class="header-section-number">5.4.2</span> Example: <span class="math inline">\(a_n = \tfrac{1}{n}\)</span></h3>
+<p><strong>Example:</strong> <span class="math inline">\(a_n = \tfrac{1}{n}\)</span></p>
 <p><strong>Lila:</strong> Could we test this definition with <span class="math inline">\(a_n = \tfrac{1}{n}\)</span> and <span class="math inline">\(L=0\)</span>?</p>
 <p><strong>Acharya Bhaskar:</strong> Certainly.<br>
 We want: for every <span class="math inline">\(\varepsilon&gt;0\)</span>, find <span class="math inline">\(K(\varepsilon)\)</span> such that if <span class="math inline">\(n\ge K(\varepsilon)\)</span>, then <span class="math inline">\(|\tfrac{1}{n} - 0| &lt; \varepsilon\)</span>.<br>
@@ -286,23 +281,18 @@ So we require <span class="math inline">\(\tfrac{1}{n} &lt; \varepsilon\)</span>
 So if we choose <span class="math inline">\(K(\varepsilon) = \lceil \tfrac{1}{\varepsilon}\rceil\)</span>, then for all <span class="math inline">\(n\ge K(\varepsilon)\)</span>, the condition is satisfied.</p>
 <p><strong>Lila:</strong> That works! So the formal definition confirms that <span class="math inline">\(\tfrac{1}{n} \to 0\)</span>.</p>
 <hr>
-</section>
-<section id="example-a_n--1n" class="level3" data-number="5.4.3">
-<h3 data-number="5.4.3" class="anchored" data-anchor-id="example-a_n--1n"><span class="header-section-number">5.4.3</span> Example: <span class="math inline">\(a_n = (-1)^n\)</span></h3>
+<p><strong>Example:</strong> <span class="math inline">\(a_n = (-1)^n\)</span></p>
 <p><strong>Lila:</strong> And what about <span class="math inline">\(a_n = (-1)^n\)</span>?</p>
 <p><strong>Acharya Bhaskar:</strong> Then the terms alternate <span class="math inline">\(-1, 1, -1, 1, \dots\)</span>. Do they get closer to a single value?</p>
 <p><strong>Lila:</strong> No — they keep jumping back and forth. So this sequence does <strong>not</strong> converge.</p>
 <p><strong>Acharya Bhaskar:</strong> Correct. It diverges, because there is no single <span class="math inline">\(L\)</span> that the terms approach.</p>
 <hr>
 </section>
-<section id="why-limits-matter" class="level3" data-number="5.4.4">
-<h3 data-number="5.4.4" class="anchored" data-anchor-id="why-limits-matter"><span class="header-section-number">5.4.4</span> Why limits matter</h3>
+<section id="why-limits-matter" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="why-limits-matter"><span class="header-section-number">5.4.2</span> Why limits matter</h3>
 <p><strong>Lila:</strong> So convergence is about sequences approaching a fixed target. But why is this so important?</p>
 <p><strong>Acharya Bhaskar:</strong> Because the notion of <strong>limit</strong> is the cornerstone of analysis. Continuity, derivatives, integrals, and infinite series all depend on it. Mastering limits of sequences is the first step toward the deeper structures of calculus.</p>
-</section>
-</section>
-<section id="limit-of-a-function-via-sequences" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="limit-of-a-function-via-sequences"><span class="header-section-number">5.5</span> Limit of a function via sequences</h2>
+<p><strong>Limit of a function via sequences</strong></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -332,6 +322,7 @@ So if we choose <span class="math inline">\(K(\varepsilon) = \lceil \tfrac{1}{\v
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
