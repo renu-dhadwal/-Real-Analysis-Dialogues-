@@ -7,4 +7,6 @@ Files included:
 - _quarto.yml
 - index.qmd
 - chapters/level1_completeness.qmd
+- chapters/level2_intervals.qmd
+- chapters/level3_decimal_representation.qmd
 - styles/course.css

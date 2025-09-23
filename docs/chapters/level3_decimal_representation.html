@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Level 2: Intervals and Their Characterization – Dialogues in Real Analysis</title>
+<title>4&nbsp; Level 3: Binary Representation via [0,1] – Dialogues in Real Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/level3_decimal_representation.html" rel="next">
-<link href="../chapters/level1_completeness.html" rel="prev">
+<link href="../chapters/level2_intervals.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -113,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/level2_intervals.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Level 2: Intervals and Their Characterization</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/level3_decimal_representation.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary Representation via [0,1]</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -154,13 +153,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/level2_intervals.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/level2_intervals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Level 2: Intervals and Their Characterization</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/level3_decimal_representation.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/level3_decimal_representation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary Representation via [0,1]</span></span></a>
   </div>
 </li>
@@ -174,17 +173,10 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-are-intervals" id="toc-what-are-intervals" class="nav-link active" data-scroll-target="#what-are-intervals"><span class="header-section-number">3.1</span> 🔹 What Are Intervals?</a>
-  <ul class="collapse">
-  <li><a href="#characterization-theorem" id="toc-characterization-theorem" class="nav-link" data-scroll-target="#characterization-theorem"><span class="header-section-number">3.1.1</span> 🔹 Characterization Theorem</a></li>
-  </ul></li>
-  <li><a href="#a-subtle-example-working-in-mathbbq" id="toc-a-subtle-example-working-in-mathbbq" class="nav-link" data-scroll-target="#a-subtle-example-working-in-mathbbq"><span class="header-section-number">3.2</span> 🔹 A Subtle Example: Working in <span class="math inline">\(\mathbb{Q}\)</span></a>
-  <ul class="collapse">
-  <li><a href="#the-nested-interval-property" id="toc-the-nested-interval-property" class="nav-link" data-scroll-target="#the-nested-interval-property"><span class="header-section-number">3.2.1</span> 🔹 The Nested Interval Property</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">3.2.2</span> 🔹 Example</a></li>
-  <li><a href="#try-it-yourself-1" id="toc-try-it-yourself-1" class="nav-link" data-scroll-target="#try-it-yourself-1"><span class="header-section-number">3.2.3</span> ✅ Try it Yourself</a></li>
-  </ul></li>
-  <li><a href="#uncountability-of-mathbbr" id="toc-uncountability-of-mathbbr" class="nav-link" data-scroll-target="#uncountability-of-mathbbr"><span class="header-section-number">4</span> Uncountability of <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  <li><a href="#step-1-first-division" id="toc-step-1-first-division" class="nav-link active" data-scroll-target="#step-1-first-division"><span class="header-section-number">4.1</span> Step 1: First division</a></li>
+  <li><a href="#step-2-second-division" id="toc-step-2-second-division" class="nav-link" data-scroll-target="#step-2-second-division"><span class="header-section-number">4.2</span> Step 2: Second division</a></li>
+  <li><a href="#step-3-infinite-process" id="toc-step-3-infinite-process" class="nav-link" data-scroll-target="#step-3-infinite-process"><span class="header-section-number">4.3</span> Step 3: Infinite process</a></li>
+  <li><a href="#step-4-example" id="toc-step-4-example" class="nav-link" data-scroll-target="#step-4-example"><span class="header-section-number">4.4</span> Step 4: Example</a></li>
   </ul>
 </nav>
     </div>
@@ -193,7 +185,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Level 2: Intervals and Their Characterization</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary Representation via [0,1]</span></h1>
 </div>
 
 
@@ -210,211 +202,62 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Acharya Bhaskara</strong>:<br>
-“Lila, now that we understand completeness, let us move to another fundamental idea in real analysis — <em>intervals</em>.”</p>
+<p><strong>Lila:</strong> Acharya, how about the decimal representation of real numbers? We still don’t know how we get that!</p>
+<p><strong>Acharya:</strong> That’s a good question Lila! But in order to demonstrate the decinal representation, let us start with the <em>binary representation</em> of numbers. <strong>Lila:</strong> Ah! I have heard that computers use binary numbers to represent data. I am curious how real numbers can be represented using binary numbers. Does it have anything to do with the Nested Intervals Property? <strong>Acharya Bhaskar:</strong> Excellent thought, Lila. Yes, binary representation can be built by repeatedly bisecting the interval <span class="math inline">\([0,1]\)</span>. Let’s explore.</p>
 <hr>
-<section id="what-are-intervals" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="what-are-intervals"><span class="header-section-number">3.1</span> 🔹 What Are Intervals?</h2>
-<p><strong>Acharya Bhaskara</strong>:<br>
-“An <strong>interval</strong> is simply a stretch of the real line without gaps. Formally:</p>
+<section id="step-1-first-division" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="step-1-first-division"><span class="header-section-number">4.1</span> Step 1: First division</h2>
+<p>Take any real number <span class="math inline">\(x \in [0,1]\)</span>. Divide <span class="math inline">\([0,1]\)</span> into two halves: <span class="math display">\[
+[0,\tfrac{1}{2}] \quad \text{and} \quad [\tfrac{1}{2}, 1].
+\]</span></p>
 <ul>
-<li>A set of the form <span class="math inline">\([a,b] = \{x \in \mathbb{R} : a \le x \le b\}\)</span> is a <strong>closed interval</strong>.<br>
+<li>If <span class="math inline">\(x \in [0,\tfrac{1}{2})\)</span>, we set <span class="math inline">\(a_1 = 0\)</span>.<br>
 </li>
-<li><span class="math inline">\((a,b) = \{x \in \mathbb{R} : a &lt; x &lt; b\}\)</span> is an <strong>open interval</strong>.<br>
-</li>
-<li>Similarly, we have half-open intervals <span class="math inline">\((a,b], [a,b)\)</span>.<br>
-</li>
-<li>And we allow intervals to extend infinitely: <span class="math inline">\((-\infty,a), [a,\infty), (-\infty,\infty) = \mathbb{R}\)</span>.</li>
+<li>If <span class="math inline">\(x \in [\tfrac{1}{2},1]\)</span>, we set <span class="math inline">\(a_1 = 1\)</span>.</li>
 </ul>
-<p>All of these are examples of intervals.”</p>
+<p>So the first binary digit <span class="math inline">\(a_1\)</span> tells us whether <span class="math inline">\(x\)</span> lies in the left or right half.</p>
 <hr>
-<p><strong>Lila</strong>:<br>
-“So intervals are just stretches of the real line. Isn’t that obvious?”</p>
-<p><strong>Acharya Bhaskara</strong>:<br>
-“It looks obvious, yes, but let us be precise. What makes these sets <em>intervals</em> and not just any arbitrary subset of <span class="math inline">\(\mathbb{R}\)</span>? The essence is that they have <strong>no gaps</strong>. This brings us to an important theorem.”</p>
-<hr>
-<section id="characterization-theorem" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="characterization-theorem"><span class="header-section-number">3.1.1</span> 🔹 Characterization Theorem</h3>
-<div class="theorem">
-<p><strong>Characterization Theorem of Intervals.</strong><br>
-A nonempty subset <span class="math inline">\(S \subseteq \mathbb{R}\)</span> is an <strong>interval</strong> if and only if it has the following property:</p>
+</section>
+<section id="step-2-second-division" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="step-2-second-division"><span class="header-section-number">4.2</span> Step 2: Second division</h2>
+<p>Now, take the half chosen in Step 1 and bisect it again.</p>
 <ul>
-<li>Whenever <span class="math inline">\(x,y \in S\)</span> with <span class="math inline">\(x &lt; y\)</span>, then every real number <span class="math inline">\(z\)</span> with <span class="math inline">\(x &lt; z &lt; y\)</span> also belongs to <span class="math inline">\(S\)</span>.</li>
-</ul>
-<p>Equivalently, if <span class="math inline">\(x,y \in S\)</span> and <span class="math inline">\(x &lt; y\)</span>, then the entire closed segment <span class="math inline">\([x,y]\)</span> is contained in <span class="math inline">\(S\)</span>.</p>
-</div>
-<hr>
-<section id="examples" class="level4" data-number="3.1.1.1">
-<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="examples"><span class="header-section-number">3.1.1.1</span> 🔹 Examples</h4>
-<div class="example">
-<p><strong>Example 1.</strong><br>
-Take <span class="math inline">\(S = (0,1)\)</span>. If <span class="math inline">\(x,y \in S\)</span> and <span class="math inline">\(x &lt; y\)</span>, then any <span class="math inline">\(z\)</span> with <span class="math inline">\(x &lt; z &lt; y\)</span> also satisfies <span class="math inline">\(0 &lt; z &lt; 1\)</span>, so <span class="math inline">\(z \in S\)</span>.<br>
-Thus <span class="math inline">\((0,1)\)</span> is an interval.</p>
-</div>
-<div class="example">
-<p><strong>Example 2.</strong><br>
-Take <span class="math inline">\(S = (0,1) \cup (2,3)\)</span>. Here <span class="math inline">\(0.5 \in S\)</span> and <span class="math inline">\(2.5 \in S\)</span>, but the point <span class="math inline">\(1.5\)</span> between them is <strong>not</strong> in <span class="math inline">\(S\)</span>.<br>
-So <span class="math inline">\(S\)</span> fails the characterization property and is not an interval.</p>
-</div>
-<hr>
-<p><strong>Lila</strong>:<br>
-“So the theorem says: intervals are exactly those sets that never leave out the points in between.”</p>
-</section>
-</section>
-</section>
-<section id="a-subtle-example-working-in-mathbbq" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="a-subtle-example-working-in-mathbbq"><span class="header-section-number">3.2</span> 🔹 A Subtle Example: Working in <span class="math inline">\(\mathbb{Q}\)</span></h2>
-<p><strong>Lila</strong>:<br>
-“Acharya, what about the set<br>
-<span class="math display">\[
-S = \{x \in \mathbb{Q} : x^2 &lt; 2\}?
-\]</span><br>
-Is that an interval?”</p>
-<p><strong>Acharya Bhaskara</strong>:<br>
-“An excellent question! Let us analyze carefully.”</p>
-<hr>
-<div class="rule-box">
-<p><strong>Remark (Intervals in <span class="math inline">\(\mathbb{Q}\)</span> vs <span class="math inline">\(\mathbb{R}\)</span>).</strong></p>
-<ul>
-<li><p>In <span class="math inline">\(\mathbb{Q}\)</span>:<br>
-<span class="math display">\[
-S = \{x \in \mathbb{Q} : x^2 &lt; 2\}
-\]</span> contains all rationals with <span class="math inline">\(x^2 &lt; 2\)</span>, e.g.&nbsp;<span class="math inline">\(1.41 \in S\)</span>, but excludes any rational <span class="math inline">\(y\)</span> with <span class="math inline">\(y^2 &gt; 2\)</span>, such as <span class="math inline">\(1.42\)</span>.<br>
-Crucially, it also excludes <span class="math inline">\(\sqrt{2}\)</span>, because <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>.<br>
-So <span class="math inline">\(S\)</span> “stops” at <span class="math inline">\(\sqrt{2}\)</span> but never includes it. This breaks the interval property inside <span class="math inline">\(\mathbb{Q}\)</span>.</p></li>
-<li><p>In <span class="math inline">\(\mathbb{R}\)</span>:<br>
-The same description becomes<br>
-<span class="math display">\[
-\{x \in \mathbb{R} : x^2 &lt; 2\} = (-\sqrt{2}, \sqrt{2}),
-\]</span><br>
-which <strong>is</strong> an interval, because the reals contain the missing boundary points.</p></li>
-</ul>
-<p>👉 This shows the difference between <strong>density</strong> (rationals are everywhere between rationals) and <strong>completeness</strong> (the reals include all limit points, like <span class="math inline">\(\sqrt{2}\)</span>).</p>
-</div>
-<hr>
-<section id="try-it-yourself" class="level4" data-number="3.2.0.1">
-<h4 data-number="3.2.0.1" class="anchored" data-anchor-id="try-it-yourself"><span class="header-section-number">3.2.0.1</span> ✅ Try it yourself</h4>
-<div class="exercise-box">
-<p><strong>Exercise.</strong> Decide whether the following sets are intervals:</p>
-<ol type="1">
-<li><span class="math inline">\([0,1)\cup(1,2]\)</span><br>
+<li>If <span class="math inline">\(a_1=0\)</span>, then we split <span class="math inline">\([0,\tfrac{1}{2}]\)</span> into <span class="math inline">\([0,\tfrac{1}{4}]\)</span> and <span class="math inline">\([\tfrac{1}{4},\tfrac{1}{2}]\)</span>.<br>
 </li>
-<li><span class="math inline">\((-\infty,0)\cup(0,\infty)\)</span></li>
-<li><span class="math inline">\(\mathbb{Z}\)</span> (the set of all integers)</li>
-</ol>
+<li>If <span class="math inline">\(a_1=1\)</span>, then we split <span class="math inline">\([\tfrac{1}{2},1]\)</span> into <span class="math inline">\([\tfrac{1}{2},\tfrac{3}{4}]\)</span> and <span class="math inline">\([\tfrac{3}{4},1]\)</span>.</li>
+</ul>
+<p>Depending on which subinterval contains <span class="math inline">\(x\)</span>, we assign <span class="math inline">\(a_2=0\)</span> (left) or <span class="math inline">\(a_2=1\)</span> (right).</p>
 <hr>
-<details>
-<summary>
-<strong>Show Answers</strong>
-</summary>
-<ol type="1">
-<li><p><strong><span class="math inline">\([0,1)\cup(1,2]\)</span></strong> → ❌ Not an interval. The point <span class="math inline">\(1\)</span> is missing, so the set has a gap.</p></li>
-<li><p><strong><span class="math inline">\((-\infty,0)\cup(0,\infty)\)</span></strong> → ❌ Not an interval. <span class="math inline">\(0\)</span> is missing.</p></li>
-<li><p><strong><span class="math inline">\(\mathbb{Z}\)</span></strong> → ❌ Not an interval. There are infinitely many gaps (e.g., between <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> there is no integer).</p></li>
-</ol>
-</details>
-</div>
-</section>
-<section id="the-nested-interval-property" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="the-nested-interval-property"><span class="header-section-number">3.2.1</span> 🔹 The Nested Interval Property</h3>
-<p><strong>Acharya Bhaskara</strong>:<br>
-“Lila, now that you understand what intervals are, let me show you one of their most remarkable features — the <em>Nested Interval Property</em>. It is a direct consequence of completeness.”</p>
-<hr>
-<div class="theorem">
-<p><strong>Nested Interval Property.</strong><br>
-Let <span class="math inline">\((I_n)\)</span> be a sequence of closed intervals <span class="math display">\[
-I_n = [a_n, b_n], \quad n=1,2,3,\ldots
-\]</span> such that</p>
-<ol type="1">
-<li><p>The intervals are nested:<br>
-<span class="math display">\[
-I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots
-\]</span></p></li>
-<li><p>The lengths shrink to <span class="math inline">\(0\)</span>:<br>
-<span class="math display">\[
-\lim_{n \to \infty} (b_n - a_n) = 0.
-\]</span></p></li>
-</ol>
-<p>Then there exists a <strong>unique point</strong> <span class="math inline">\(c \in \mathbb{R}\)</span> such that <span class="math display">\[
-\bigcap_{n=1}^\infty I_n = \{c\}.
-\]</span></p>
-</div>
+<p><strong>Lila:</strong> So <span class="math inline">\(a_2\)</span> refines the position of <span class="math inline">\(x\)</span> within the chosen half?</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. Continuing this process, at the <span class="math inline">\(n\)</span>-th step we decide whether <span class="math inline">\(x\)</span> lies in the left or right subinterval, and record the digit <span class="math inline">\(a_n\)</span>.</p>
 <hr>
 </section>
-<section id="example" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="example"><span class="header-section-number">3.2.2</span> 🔹 Example</h3>
-<div class="example">
-<p><strong>Example.</strong><br>
-Take <span class="math display">\[
-I_n = \left[0, \tfrac{1}{n}\right].
-\]</span> Clearly <span class="math inline">\(I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots\)</span>, and the lengths <span class="math inline">\(b_n - a_n = \tfrac{1}{n} \to 0\)</span>.<br>
-Thus <span class="math display">\[
-\bigcap_{n=1}^\infty I_n = \{0\}.
+<section id="step-3-infinite-process" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="step-3-infinite-process"><span class="header-section-number">4.3</span> Step 3: Infinite process</h2>
+<p>Thus we build a sequence of digits <span class="math inline">\(a_1,a_2,a_3,\dots\)</span> where each <span class="math inline">\(a_i \in \{0,1\}\)</span>. These digits define the binary expansion: <span class="math display">\[
+x = 0.a_1a_2a_3\ldots \quad \text{(in base 2)}.
 \]</span></p>
-</div>
+<p>Formally, <span class="math display">\[
+x = \sum_{n=1}^{\infty} \frac{a_n}{2^n}.
+\]</span></p>
+<hr>
+<p><strong>Lila:</strong> Ah, so each digit corresponds to a left-or-right choice in successive subdivisions of <span class="math inline">\([0,1]\)</span>. That’s just like building a nested sequence of intervals!</p>
+<p><strong>Acharya Bhaskar:</strong> Well observed. In fact, the intersection of these nested intervals is exactly the single point <span class="math inline">\(x\)</span>. The binary expansion records the entire path of choices.</p>
 <hr>
 </section>
-<section id="try-it-yourself-1" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="try-it-yourself-1"><span class="header-section-number">3.2.3</span> ✅ Try it Yourself</h3>
-<div class="exercise-box">
-<p><strong>Exercise.</strong><br>
-Consider the nested intervals <span class="math display">\[
-I_n = \left[1, 1 + \tfrac{1}{n}\right].
+<section id="step-4-example" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="step-4-example"><span class="header-section-number">4.4</span> Step 4: Example</h2>
+<p>Take <span class="math inline">\(x=\tfrac{5}{8}\)</span>.<br>
+- First step: <span class="math inline">\(x\in [\tfrac{1}{2},1]\)</span>, so <span class="math inline">\(a_1=1\)</span>.<br>
+- Second step: <span class="math inline">\(x\in [\tfrac{1}{2},\tfrac{3}{4}]\)</span>, so <span class="math inline">\(a_2=0\)</span>.<br>
+- Third step: <span class="math inline">\(x\in [\tfrac{5}{8},\tfrac{3}{4}]\)</span>, so <span class="math inline">\(a_3=1\)</span>.</p>
+<p>Thus, <span class="math display">\[
+x = 0.101_2 = \tfrac{1}{2} + 0 + \tfrac{1}{8} = \tfrac{5}{8}.
 \]</span></p>
-<ol type="1">
-<li>Are the intervals nested?<br>
-</li>
-<li>What is <span class="math inline">\(\bigcap_{n=1}^\infty I_n\)</span>?</li>
-</ol>
 <hr>
-<details>
-<summary>
-<strong>Show Answers</strong>
-</summary>
-Yes, the intervals are nested since each <span class="math inline">\(I_{n+1} \subseteq I_n\)</span>.<br>
-The lengths <span class="math inline">\(b_n - a_n = \tfrac{1}{n} \to 0\)</span>.<br>
-Hence, <span class="math display">\[
-\bigcap_{n=1}^\infty I_n = \{1\}.
-\]</span>
-</details>
-</div>
-</section>
-</section>
-<section id="uncountability-of-mathbbr" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Uncountability of <span class="math inline">\(\mathbb{R}\)</span></h1>
-<p><strong>Lila:</strong> Acharya, now that we know the Nested Interval Property, can we use it to prove that the real numbers are uncountable?</p>
-<p><strong>Acharya Bhaskar:</strong> Certainly, Lila. We’ll give a clear proof by contradiction.</p>
-<p><strong>Lila:</strong> OK — what do we assume for contradiction?</p>
-<p><strong>Acharya Bhaskar:</strong> Assume <span class="math inline">\(\mathbb{R}\)</span> is countable. Then every real number in the interval <span class="math inline">\([0,1]\)</span> can be listed: <span class="math display">\[
-x_1, x_2, x_3, \dots
-\]</span> (If <span class="math inline">\(\mathbb{R}\)</span> were countable then any nonempty subinterval like <span class="math inline">\([0,1]\)</span> would also be countable, so this is legitimate.)</p>
-<p><strong>Lila:</strong> So we have a sequence that is supposed to contain every real in <span class="math inline">\([0,1]\)</span>.</p>
-<p><strong>Acharya Bhaskar:</strong> Right. Now we construct a nested sequence of closed intervals <span class="math display">\[
-I_1 \supset I_2 \supset I_3 \supset \cdots
-\]</span> with the property that <span class="math inline">\(x_n \notin I_{n+1}\)</span> for each <span class="math inline">\(n\)</span>, and with the lengths <span class="math inline">\(|I_n|\)</span> shrinking to <span class="math inline">\(0\)</span>. Start with <span class="math display">\[
-I_1 := [0,1].
-\]</span></p>
-<p><strong>Lila:</strong> How do we get <span class="math inline">\(I_2\)</span> from <span class="math inline">\(I_1\)</span> so that it avoids <span class="math inline">\(x_1\)</span>?</p>
-<p><strong>Acharya Bhaskar:</strong> Since <span class="math inline">\(x_1\)</span> is a single point in <span class="math inline">\([0,1]\)</span>, we can choose a closed subinterval <span class="math inline">\(I_2 \subset I_1\)</span> that does not contain <span class="math inline">\(x_1\)</span>. For definiteness pick <span class="math inline">\(I_2\)</span> to be one of the two halves of <span class="math inline">\([0,1]\)</span> that does not contain <span class="math inline">\(x_1\)</span> (if <span class="math inline">\(x_1\)</span> is exactly the midpoint, choose a smaller closed subinterval avoiding it). Ensure <span class="math inline">\(|I_2|\le 1/2\)</span>.</p>
-<p><strong>Lila:</strong> And then for <span class="math inline">\(x_2\)</span> we choose <span class="math inline">\(I_3 \subset I_2\)</span> avoiding <span class="math inline">\(x_2\)</span>, and so on?</p>
-<p><strong>Acharya Bhaskar:</strong> Exactly. Inductively: given <span class="math inline">\(I_n\)</span> (a nonempty closed interval), pick a closed subinterval <span class="math inline">\(I_{n+1}\subset I_n\)</span> such that <span class="math inline">\(x_n\notin I_{n+1}\)</span> and <span class="math inline">\(|I_{n+1}|\le 2^{-n}\)</span>. (There is always room to do this because removing the single point <span class="math inline">\(x_n\)</span> from <span class="math inline">\(I_n\)</span> leaves intervals we can choose from; we may take half of <span class="math inline">\(I_n\)</span> away from <span class="math inline">\(x_n\)</span>.)</p>
-<p>So we obtain a nested sequence of nonempty closed intervals whose lengths tend to zero: <span class="math display">\[
-|I_n| \le 2^{-(n-1)} \to 0 \quad (n\to\infty).
-\]</span></p>
-<p><strong>Lila:</strong> Then we use the Nested Interval Property?</p>
-<p><strong>Acharya Bhaskar:</strong> Yes. By NIP, the intersection <span class="math display">\[
-\bigcap_{n=1}^{\infty} I_n
-\]</span> is nonempty. Because the lengths <span class="math inline">\(|I_n|\)</span> go to <span class="math inline">\(0\)</span>, the intersection contains exactly one point. Call that point <span class="math inline">\(\alpha\)</span>.</p>
-<p><strong>Lila:</strong> Now why is <span class="math inline">\(\alpha\)</span> a contradiction?</p>
-<p><strong>Acharya Bhaskar:</strong> Observe: for each <span class="math inline">\(n\)</span> we deliberately ensured <span class="math inline">\(x_n\notin I_{n+1}\)</span>. Since <span class="math inline">\(\alpha\in I_{n+1}\)</span> for every <span class="math inline">\(n\)</span>, we conclude <span class="math inline">\(\alpha\neq x_n\)</span> for every <span class="math inline">\(n\)</span>. Thus <span class="math inline">\(\alpha\)</span> is a point of <span class="math inline">\([0,1]\)</span> that does not appear in the list <span class="math inline">\(x_1,x_2,\dots\)</span>, contradicting the assumption that the list enumerated all reals in <span class="math inline">\([0,1]\)</span>.</p>
-<p>Therefore our assumption that <span class="math inline">\(\mathbb{R}\)</span> (equivalently <span class="math inline">\([0,1]\)</span>) is countable is false. Hence <span class="math inline">\(\mathbb{R}\)</span> is uncountable. ∎</p>
-<details>
-<summary>
-<strong>Remark / small alternative detail</strong>
-</summary>
-One technical way to ensure the construction works cleanly is to define <span class="math inline">\(I_1=[0,1]\)</span>. At step <span class="math inline">\(n\)</span>, given the closed interval <span class="math inline">\(I_n=[a_n,b_n]\)</span>, choose two closed subintervals <span class="math inline">\([a_n,m_n]\)</span> and <span class="math inline">\([m_n,b_n]\)</span> where <span class="math inline">\(m_n=(a_n+b_n)/2\)</span>. At least one of these halves does not contain <span class="math inline">\(x_n\)</span>; take that half to be <span class="math inline">\(I_{n+1}\)</span>. Then <span class="math inline">\(|I_{n+1}|=\tfrac12|I_n|\le 2^{-n}\)</span>, and the lengths go to <span class="math inline">\(0\)</span>. The rest of the proof is unchanged.
-</details>
-<p><strong>Lila:</strong> Uncountability of <span class="math inline">\(\mathbb{R}\)</span> also shows that the set of Irrationals is uncountable, since <span class="math inline">\(\mathbb{R}\)</span> is the union of rationals <span class="math inline">\(Q\)</span> and the set of irrational numbers and <span class="math inline">\(Q\)</span> is countable. Isn’t it? <strong>Acharya:</strong> You are absolutely right Lila! The union of countable sets is countable. Since <span class="math inline">\(\mathbb{R}\)</span> is uncountable, the set of irrationals cannot be countable.</p>
+<p><strong>Lila:</strong> That’s beautiful! Binary digits are nothing but a record of the successive bisections that trap the number.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly, and this construction shows how every <span class="math inline">\(x \in [0,1]\)</span> can be encoded as an infinite binary string. It connects the geometry of intervals with the arithmetic of expansions.</p>
+<hr>
 
 
 </section>
@@ -822,14 +665,11 @@ One technical way to ensure the construction works cleanly is to define <span cl
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/level1_completeness.html" class="pagination-link" aria-label="Level 1: Completeness of the Real Numbers">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Level 1: Completeness of the Real Numbers</span></span>
+      <a href="../chapters/level2_intervals.html" class="pagination-link" aria-label="Level 2: Intervals and Their Characterization">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Level 2: Intervals and Their Characterization</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/level3_decimal_representation.html" class="pagination-link" aria-label="Level 3: Binary Representation via [0,1]">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary Representation via [0,1]</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -1,0 +1,76 @@
+# Level 3: Binary Representation via [0,1]
+
+**Lila:** Acharya, how about the decimal representation of real numbers? We still don't know how we get that!
+
+**Acharya:** That's a good question Lila! But in order to demonstrate the decinal representation, let us start with the *binary representation* of numbers.
+**Lila:** Ah! I have heard that computers use binary numbers to represent data. I am curious how real numbers can be represented using binary numbers. Does it have anything to do with the Nested Intervals Property?
+**Acharya Bhaskar:** Excellent thought, Lila. Yes, binary representation can be built by repeatedly bisecting the interval $[0,1]$. Let’s explore.
+
+---
+
+## Step 1: First division
+Take any real number $x \in [0,1]$. Divide $[0,1]$ into two halves:
+$$
+[0,\tfrac{1}{2}] \quad \text{and} \quad [\tfrac{1}{2}, 1].
+$$
+
+- If $x \in [0,\tfrac{1}{2})$, we set $a_1 = 0$.  
+- If $x \in [\tfrac{1}{2},1]$, we set $a_1 = 1$.
+
+So the first binary digit $a_1$ tells us whether $x$ lies in the left or right half.
+
+---
+
+## Step 2: Second division
+Now, take the half chosen in Step 1 and bisect it again.
+
+- If $a_1=0$, then we split $[0,\tfrac{1}{2}]$ into $[0,\tfrac{1}{4}]$ and $[\tfrac{1}{4},\tfrac{1}{2}]$.  
+- If $a_1=1$, then we split $[\tfrac{1}{2},1]$ into $[\tfrac{1}{2},\tfrac{3}{4}]$ and $[\tfrac{3}{4},1]$.
+
+Depending on which subinterval contains $x$, we assign $a_2=0$ (left) or $a_2=1$ (right).
+
+---
+
+**Lila:** So $a_2$ refines the position of $x$ within the chosen half?
+
+**Acharya Bhaskar:** Exactly. Continuing this process, at the $n$-th step we decide whether $x$ lies in the left or right subinterval, and record the digit $a_n$.
+
+---
+
+## Step 3: Infinite process
+Thus we build a sequence of digits $a_1,a_2,a_3,\dots$ where each $a_i \in \{0,1\}$. These digits define the binary expansion:
+$$
+x = 0.a_1a_2a_3\ldots \quad \text{(in base 2)}.
+$$
+
+Formally,
+$$
+x = \sum_{n=1}^{\infty} \frac{a_n}{2^n}.
+$$
+
+---
+
+**Lila:** Ah, so each digit corresponds to a left-or-right choice in successive subdivisions of $[0,1]$. That’s just like building a nested sequence of intervals!
+
+**Acharya Bhaskar:** Well observed. In fact, the intersection of these nested intervals is exactly the single point $x$. The binary expansion records the entire path of choices.
+
+---
+
+## Step 4: Example
+Take $x=\tfrac{5}{8}$.  
+- First step: $x\in [\tfrac{1}{2},1]$, so $a_1=1$.  
+- Second step: $x\in [\tfrac{1}{2},\tfrac{3}{4}]$, so $a_2=0$.  
+- Third step: $x\in [\tfrac{5}{8},\tfrac{3}{4}]$, so $a_3=1$.  
+
+Thus,
+$$
+x = 0.101_2 = \tfrac{1}{2} + 0 + \tfrac{1}{8} = \tfrac{5}{8}.
+$$
+
+---
+
+**Lila:** That’s beautiful! Binary digits are nothing but a record of the successive bisections that trap the number.
+
+**Acharya Bhaskar:** Exactly, and this construction shows how every $x \in [0,1]$ can be encoded as an infinite binary string. It connects the geometry of intervals with the arithmetic of expansions.
+
+---

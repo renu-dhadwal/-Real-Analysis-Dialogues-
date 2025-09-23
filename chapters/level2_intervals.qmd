@@ -1,8 +1,4 @@
----
-title: "Level 2: Intervals and Their Characterization"
-format: html
----
-
+# Level 2: Intervals and Their Characterization
 **Acharya Bhaskara**:  
 “Lila, now that we understand completeness, let us move to another fundamental idea in real analysis — *intervals*.”  
 
@@ -258,4 +254,7 @@ Therefore our assumption that $\mathbb{R}$ (equivalently $[0,1]$) is countable i
 One technical way to ensure the construction works cleanly is to define $I_1=[0,1]$. At step $n$, given the closed interval $I_n=[a_n,b_n]$, choose two closed subintervals
 $[a_n,m_n]$ and $[m_n,b_n]$ where $m_n=(a_n+b_n)/2$. At least one of these halves does not contain $x_n$; take that half to be $I_{n+1}$. Then $|I_{n+1}|=\tfrac12|I_n|\le 2^{-n}$, and the lengths go to $0$. The rest of the proof is unchanged.
 </details>
+
+**Lila:** Uncountability of $\mathbb{R}$ also shows that the set of Irrationals is uncountable, since $\mathbb{R}$ is the union of rationals $Q$ and the set of irrational numbers and $Q$ is countable. Isn't it?
+**Acharya:** You are absolutely right Lila! The union of countable sets is countable. Since $\mathbb{R}$ is uncountable, the set of irrationals cannot be countable.
 
