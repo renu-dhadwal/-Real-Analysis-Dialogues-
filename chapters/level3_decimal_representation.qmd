@@ -8,9 +8,9 @@
 
 **Acharya Bhaskar:** Excellent thought, Lila. Indeed, binary representation arises quite naturally if we repeatedly bisect the interval $[0,1]$. Let’s explore how this works.
 
-## Binary representation
+##Binary representation
 
-Step 1: First division
+**Step 1:** First division
 Take any real number $x \in [0,1]$. Divide $[0,1]$ into two halves:
 $$
 [0,\tfrac{1}{2}] \quad \text{and} \quad [\tfrac{1}{2}, 1].
@@ -75,4 +75,94 @@ $$
 
 **Acharya Bhaskar:** Exactly, and this construction shows how every $x \in [0,1]$ can be encoded as an infinite binary string. It connects the geometry of intervals with the arithmetic of expansions.
 
+## Decimal Representation via [0,1]
+
+**Lila:** Acharya, now that I understand binary representation, what about *decimal* representation of real numbers? How do we obtain that?
+
+**Acharya Bhaskar:** Very good question, Lila. The idea is very similar to binary, except instead of dividing into two parts, we divide the interval $[0,1]$ into ten equal parts.
+
 ---
+
+**First digit**
+
+**Acharya Bhaskar:** Let $x \in [0,1]$. We divide $[0,1]$ into ten subintervals:
+$$
+\Big[0,\tfrac{1}{10}\Big], \Big[\tfrac{1}{10},\tfrac{2}{10}\Big], \dots, \Big[\tfrac{9}{10},1\Big].
+$$
+
+- If $x$ lies in the first interval, set $d_1=0$.  
+- If $x$ lies in the second interval, set $d_1=1$.  
+- And so on, up to $d_1=9$ if $x \in [\tfrac{9}{10},1]$.  
+
+This $d_1$ is the *first decimal digit* after the point.
+
+**Lila:** So $d_1$ tells us in which tenth of the interval $[0,1]$ the number $x$ lies.
+
+---
+
+**Second digit**
+
+**Acharya Bhaskar:** Exactly. Now, take the subinterval chosen in Step 1 and divide it again into ten equal parts.  
+
+The position of $x$ in this subdivision gives us $d_2$, the second decimal digit.
+
+**Lila:** Just like in binary, but with ten instead of two!
+
+---
+
+**Infinite process**
+
+**Acharya Bhaskar:** Yes. Continuing this process, we construct digits $d_1,d_2,d_3,\dots$ with $d_i \in \{0,1,2,\dots,9\}$.  
+
+These digits define the decimal expansion:
+$$
+x = 0.d_1d_2d_3\ldots \quad \text{(in base 10)}.
+$$
+
+Formally,
+$$
+x = \sum_{n=1}^{\infty} \frac{d_n}{10^n}.
+$$
+
+---
+
+### Example
+
+**Lila:** Could we try $x=\tfrac{457}{1000}$?  
+
+**Acharya Bhaskar:** Certainly.  
+
+- First step: $x \in [0.4,0.5]$, so $d_1=4$.  
+- Second step: within that interval, $x \in [0.45,0.46]$, so $d_2=5$.  
+- Third step: then $x \in [0.457,0.458]$, so $d_3=7$.  
+
+Thus,
+$$
+x = 0.457.
+$$
+
+---
+
+### A subtlety: non-uniqueness
+
+**Lila:** Acharya, are decimal representations always unique?
+
+**Acharya Bhaskar:** A very sharp question, Lila. In fact, they are *not always unique*. For example,
+$$
+0.5000\ldots = 0.4999\ldots
+$$
+represent the same number.  
+
+**Lila:** Oh, I see. So sometimes a terminating decimal has an alternative representation with repeating $9$s.
+
+**Acharya Bhaskar:** Exactly. This happens whenever the decimal expansion ends. You may think of it as the final subinterval having two possible "addresses" — one ending in an infinite string of zeros, and the other in an infinite string of nines.
+
+**Lila:** So aside from this special case, decimal representations are unique?
+
+**Acharya Bhaskar:** Yes, apart from this subtlety, each real number in $[0,1]$ corresponds to exactly one infinite decimal expansion.
+
+---
+
+**Lila:** That clears it up! Decimal representation is really just like binary, except we use partitions into ten instead of two, with a small quirk about repeating $9$s.
+
+**Acharya Bhaskar:** Exactly, Lila. And this connection between *interval subdivisions* and *digit expansions* is a powerful idea in real analysis.

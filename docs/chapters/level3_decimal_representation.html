@@ -173,8 +173,12 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#binary-representation" id="toc-binary-representation" class="nav-link active" data-scroll-target="#binary-representation"><span class="header-section-number">4.1</span> Binary representation</a></li>
-  <li><a href="#step-4-example" id="toc-step-4-example" class="nav-link" data-scroll-target="#step-4-example"><span class="header-section-number">4.2</span> Step 4: Example</a></li>
+  <li><a href="#step-4-example" id="toc-step-4-example" class="nav-link active" data-scroll-target="#step-4-example"><span class="header-section-number">4.1</span> Step 4: Example</a></li>
+  <li><a href="#decimal-representation-via-01" id="toc-decimal-representation-via-01" class="nav-link" data-scroll-target="#decimal-representation-via-01"><span class="header-section-number">4.2</span> Decimal Representation via [0,1]</a>
+  <ul class="collapse">
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">4.2.1</span> Example</a></li>
+  <li><a href="#a-subtlety-non-uniqueness" id="toc-a-subtlety-non-uniqueness" class="nav-link" data-scroll-target="#a-subtlety-non-uniqueness"><span class="header-section-number">4.2.2</span> A subtlety: non-uniqueness</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -204,9 +208,8 @@ window.Quarto = {
 <p><strong>Acharya Bhaskar:</strong> A very good question, Lila! To understand decimal representations properly, it is helpful to first look at the binary representation of numbers.</p>
 <p><strong>Lila:</strong> Ah! I know that computers use binary numbers to represent data. But I’m curious—how can real numbers be expressed in binary? And does this have any connection with the Nested Interval Property?</p>
 <p><strong>Acharya Bhaskar:</strong> Excellent thought, Lila. Indeed, binary representation arises quite naturally if we repeatedly bisect the interval <span class="math inline">\([0,1]\)</span>. Let’s explore how this works.</p>
-<section id="binary-representation" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="binary-representation"><span class="header-section-number">4.1</span> Binary representation</h2>
-<p>Step 1: First division Take any real number <span class="math inline">\(x \in [0,1]\)</span>. Divide <span class="math inline">\([0,1]\)</span> into two halves: <span class="math display">\[
+<p>##Binary representation</p>
+<p><strong>Step 1:</strong> First division Take any real number <span class="math inline">\(x \in [0,1]\)</span>. Divide <span class="math inline">\([0,1]\)</span> into two halves: <span class="math display">\[
 [0,\tfrac{1}{2}] \quad \text{and} \quad [\tfrac{1}{2}, 1].
 \]</span></p>
 <ul>
@@ -237,9 +240,8 @@ x = \sum_{n=1}^{\infty} \frac{a_n}{2^n}.
 <p><strong>Lila:</strong> Ah, so each digit corresponds to a left-or-right choice in successive subdivisions of <span class="math inline">\([0,1]\)</span>. That’s just like building a nested sequence of intervals!</p>
 <p><strong>Acharya Bhaskar:</strong> Well observed. In fact, the intersection of these nested intervals is exactly the single point <span class="math inline">\(x\)</span>. The binary expansion records the entire path of choices.</p>
 <hr>
-</section>
-<section id="step-4-example" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="step-4-example"><span class="header-section-number">4.2</span> Step 4: Example</h2>
+<section id="step-4-example" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="step-4-example"><span class="header-section-number">4.1</span> Step 4: Example</h2>
 <p>Take <span class="math inline">\(x=\tfrac{5}{8}\)</span>.<br>
 - First step: <span class="math inline">\(x\in [\tfrac{1}{2},1]\)</span>, so <span class="math inline">\(a_1=1\)</span>.<br>
 - Second step: <span class="math inline">\(x\in [\tfrac{1}{2},\tfrac{3}{4}]\)</span>, so <span class="math inline">\(a_2=0\)</span>.<br>
@@ -250,9 +252,72 @@ x = 0.101_2 = \tfrac{1}{2} + 0 + \tfrac{1}{8} = \tfrac{5}{8}.
 <hr>
 <p><strong>Lila:</strong> That’s beautiful! Binary digits are nothing but a record of the successive bisections that trap the number.</p>
 <p><strong>Acharya Bhaskar:</strong> Exactly, and this construction shows how every <span class="math inline">\(x \in [0,1]\)</span> can be encoded as an infinite binary string. It connects the geometry of intervals with the arithmetic of expansions.</p>
+</section>
+<section id="decimal-representation-via-01" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="decimal-representation-via-01"><span class="header-section-number">4.2</span> Decimal Representation via [0,1]</h2>
+<p><strong>Lila:</strong> Acharya, now that I understand binary representation, what about <em>decimal</em> representation of real numbers? How do we obtain that?</p>
+<p><strong>Acharya Bhaskar:</strong> Very good question, Lila. The idea is very similar to binary, except instead of dividing into two parts, we divide the interval <span class="math inline">\([0,1]\)</span> into ten equal parts.</p>
 <hr>
+<p><strong>First digit</strong></p>
+<p><strong>Acharya Bhaskar:</strong> Let <span class="math inline">\(x \in [0,1]\)</span>. We divide <span class="math inline">\([0,1]\)</span> into ten subintervals: <span class="math display">\[
+\Big[0,\tfrac{1}{10}\Big], \Big[\tfrac{1}{10},\tfrac{2}{10}\Big], \dots, \Big[\tfrac{9}{10},1\Big].
+\]</span></p>
+<ul>
+<li>If <span class="math inline">\(x\)</span> lies in the first interval, set <span class="math inline">\(d_1=0\)</span>.<br>
+</li>
+<li>If <span class="math inline">\(x\)</span> lies in the second interval, set <span class="math inline">\(d_1=1\)</span>.<br>
+</li>
+<li>And so on, up to <span class="math inline">\(d_1=9\)</span> if <span class="math inline">\(x \in [\tfrac{9}{10},1]\)</span>.</li>
+</ul>
+<p>This <span class="math inline">\(d_1\)</span> is the <em>first decimal digit</em> after the point.</p>
+<p><strong>Lila:</strong> So <span class="math inline">\(d_1\)</span> tells us in which tenth of the interval <span class="math inline">\([0,1]\)</span> the number <span class="math inline">\(x\)</span> lies.</p>
+<hr>
+<p><strong>Second digit</strong></p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. Now, take the subinterval chosen in Step 1 and divide it again into ten equal parts.</p>
+<p>The position of <span class="math inline">\(x\)</span> in this subdivision gives us <span class="math inline">\(d_2\)</span>, the second decimal digit.</p>
+<p><strong>Lila:</strong> Just like in binary, but with ten instead of two!</p>
+<hr>
+<p><strong>Infinite process</strong></p>
+<p><strong>Acharya Bhaskar:</strong> Yes. Continuing this process, we construct digits <span class="math inline">\(d_1,d_2,d_3,\dots\)</span> with <span class="math inline">\(d_i \in \{0,1,2,\dots,9\}\)</span>.</p>
+<p>These digits define the decimal expansion: <span class="math display">\[
+x = 0.d_1d_2d_3\ldots \quad \text{(in base 10)}.
+\]</span></p>
+<p>Formally, <span class="math display">\[
+x = \sum_{n=1}^{\infty} \frac{d_n}{10^n}.
+\]</span></p>
+<hr>
+<section id="example" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="example"><span class="header-section-number">4.2.1</span> Example</h3>
+<p><strong>Lila:</strong> Could we try <span class="math inline">\(x=\tfrac{457}{1000}\)</span>?</p>
+<p><strong>Acharya Bhaskar:</strong> Certainly.</p>
+<ul>
+<li>First step: <span class="math inline">\(x \in [0.4,0.5]\)</span>, so <span class="math inline">\(d_1=4\)</span>.<br>
+</li>
+<li>Second step: within that interval, <span class="math inline">\(x \in [0.45,0.46]\)</span>, so <span class="math inline">\(d_2=5\)</span>.<br>
+</li>
+<li>Third step: then <span class="math inline">\(x \in [0.457,0.458]\)</span>, so <span class="math inline">\(d_3=7\)</span>.</li>
+</ul>
+<p>Thus, <span class="math display">\[
+x = 0.457.
+\]</span></p>
+<hr>
+</section>
+<section id="a-subtlety-non-uniqueness" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="a-subtlety-non-uniqueness"><span class="header-section-number">4.2.2</span> A subtlety: non-uniqueness</h3>
+<p><strong>Lila:</strong> Acharya, are decimal representations always unique?</p>
+<p><strong>Acharya Bhaskar:</strong> A very sharp question, Lila. In fact, they are <em>not always unique</em>. For example, <span class="math display">\[
+0.5000\ldots = 0.4999\ldots
+\]</span> represent the same number.</p>
+<p><strong>Lila:</strong> Oh, I see. So sometimes a terminating decimal has an alternative representation with repeating <span class="math inline">\(9\)</span>s.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. This happens whenever the decimal expansion ends. You may think of it as the final subinterval having two possible “addresses” — one ending in an infinite string of zeros, and the other in an infinite string of nines.</p>
+<p><strong>Lila:</strong> So aside from this special case, decimal representations are unique?</p>
+<p><strong>Acharya Bhaskar:</strong> Yes, apart from this subtlety, each real number in <span class="math inline">\([0,1]\)</span> corresponds to exactly one infinite decimal expansion.</p>
+<hr>
+<p><strong>Lila:</strong> That clears it up! Decimal representation is really just like binary, except we use partitions into ten instead of two, with a small quirk about repeating <span class="math inline">\(9\)</span>s.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly, Lila. And this connection between <em>interval subdivisions</em> and <em>digit expansions</em> is a powerful idea in real analysis.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
