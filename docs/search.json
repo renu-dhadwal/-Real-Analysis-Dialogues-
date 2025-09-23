@@ -228,5 +228,55 @@
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Level 3: Binary and Decimal Representation via [0,1]</span>"
     ]
+  },
+  {
+    "objectID": "chapters/level4_sequences_series.html",
+    "href": "chapters/level4_sequences_series.html",
+    "title": "5  Level 4: Sequences and Series",
+    "section": "",
+    "text": "5.1 Introduction\nLila: Acharya, until now we have been exploring real numbers, their representations, and Cantor’s ideas. But what comes next in our journey?\nAcharya Bhaskar: A natural next step, Lila, is to study not just individual numbers, but patterns of numbers — how they progress, how they accumulate. This leads us to the study of sequences and series.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Level 4: Sequences and Series</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level4_sequences_series.html#what-is-a-sequence",
+    "href": "chapters/level4_sequences_series.html#what-is-a-sequence",
+    "title": "5  Level 4: Sequences and Series",
+    "section": "5.2 What is a sequence?",
+    "text": "5.2 What is a sequence?\nLila: What exactly is a sequence?\nAcharya Bhaskar: A sequence is simply an ordered list of numbers: \\[\n(a_n)_{n=1}^\\infty = a_1, a_2, a_3, \\dots\n\\] Each \\(a_n\\) is called the \\(n\\)-th term. The idea is that as \\(n\\) increases, we can watch how the terms behave — whether they approach a limit, oscillate, or grow without bound.\nLila: So a sequence is like watching numbers march along, step by step?\nAcharya Bhaskar: Exactly! For example: - \\(a_n = \\tfrac{1}{n}\\) gives the sequence \\(1, \\tfrac{1}{2}, \\tfrac{1}{3}, \\dots\\) which gets closer and closer to \\(0\\).\n- \\(a_n = (-1)^n\\) gives \\(-1, 1, -1, 1, \\dots\\) which jumps back and forth and never settles.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Level 4: Sequences and Series</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level4_sequences_series.html#what-is-a-series",
+    "href": "chapters/level4_sequences_series.html#what-is-a-series",
+    "title": "5  Level 4: Sequences and Series",
+    "section": "5.3 What is a series?",
+    "text": "5.3 What is a series?\nLila: And what about a series?\nAcharya Bhaskar: A series is what we get when we add up the terms of a sequence: \\[\nS = \\sum_{n=1}^\\infty a_n = a_1 + a_2 + a_3 + \\cdots\n\\]\nLila: So if a sequence is footsteps, then a series is like adding the total distance covered?\nAcharya Bhaskar: Well said! For example: - The series \\(\\sum_{n=1}^\\infty \\tfrac{1}{2^n} = \\tfrac{1}{2} + \\tfrac{1}{4} + \\tfrac{1}{8} + \\cdots\\) converges to \\(1\\).\n- But the series \\(\\sum_{n=1}^\\infty \\tfrac{1}{n} = 1 + \\tfrac{1}{2} + \\tfrac{1}{3} + \\cdots\\) grows without bound — it diverges.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Level 4: Sequences and Series</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level4_sequences_series.html#why-study-sequences-and-series",
+    "href": "chapters/level4_sequences_series.html#why-study-sequences-and-series",
+    "title": "5  Level 4: Sequences and Series",
+    "section": "5.4 Why study sequences and series?",
+    "text": "5.4 Why study sequences and series?\nLila: Why are these so important?\nAcharya Bhaskar: Because they are the language of approximation and analysis: 1. Important numbers like \\(e\\) and \\(\\pi\\) appear as limits of sequences or sums of series.\n2. Functions like \\(\\sin x\\), \\(\\cos x\\), and \\(e^x\\) can be expressed as infinite series — that’s how we calculate them on computers!\n3. Understanding limits of sequences helps us define continuity, derivatives, and integrals.\nLila: So sequences and series are the foundation stones for the rest of calculus and analysis.\nAcharya Bhaskar: Precisely. Real analysis begins here, with the careful study of how infinite processes behave.\n\nAcharya Bhaskar (teaser):\n“Think of a sequence as footsteps marching towards a destination.\nIf the footsteps wander endlessly, the sequence diverges.\nIf they march steadily towards a point, the sequence converges.\nAnd when you add the footsteps together, you create the story of a series.”\n## Limits of Sequences\nLila: Acharya, you said some sequences “converge” and some “diverge.” What exactly does it mean for a sequence to converge?\nAcharya Bhaskar: Good question, Lila. Intuitively, a sequence converges if its terms get closer and closer to some fixed number, which we call the limit.\nLila: So for \\(a_n = \\tfrac{1}{n}\\), the terms \\(1, \\tfrac{1}{2}, \\tfrac{1}{3}, \\dots\\) get closer and closer to \\(0\\), so the limit should be \\(0\\)?\nAcharya Bhaskar: Exactly. We write \\[\n\\lim_{n\\to\\infty} \\frac{1}{n} = 0.\n\\]\n\n\n5.4.1 The formal definition\nAcharya Bhaskar: But in real analysis we need precision. So here is the definition:\nA sequence \\((a_n)\\) is said to converge to a number \\(L\\) if for every \\(\\varepsilon &gt; 0\\), there exists a natural number \\(K(\\varepsilon)\\) such that whenever \\(n \\geq K(\\varepsilon)\\), we have \\[\n|a_n - L| &lt; \\varepsilon.\n\\]\nLila: Let me see if I understand. This means: no matter how small an error margin \\(\\varepsilon\\) I choose, if I go far enough in the sequence (beyond some \\(K\\) that depends on the given \\(\\varepsilon\\)), all terms stay within that margin around \\(L\\).\nAcharya Bhaskar: Well said. That is the precise meaning of convergence.\n\n\n\n5.4.2 Example: \\(a_n = \\tfrac{1}{n}\\)\nLila: Could we test this definition with \\(a_n = \\tfrac{1}{n}\\) and \\(L=0\\)?\nAcharya Bhaskar: Certainly.\nWe want: for every \\(\\varepsilon&gt;0\\), find \\(K(\\varepsilon)\\) such that if \\(n\\ge K(\\varepsilon)\\), then \\(|\\tfrac{1}{n} - 0| &lt; \\varepsilon\\).\nBut \\(|\\tfrac{1}{n} - 0| = \\tfrac{1}{n}\\).\nSo we require \\(\\tfrac{1}{n} &lt; \\varepsilon\\).\nThis is the same as \\(n &gt; \\tfrac{1}{\\varepsilon}\\).\nSo if we choose \\(K(\\varepsilon) = \\lceil \\tfrac{1}{\\varepsilon}\\rceil\\), then for all \\(n\\ge K(\\varepsilon)\\), the condition is satisfied.\nLila: That works! So the formal definition confirms that \\(\\tfrac{1}{n} \\to 0\\).\n\n\n\n5.4.3 Example: \\(a_n = (-1)^n\\)\nLila: And what about \\(a_n = (-1)^n\\)?\nAcharya Bhaskar: Then the terms alternate \\(-1, 1, -1, 1, \\dots\\). Do they get closer to a single value?\nLila: No — they keep jumping back and forth. So this sequence does not converge.\nAcharya Bhaskar: Correct. It diverges, because there is no single \\(L\\) that the terms approach.\n\n\n\n5.4.4 Why limits matter\nLila: So convergence is about sequences approaching a fixed target. But why is this so important?\nAcharya Bhaskar: Because the notion of limit is the cornerstone of analysis. Continuity, derivatives, integrals, and infinite series all depend on it. Mastering limits of sequences is the first step toward the deeper structures of calculus.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Level 4: Sequences and Series</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level4_sequences_series.html#limit-of-a-function-via-sequences",
+    "href": "chapters/level4_sequences_series.html#limit-of-a-function-via-sequences",
+    "title": "5  Level 4: Sequences and Series",
+    "section": "5.5 Limit of a function via sequences",
+    "text": "5.5 Limit of a function via sequences\n\n\n\n\n\n\nNoteConnecting sequence limits and function limits\n\n\n\n\n\nLila: Acharya, I understand the limit of a sequence. But what could the limit of sequences have to do with the notion of limits of functions?\nAcharya Bhaskar: An excellent question, Lila. In fact, the two ideas are deeply connected.\nWe say \\[\n\\lim_{x\\to a} f(x) = L\n\\] if and only if for every sequence \\((x_n)\\) with \\(x_n \\to a\\) and \\(x_n \\neq a\\), the sequence \\((f(x_n))\\) converges to \\(L\\).\n\nLila: So if all possible sequences approaching \\(a\\) give the same limiting value \\(L\\) for \\(f(x_n)\\), then that must be the limit of the function?\nAcharya Bhaskar: Exactly. This is called the sequential criterion for functional limits.\nIt tells us: instead of thinking about all the infinitely many “ways” of approaching \\(a\\), it is enough to test every possible sequence converging to \\(a\\).\n\nLila: Ah! So the concept of a function limit is really an extension of the idea of sequence limits.\nAcharya Bhaskar: Precisely, Lila. That is why we first built a strong foundation with sequences — they are the key to understanding limits of functions.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Level 4: Sequences and Series</span>"
+    ]
   }
 ]

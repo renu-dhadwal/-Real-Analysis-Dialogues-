@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Level 3: Binary and Decimal Representation via [0,1] – Dialogues in Real Analysis</title>
+<title>5&nbsp; Level 4: Sequences and Series – Dialogues in Real Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/level4_sequences_series.html" rel="next">
-<link href="../chapters/level2_intervals.html" rel="prev">
+<link href="../chapters/level3_decimal_representation.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -113,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/level3_decimal_representation.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary and Decimal Representation via [0,1]</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/level4_sequences_series.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Level 4: Sequences and Series</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -160,13 +159,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/level3_decimal_representation.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/level3_decimal_representation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary and Decimal Representation via [0,1]</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/level4_sequences_series.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/level4_sequences_series.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Level 4: Sequences and Series</span></span></a>
   </div>
 </li>
@@ -180,20 +179,17 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#binary-representation" id="toc-binary-representation" class="nav-link active" data-scroll-target="#binary-representation"><span class="header-section-number">4.1</span> Binary representation</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">4.2</span> Example</a></li>
-  <li><a href="#decimal-representation-via-01" id="toc-decimal-representation-via-01" class="nav-link" data-scroll-target="#decimal-representation-via-01"><span class="header-section-number">4.3</span> Decimal Representation via [0,1]</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">5.1</span> Introduction</a></li>
+  <li><a href="#what-is-a-sequence" id="toc-what-is-a-sequence" class="nav-link" data-scroll-target="#what-is-a-sequence"><span class="header-section-number">5.2</span> What is a sequence?</a></li>
+  <li><a href="#what-is-a-series" id="toc-what-is-a-series" class="nav-link" data-scroll-target="#what-is-a-series"><span class="header-section-number">5.3</span> What is a series?</a></li>
+  <li><a href="#why-study-sequences-and-series" id="toc-why-study-sequences-and-series" class="nav-link" data-scroll-target="#why-study-sequences-and-series"><span class="header-section-number">5.4</span> Why study sequences and series?</a>
   <ul class="collapse">
-  <li><a href="#example-find-the-decimal-repersentation-of-x-tfrac27" id="toc-example-find-the-decimal-repersentation-of-x-tfrac27" class="nav-link" data-scroll-target="#example-find-the-decimal-repersentation-of-x-tfrac27"><span class="header-section-number">4.3.1</span> Example: Find the decimal repersentation of <span class="math inline">\(x = \tfrac{2}{7}\)</span></a></li>
-  <li><a href="#a-subtlety-non-uniqueness" id="toc-a-subtlety-non-uniqueness" class="nav-link" data-scroll-target="#a-subtlety-non-uniqueness"><span class="header-section-number">4.3.2</span> A subtlety: non-uniqueness</a></li>
+  <li><a href="#the-formal-definition" id="toc-the-formal-definition" class="nav-link" data-scroll-target="#the-formal-definition"><span class="header-section-number">5.4.1</span> The formal definition</a></li>
+  <li><a href="#example-a_n-tfrac1n" id="toc-example-a_n-tfrac1n" class="nav-link" data-scroll-target="#example-a_n-tfrac1n"><span class="header-section-number">5.4.2</span> Example: <span class="math inline">\(a_n = \tfrac{1}{n}\)</span></a></li>
+  <li><a href="#example-a_n--1n" id="toc-example-a_n--1n" class="nav-link" data-scroll-target="#example-a_n--1n"><span class="header-section-number">5.4.3</span> Example: <span class="math inline">\(a_n = (-1)^n\)</span></a></li>
+  <li><a href="#why-limits-matter" id="toc-why-limits-matter" class="nav-link" data-scroll-target="#why-limits-matter"><span class="header-section-number">5.4.4</span> Why limits matter</a></li>
   </ul></li>
-  <li><a href="#cantors-diagonal-argument-uncountability-of-01" id="toc-cantors-diagonal-argument-uncountability-of-01" class="nav-link" data-scroll-target="#cantors-diagonal-argument-uncountability-of-01"><span class="header-section-number">5</span> Cantor’s Diagonal Argument — Uncountability of <span class="math inline">\([0,1]\)</span></a>
-  <ul class="collapse">
-  <li><a href="#a-canonical-choice-of-decimal-expansion" id="toc-a-canonical-choice-of-decimal-expansion" class="nav-link" data-scroll-target="#a-canonical-choice-of-decimal-expansion"><span class="header-section-number">5.1</span> A canonical choice of decimal expansion</a></li>
-  <li><a href="#assume-a-listing" id="toc-assume-a-listing" class="nav-link" data-scroll-target="#assume-a-listing"><span class="header-section-number">5.2</span> Assume a listing</a></li>
-  <li><a href="#the-diagonal-construction" id="toc-the-diagonal-construction" class="nav-link" data-scroll-target="#the-diagonal-construction"><span class="header-section-number">5.3</span> The diagonal construction</a></li>
-  <li><a href="#why-this-is-a-contradiction" id="toc-why-this-is-a-contradiction" class="nav-link" data-scroll-target="#why-this-is-a-contradiction"><span class="header-section-number">5.4</span> Why this is a contradiction</a></li>
-  </ul></li>
+  <li><a href="#limit-of-a-function-via-sequences" id="toc-limit-of-a-function-via-sequences" class="nav-link" data-scroll-target="#limit-of-a-function-via-sequences"><span class="header-section-number">5.5</span> Limit of a function via sequences</a></li>
   </ul>
 </nav>
     </div>
@@ -202,7 +198,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary and Decimal Representation via [0,1]</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Level 4: Sequences and Series</span></h1>
 </div>
 
 
@@ -219,181 +215,123 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Lila:</strong> Acharya, what about the decimal representation of real numbers? We still don’t know exactly how it is constructed.</p>
-<p><strong>Acharya Bhaskar:</strong> A very good question, Lila! To understand decimal representations properly, it is helpful to first look at the binary representation of numbers.</p>
-<p><strong>Lila:</strong> Ah! I know that computers use binary numbers to represent data. But I’m curious—how can real numbers be expressed in binary? And does this have any connection with the Nested Interval Property?</p>
-<p><strong>Acharya Bhaskar:</strong> Excellent thought, Lila. Indeed, binary representation arises quite naturally if we repeatedly bisect the interval <span class="math inline">\([0,1]\)</span>. Let’s explore how this works.</p>
-<section id="binary-representation" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="binary-representation"><span class="header-section-number">4.1</span> Binary representation</h2>
-<p><strong>Step 1:</strong> First division Take any real number <span class="math inline">\(x \in [0,1]\)</span>. Divide <span class="math inline">\([0,1]\)</span> into two halves: <span class="math display">\[
-[0,\tfrac{1}{2}] \quad \text{and} \quad [\tfrac{1}{2}, 1].
-\]</span></p>
-<ul>
-<li>If <span class="math inline">\(x \in [0,\tfrac{1}{2})\)</span>, we set <span class="math inline">\(a_1 = 0\)</span>.<br>
-</li>
-<li>If <span class="math inline">\(x \in [\tfrac{1}{2},1]\)</span>, we set <span class="math inline">\(a_1 = 1\)</span>.</li>
-</ul>
-<p>So the first binary digit <span class="math inline">\(a_1\)</span> tells us whether <span class="math inline">\(x\)</span> lies in the left or right half.</p>
-<hr>
-<p><strong>Step 2: Second division</strong> Now, take the half chosen in Step 1 and bisect it again.</p>
-<ul>
-<li>If <span class="math inline">\(a_1=0\)</span>, then we split <span class="math inline">\([0,\tfrac{1}{2}]\)</span> into <span class="math inline">\([0,\tfrac{1}{4}]\)</span> and <span class="math inline">\([\tfrac{1}{4},\tfrac{1}{2}]\)</span>.<br>
-</li>
-<li>If <span class="math inline">\(a_1=1\)</span>, then we split <span class="math inline">\([\tfrac{1}{2},1]\)</span> into <span class="math inline">\([\tfrac{1}{2},\tfrac{3}{4}]\)</span> and <span class="math inline">\([\tfrac{3}{4},1]\)</span>.</li>
-</ul>
-<p>Depending on which subinterval contains <span class="math inline">\(x\)</span>, we assign <span class="math inline">\(a_2=0\)</span> (left) or <span class="math inline">\(a_2=1\)</span> (right).</p>
-<hr>
-<p><strong>Lila:</strong> So <span class="math inline">\(a_2\)</span> refines the position of <span class="math inline">\(x\)</span> within the chosen half?</p>
-<p><strong>Acharya Bhaskar:</strong> Exactly. Continuing this process, at the <span class="math inline">\(n\)</span>-th step we decide whether <span class="math inline">\(x\)</span> lies in the left or right subinterval, and record the digit <span class="math inline">\(a_n\)</span>.</p>
-<hr>
-<p><strong>Step 3: Infinite process</strong> Thus we build a sequence of digits <span class="math inline">\(a_1,a_2,a_3,\dots\)</span> where each <span class="math inline">\(a_i \in \{0,1\}\)</span>. These digits define the binary expansion: <span class="math display">\[
-x = 0.a_1a_2a_3\ldots \quad \text{(in base 2)}.
-\]</span></p>
-<p>Formally, <span class="math display">\[
-x = \sum_{n=1}^{\infty} \frac{a_n}{2^n}.
-\]</span></p>
-<hr>
-<p><strong>Lila:</strong> Ah, so each digit corresponds to a left-or-right choice in successive subdivisions of <span class="math inline">\([0,1]\)</span>. That’s just like building a nested sequence of intervals!</p>
-<p><strong>Acharya Bhaskar:</strong> Well observed. In fact, the intersection of these nested intervals is exactly the single point <span class="math inline">\(x\)</span>. The binary expansion records the entire path of choices.</p>
+<section id="introduction" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">5.1</span> Introduction</h2>
+<p><strong>Lila:</strong> Acharya, until now we have been exploring real numbers, their representations, and Cantor’s ideas. But what comes next in our journey?</p>
+<p><strong>Acharya Bhaskar:</strong> A natural next step, Lila, is to study not just <em>individual</em> numbers, but <em>patterns</em> of numbers — how they progress, how they accumulate. This leads us to the study of <strong>sequences</strong> and <strong>series</strong>.</p>
 <hr>
 </section>
-<section id="example" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="example"><span class="header-section-number">4.2</span> Example</h2>
-<p>Take <span class="math inline">\(x=\tfrac{5}{8}\)</span>.<br>
-- First step: <span class="math inline">\(x\in [\tfrac{1}{2},1]\)</span>, so <span class="math inline">\(a_1=1\)</span>.<br>
-- Second step: <span class="math inline">\(x\in [\tfrac{1}{2},\tfrac{3}{4}]\)</span>, so <span class="math inline">\(a_2=0\)</span>.<br>
-- Third step: <span class="math inline">\(x\in [\tfrac{5}{8},\tfrac{3}{4}]\)</span>, so <span class="math inline">\(a_3=1\)</span>.</p>
-<p>Thus, <span class="math display">\[
-x = 0.101_2 = \tfrac{1}{2} + 0 + \tfrac{1}{8} = \tfrac{5}{8}.
-\]</span></p>
-<hr>
-<p><strong>Lila:</strong> That’s beautiful! Binary digits are nothing but a record of the successive bisections that trap the number.</p>
-<p><strong>Acharya Bhaskar:</strong> Exactly, and this construction shows how every <span class="math inline">\(x \in [0,1]\)</span> can be encoded as an infinite binary string. It connects the geometry of intervals with the arithmetic of expansions.</p>
+<section id="what-is-a-sequence" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="what-is-a-sequence"><span class="header-section-number">5.2</span> What is a sequence?</h2>
+<p><strong>Lila:</strong> What exactly is a sequence?</p>
+<p><strong>Acharya Bhaskar:</strong> A <strong>sequence</strong> is simply an ordered list of numbers: <span class="math display">\[
+(a_n)_{n=1}^\infty = a_1, a_2, a_3, \dots
+\]</span> Each <span class="math inline">\(a_n\)</span> is called the <em><span class="math inline">\(n\)</span>-th term</em>. The idea is that as <span class="math inline">\(n\)</span> increases, we can watch how the terms behave — whether they approach a limit, oscillate, or grow without bound.</p>
+<p><strong>Lila:</strong> So a sequence is like watching numbers march along, step by step?</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly! For example: - <span class="math inline">\(a_n = \tfrac{1}{n}\)</span> gives the sequence <span class="math inline">\(1, \tfrac{1}{2}, \tfrac{1}{3}, \dots\)</span> which gets closer and closer to <span class="math inline">\(0\)</span>.<br>
+- <span class="math inline">\(a_n = (-1)^n\)</span> gives <span class="math inline">\(-1, 1, -1, 1, \dots\)</span> which jumps back and forth and never settles.</p>
 <hr>
 </section>
-<section id="decimal-representation-via-01" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="decimal-representation-via-01"><span class="header-section-number">4.3</span> Decimal Representation via [0,1]</h2>
-<p><strong>Lila:</strong> Acharya, now that I understand binary representation, what about <em>decimal</em> representation of real numbers? How do we obtain that?</p>
-<p><strong>Acharya Bhaskar:</strong> Very good question, Lila. The idea is very similar to binary, except instead of dividing into two parts, we divide the interval <span class="math inline">\([0,1]\)</span> into ten equal parts.</p>
-<hr>
-<p><strong>First digit</strong></p>
-<p><strong>Acharya Bhaskar:</strong> Let <span class="math inline">\(x \in [0,1]\)</span>. We divide <span class="math inline">\([0,1]\)</span> into ten subintervals: <span class="math display">\[
-\Big[0,\tfrac{1}{10}\Big], \Big[\tfrac{1}{10},\tfrac{2}{10}\Big], \dots, \Big[\tfrac{9}{10},1\Big].
+<section id="what-is-a-series" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="what-is-a-series"><span class="header-section-number">5.3</span> What is a series?</h2>
+<p><strong>Lila:</strong> And what about a series?</p>
+<p><strong>Acharya Bhaskar:</strong> A <strong>series</strong> is what we get when we add up the terms of a sequence: <span class="math display">\[
+S = \sum_{n=1}^\infty a_n = a_1 + a_2 + a_3 + \cdots
 \]</span></p>
-<ul>
-<li>If <span class="math inline">\(x\)</span> lies in the first interval, set <span class="math inline">\(d_1=0\)</span>.<br>
-</li>
-<li>If <span class="math inline">\(x\)</span> lies in the second interval, set <span class="math inline">\(d_1=1\)</span>.<br>
-</li>
-<li>And so on, up to <span class="math inline">\(d_1=9\)</span> if <span class="math inline">\(x \in [\tfrac{9}{10},1]\)</span>.</li>
-</ul>
-<p>This <span class="math inline">\(d_1\)</span> is the <em>first decimal digit</em> after the point.</p>
-<p><strong>Lila:</strong> So <span class="math inline">\(d_1\)</span> tells us in which tenth of the interval <span class="math inline">\([0,1]\)</span> the number <span class="math inline">\(x\)</span> lies.</p>
-<hr>
-<p><strong>Second digit</strong></p>
-<p><strong>Acharya Bhaskar:</strong> Exactly. Now, take the subinterval chosen in Step 1 and divide it again into ten equal parts.</p>
-<p>The position of <span class="math inline">\(x\)</span> in this subdivision gives us <span class="math inline">\(d_2\)</span>, the second decimal digit.</p>
-<p><strong>Lila:</strong> Just like in binary, but with ten instead of two!</p>
-<hr>
-<p><strong>Infinite process</strong></p>
-<p><strong>Acharya Bhaskar:</strong> Yes. Continuing this process, we construct digits <span class="math inline">\(d_1,d_2,d_3,\dots\)</span> with <span class="math inline">\(d_i \in \{0,1,2,\dots,9\}\)</span>.</p>
-<p>These digits define the decimal expansion: <span class="math display">\[
-x = 0.d_1d_2d_3\ldots \quad \text{(in base 10)}.
-\]</span></p>
-<p>Formally, <span class="math display">\[
-x = \sum_{n=1}^{\infty} \frac{d_n}{10^n}.
-\]</span></p>
-<hr>
-<section id="example-find-the-decimal-repersentation-of-x-tfrac27" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="example-find-the-decimal-repersentation-of-x-tfrac27"><span class="header-section-number">4.3.1</span> Example: Find the decimal repersentation of <span class="math inline">\(x = \tfrac{2}{7}\)</span></h3>
-<ul>
-<li>First step: <span class="math inline">\(2/7\)</span> lies in the third subinterval <span class="math inline">\([2/10,3/10]\)</span>, so <span class="math inline">\(d_1=2\)</span>.<br>
-</li>
-<li>Second step: within <span class="math inline">\([2/10,3/10]\)</span>, divide into tenths: <span class="math inline">\([28/100,29/100]\)</span> contains <span class="math inline">\(2/7\)</span>, so <span class="math inline">\(d_2=8\)</span>.<br>
-</li>
-<li>Third step: now inside <span class="math inline">\([28/100,29/100]\)</span>, we find <span class="math inline">\(2/7\)</span> in <span class="math inline">\([285/1000,286/1000]\)</span>, so <span class="math inline">\(d_3=5\)</span>.<br>
-</li>
-<li>Fourth step: inside <span class="math inline">\([285/1000,286/1000]\)</span>, we find <span class="math inline">\(2/7\)</span> in <span class="math inline">\([2857/10000,2858/10000]\)</span>, so <span class="math inline">\(d_4=7\)</span>.</li>
-</ul>
-<p>Continuing this way, we uncover the repeating decimal expansion: <span class="math display">\[
-\frac{2}{7} = 0.285714285714\ldots
-\]</span></p>
-<p><strong>Lila:</strong> That’s neat! The digits appear directly from locating <span class="math inline">\(x\)</span> in finer and finer tenths.</p>
+<p><strong>Lila:</strong> So if a sequence is footsteps, then a series is like adding the total distance covered?</p>
+<p><strong>Acharya Bhaskar:</strong> Well said! For example: - The series <span class="math inline">\(\sum_{n=1}^\infty \tfrac{1}{2^n} = \tfrac{1}{2} + \tfrac{1}{4} + \tfrac{1}{8} + \cdots\)</span> converges to <span class="math inline">\(1\)</span>.<br>
+- But the series <span class="math inline">\(\sum_{n=1}^\infty \tfrac{1}{n} = 1 + \tfrac{1}{2} + \tfrac{1}{3} + \cdots\)</span> grows without bound — it diverges.</p>
 <hr>
 </section>
-<section id="a-subtlety-non-uniqueness" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="a-subtlety-non-uniqueness"><span class="header-section-number">4.3.2</span> A subtlety: non-uniqueness</h3>
-<p><strong>Lila:</strong> Are decimal representations always unique?</p>
-<p><strong>Acharya Bhaskar:</strong> A very sharp question, Lila. In fact, they are <em>not always unique</em>. For example, <span class="math display">\[
-0.5000\ldots = 0.4999\ldots
-\]</span> represent the same number.</p>
-<p><strong>Lila:</strong> Oh, I see. So sometimes a terminating decimal has an alternative representation with repeating <span class="math inline">\(9\)</span>s.</p>
-<p><strong>Acharya Bhaskar:</strong> Exactly. This happens whenever the decimal expansion ends. You may think of it as the final subinterval having two possible “addresses” — one ending in an infinite string of zeros, and the other in an infinite string of nines.</p>
-<p><strong>Lila:</strong> So aside from this special case, decimal representations are unique?</p>
-<p><strong>Acharya Bhaskar:</strong> Yes, apart from this subtlety, each real number in <span class="math inline">\([0,1]\)</span> corresponds to exactly one infinite decimal expansion.</p>
+<section id="why-study-sequences-and-series" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="why-study-sequences-and-series"><span class="header-section-number">5.4</span> Why study sequences and series?</h2>
+<p><strong>Lila:</strong> Why are these so important?</p>
+<p><strong>Acharya Bhaskar:</strong> Because they are the language of approximation and analysis: 1. Important numbers like <span class="math inline">\(e\)</span> and <span class="math inline">\(\pi\)</span> appear as limits of sequences or sums of series.<br>
+2. Functions like <span class="math inline">\(\sin x\)</span>, <span class="math inline">\(\cos x\)</span>, and <span class="math inline">\(e^x\)</span> can be expressed as infinite series — that’s how we calculate them on computers!<br>
+3. Understanding limits of sequences helps us define continuity, derivatives, and integrals.</p>
+<p><strong>Lila:</strong> So sequences and series are the foundation stones for the rest of calculus and analysis.</p>
+<p><strong>Acharya Bhaskar:</strong> Precisely. Real analysis begins here, with the careful study of how infinite processes behave.</p>
 <hr>
-<p><strong>Lila:</strong> That clears it up! Decimal representation is really just like binary, except we use partitions into ten instead of two, with a small quirk about repeating <span class="math inline">\(9\)</span>s.</p>
-<p><strong>Acharya Bhaskar:</strong> Exactly, Lila. And this connection between <em>interval subdivisions</em> and <em>digit expansions</em> is a powerful idea in real analysis.</p>
-</section>
-</section>
-<section id="cantors-diagonal-argument-uncountability-of-01" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Cantor’s Diagonal Argument — Uncountability of <span class="math inline">\([0,1]\)</span></h1>
-<p><strong>Lila:</strong> Acharya, please give Cantor’s diagonal proof but using <strong>decimal</strong> expansions.</p>
-<p><strong>Acharya Bhaskar:</strong> Certainly. I will keep the presentation short and rigorous.</p>
-<hr>
-<section id="a-canonical-choice-of-decimal-expansion" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="a-canonical-choice-of-decimal-expansion"><span class="header-section-number">5.1</span> A canonical choice of decimal expansion</h2>
-<p><strong>Acharya Bhaskar:</strong> First a technical but important point. Some numbers admit two decimal expansions, for example <span class="math display">\[
-0.5000\ldots = 0.4999\ldots.
-\]</span> To avoid ambiguity we fix a canonical rule: whenever a number has two decimal expansions, we choose the one that terminates (the expansion ending in infinitely many zeros). Equivalently, we do <strong>not</strong> use expansions that end with an infinite tail of <span class="math inline">\(9\)</span>’s.</p>
-<p>With this rule, every <span class="math inline">\(x\in[0,1]\)</span> has a unique decimal expansion <span class="math display">\[
-x = 0.d_1 d_2 d_3\ldots\qquad (d_i\in\{0,1,\dots,9\}).
+<p><strong>Acharya Bhaskar (teaser):</strong><br>
+“Think of a sequence as footsteps marching towards a destination.<br>
+If the footsteps wander endlessly, the sequence diverges.<br>
+If they march steadily towards a point, the sequence converges.<br>
+And when you add the footsteps together, you create the story of a series.”<br>
+## Limits of Sequences</p>
+<p><strong>Lila:</strong> Acharya, you said some sequences “converge” and some “diverge.” What exactly does it mean for a sequence to converge?</p>
+<p><strong>Acharya Bhaskar:</strong> Good question, Lila. Intuitively, a sequence <strong>converges</strong> if its terms get closer and closer to some fixed number, which we call the <strong>limit</strong>.</p>
+<p><strong>Lila:</strong> So for <span class="math inline">\(a_n = \tfrac{1}{n}\)</span>, the terms <span class="math inline">\(1, \tfrac{1}{2}, \tfrac{1}{3}, \dots\)</span> get closer and closer to <span class="math inline">\(0\)</span>, so the limit should be <span class="math inline">\(0\)</span>?</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. We write <span class="math display">\[
+\lim_{n\to\infty} \frac{1}{n} = 0.
 \]</span></p>
 <hr>
-</section>
-<section id="assume-a-listing" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="assume-a-listing"><span class="header-section-number">5.2</span> Assume a listing</h2>
-<p><strong>Acharya Bhaskar:</strong> Suppose, for contradiction, that <span class="math inline">\([0,1]\)</span> is countable. Then there is a list <span class="math display">\[
-x_1,\; x_2,\; x_3,\; \dots
-\]</span> and, by our canonical rule, write each <span class="math inline">\(x_n\)</span> as <span class="math display">\[\begin{align*}
-x_1 &amp;= 0.d_{11} d_{12} d_{13}\ldots d_{1n} \ldots,\\
-x_2 &amp;= 0.d_{21} d_{22} d_{23}\ldots d_{2n} \ldots,\\
-x_3 &amp;= 0.d_{31} d_{32} d_{33}\ldots d_{3n} \ldots,\\
-&amp;\vdots \\
-x_n &amp;= 0.d_{n1} d_{n2} d_{n3}\ldots d_{nn} \ldots
-\end{align*}\]</span></p>
-<p>where <span class="math inline">\(d_{nk}\in\{0,\dots,9\}\)</span> is the <span class="math inline">\(k\)</span>-th decimal digit of the <span class="math inline">\(n\)</span>-th number.</p>
-<hr>
-</section>
-<section id="the-diagonal-construction" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="the-diagonal-construction"><span class="header-section-number">5.3</span> The diagonal construction</h2>
-<p><strong>Acharya Bhaskar:</strong> Now build a new decimal sequence <span class="math inline">\((y_k)\)</span> by changing the <span class="math inline">\(k\)</span>-th digit of the <span class="math inline">\(k\)</span>-th listed number. For each <span class="math inline">\(k\)</span> define <span class="math display">\[
-y_k :=
-\begin{cases}
-d_{kk}+1 &amp;\text{if } d_{kk}\in\{0,1,\dots,8\},\\[4pt]
-0 &amp;\text{if } d_{kk}=9.
-\end{cases}
-\]</span> Thus <span class="math inline">\(y_k\in\{0,\dots,9\}\)</span> and, crucially, <span class="math inline">\(y_k\neq d_{kk}\)</span> for every <span class="math inline">\(k\)</span>.</p>
-<p>Let <span class="math display">\[
-y := 0.y_1 y_2 y_3 \ldots .
+<section id="the-formal-definition" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="the-formal-definition"><span class="header-section-number">5.4.1</span> The formal definition</h3>
+<p><strong>Acharya Bhaskar:</strong> But in real analysis we need precision. So here is the definition:</p>
+<p>A sequence <span class="math inline">\((a_n)\)</span> is said to converge to a number <span class="math inline">\(L\)</span> if for every <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists a natural number <span class="math inline">\(K(\varepsilon)\)</span> such that whenever <span class="math inline">\(n \geq K(\varepsilon)\)</span>, we have <span class="math display">\[
+|a_n - L| &lt; \varepsilon.
 \]</span></p>
+<p><strong>Lila:</strong> Let me see if I understand. This means: no matter how small an error margin <span class="math inline">\(\varepsilon\)</span> I choose, if I go far enough in the sequence (beyond some <span class="math inline">\(K\)</span> that depends on the given <span class="math inline">\(\varepsilon\)</span>), all terms stay within that margin around <span class="math inline">\(L\)</span>.</p>
+<p><strong>Acharya Bhaskar:</strong> Well said. That is the precise meaning of convergence.</p>
 <hr>
 </section>
-<section id="why-this-is-a-contradiction" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="why-this-is-a-contradiction"><span class="header-section-number">5.4</span> Why this is a contradiction</h2>
-<p><strong>Lila:</strong> How do we know <span class="math inline">\(y\)</span> is not on the list?</p>
-<p><strong>Acharya Bhaskar:</strong> For each <span class="math inline">\(n\)</span>, the <span class="math inline">\(n\)</span>-th digit of <span class="math inline">\(y\)</span> equals <span class="math inline">\(y_n\)</span>, which by construction differs from <span class="math inline">\(d_{nn}\)</span>, the <span class="math inline">\(n\)</span>-th digit of <span class="math inline">\(x_n\)</span>. Therefore <span class="math inline">\(y\neq x_n\)</span> for every <span class="math inline">\(n\)</span>. In other words, <span class="math inline">\(y\)</span> is a point of <span class="math inline">\([0,1]\)</span> not appearing in the supposed complete list. This contradicts the assumption that <span class="math inline">\([0,1]\)</span> was countable.</p>
-<p>Hence <span class="math inline">\([0,1]\)</span>, and therefore <span class="math inline">\(\mathbb{R}\)</span>, is uncountable. ∎</p>
+<section id="example-a_n-tfrac1n" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="example-a_n-tfrac1n"><span class="header-section-number">5.4.2</span> Example: <span class="math inline">\(a_n = \tfrac{1}{n}\)</span></h3>
+<p><strong>Lila:</strong> Could we test this definition with <span class="math inline">\(a_n = \tfrac{1}{n}\)</span> and <span class="math inline">\(L=0\)</span>?</p>
+<p><strong>Acharya Bhaskar:</strong> Certainly.<br>
+We want: for every <span class="math inline">\(\varepsilon&gt;0\)</span>, find <span class="math inline">\(K(\varepsilon)\)</span> such that if <span class="math inline">\(n\ge K(\varepsilon)\)</span>, then <span class="math inline">\(|\tfrac{1}{n} - 0| &lt; \varepsilon\)</span>.<br>
+But <span class="math inline">\(|\tfrac{1}{n} - 0| = \tfrac{1}{n}\)</span>.<br>
+So we require <span class="math inline">\(\tfrac{1}{n} &lt; \varepsilon\)</span>.</p>
+<p>This is the same as <span class="math inline">\(n &gt; \tfrac{1}{\varepsilon}\)</span>.<br>
+So if we choose <span class="math inline">\(K(\varepsilon) = \lceil \tfrac{1}{\varepsilon}\rceil\)</span>, then for all <span class="math inline">\(n\ge K(\varepsilon)\)</span>, the condition is satisfied.</p>
+<p><strong>Lila:</strong> That works! So the formal definition confirms that <span class="math inline">\(\tfrac{1}{n} \to 0\)</span>.</p>
 <hr>
-<!--
- ## Short remarks
-
-- Avoiding the infinite-$9$ expansions was necessary so that each listed number had a unique expansion; our choice of the terminating expansion makes the diagonal flip unambiguous.  
-- The same argument works with any base $b\ge2$; in base $b$ choose a digit different from the diagonal one (for example add $1$ modulo $b$) to guarantee the new number differs on every diagonal position.
--->
+</section>
+<section id="example-a_n--1n" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="example-a_n--1n"><span class="header-section-number">5.4.3</span> Example: <span class="math inline">\(a_n = (-1)^n\)</span></h3>
+<p><strong>Lila:</strong> And what about <span class="math inline">\(a_n = (-1)^n\)</span>?</p>
+<p><strong>Acharya Bhaskar:</strong> Then the terms alternate <span class="math inline">\(-1, 1, -1, 1, \dots\)</span>. Do they get closer to a single value?</p>
+<p><strong>Lila:</strong> No — they keep jumping back and forth. So this sequence does <strong>not</strong> converge.</p>
+<p><strong>Acharya Bhaskar:</strong> Correct. It diverges, because there is no single <span class="math inline">\(L\)</span> that the terms approach.</p>
+<hr>
+</section>
+<section id="why-limits-matter" class="level3" data-number="5.4.4">
+<h3 data-number="5.4.4" class="anchored" data-anchor-id="why-limits-matter"><span class="header-section-number">5.4.4</span> Why limits matter</h3>
+<p><strong>Lila:</strong> So convergence is about sequences approaching a fixed target. But why is this so important?</p>
+<p><strong>Acharya Bhaskar:</strong> Because the notion of <strong>limit</strong> is the cornerstone of analysis. Continuity, derivatives, integrals, and infinite series all depend on it. Mastering limits of sequences is the first step toward the deeper structures of calculus.</p>
+</section>
+</section>
+<section id="limit-of-a-function-via-sequences" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="limit-of-a-function-via-sequences"><span class="header-section-number">5.5</span> Limit of a function via sequences</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Connecting sequence limits and function limits
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Lila:</strong> Acharya, I understand the limit of a sequence. But what could the limit of sequences have to do with the notion of limits of functions?</p>
+<p><strong>Acharya Bhaskar:</strong> An excellent question, Lila. In fact, the two ideas are deeply connected.</p>
+<p>We say <span class="math display">\[
+\lim_{x\to a} f(x) = L
+\]</span> if and only if for <strong>every sequence</strong> <span class="math inline">\((x_n)\)</span> with <span class="math inline">\(x_n \to a\)</span> and <span class="math inline">\(x_n \neq a\)</span>, the sequence <span class="math inline">\((f(x_n))\)</span> converges to <span class="math inline">\(L\)</span>.</p>
+<hr>
+<p><strong>Lila:</strong> So if all possible sequences approaching <span class="math inline">\(a\)</span> give the same limiting value <span class="math inline">\(L\)</span> for <span class="math inline">\(f(x_n)\)</span>, then that must be the limit of the function?</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. This is called the <em>sequential criterion</em> for functional limits.</p>
+<p>It tells us: instead of thinking about all the infinitely many “ways” of approaching <span class="math inline">\(a\)</span>, it is enough to test every possible sequence converging to <span class="math inline">\(a\)</span>.</p>
+<hr>
+<p><strong>Lila:</strong> Ah! So the concept of a function limit is really an extension of the idea of sequence limits.</p>
+<p><strong>Acharya Bhaskar:</strong> Precisely, Lila. That is why we first built a strong foundation with sequences — they are the key to understanding limits of functions.</p>
+</div>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -799,14 +737,11 @@ y := 0.y_1 y_2 y_3 \ldots .
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/level2_intervals.html" class="pagination-link" aria-label="Level 2: Intervals and Their Characterization">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Level 2: Intervals and Their Characterization</span></span>
+      <a href="../chapters/level3_decimal_representation.html" class="pagination-link" aria-label="Level 3: Binary and Decimal Representation via [0,1]">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Level 3: Binary and Decimal Representation via [0,1]</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/level4_sequences_series.html" class="pagination-link" aria-label="Level 4: Sequences and Series">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Level 4: Sequences and Series</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
