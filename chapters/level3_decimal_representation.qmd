@@ -240,7 +240,8 @@ Hence $[0,1]$, and therefore $\mathbb{R}$, is uncountable. ∎
 
 ---
 
-<-- ## Short remarks
+<!--
+ ## Short remarks
 
 - Avoiding the infinite-$9$ expansions was necessary so that each listed number had a unique expansion; our choice of the terminating expansion makes the diagonal flip unambiguous.  
 - The same argument works with any base $b\ge2$; in base $b$ choose a digit different from the diagonal one (for example add $1$ modulo $b$) to guarantee the new number differs on every diagonal position.
