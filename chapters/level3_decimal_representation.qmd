@@ -126,13 +126,9 @@ $$
 
 ---
 
-### Example: $x = \tfrac{2}{7}$
+### Example: Find the decimal repersentation of $x = \tfrac{2}{7}$
 
-**Lila:** Can we try an example, say $x=\tfrac{2}{7}$?  
-
-**Acharya Bhaskar:** Certainly. Let’s locate it step by step.  
-
-- First step: $2/7 \approx 0.2857$. It lies in the third subinterval $[2/10,3/10]$, so $d_1=2$.  
+- First step: $2/7$ lies in the third subinterval $[2/10,3/10]$, so $d_1=2$.  
 - Second step: within $[2/10,3/10]$, divide into tenths: $[28/100,29/100]$ contains $2/7$, so $d_2=8$.  
 - Third step: now inside $[28/100,29/100]$, we find $2/7$ in $[285/1000,286/1000]$, so $d_3=5$.  
 - Fourth step: inside $[285/1000,286/1000]$, we find $2/7$ in $[2857/10000,2858/10000]$, so $d_4=7$.  
