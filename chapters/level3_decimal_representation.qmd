@@ -75,6 +75,8 @@ $$
 
 **Acharya Bhaskar:** Exactly, and this construction shows how every $x \in [0,1]$ can be encoded as an infinite binary string. It connects the geometry of intervals with the arithmetic of expansions.
 
+---
+
 ## Decimal Representation via [0,1]
 
 **Lila:** Acharya, now that I understand binary representation, what about *decimal* representation of real numbers? How do we obtain that?
@@ -165,3 +167,75 @@ represent the same number.
 **Lila:** That clears it up! Decimal representation is really just like binary, except we use partitions into ten instead of two, with a small quirk about repeating $9$s.
 
 **Acharya Bhaskar:** Exactly, Lila. And this connection between *interval subdivisions* and *digit expansions* is a powerful idea in real analysis.
+
+
+# Cantor's Diagonal Argument — Uncountability of $[0,1]$
+
+**Lila:** Acharya, please give Cantor’s diagonal proof but using **decimal** expansions.
+
+**Acharya Bhaskar:** Certainly. I will keep the presentation short and rigorous.
+
+---
+
+## A canonical choice of decimal expansion
+
+**Acharya Bhaskar:** First a technical but important point. Some numbers admit two decimal expansions, for example
+$$
+0.5000\ldots = 0.4999\ldots.
+$$
+To avoid ambiguity we fix a canonical rule: whenever a number has two decimal expansions, we choose the one that terminates (the expansion ending in infinitely many zeros). Equivalently, we do **not** use expansions that end with an infinite tail of $9$'s.
+
+With this rule, every $x\in[0,1]$ has a unique decimal expansion
+$$
+x = 0.d_1 d_2 d_3\ldots\qquad (d_i\in\{0,1,\dots,9\}).
+$$
+
+---
+
+## Assume a listing
+
+**Acharya Bhaskar:** Suppose, for contradiction, that $[0,1]$ is countable. Then there is a list
+$$
+x^{(1)},\; x^{(2)},\; x^{(3)},\; \dots
+$$
+and, by our canonical rule, write each $x^{(n)}$ as
+$$
+x^{(n)} = 0.d_{n1} d_{n2} d_{n3}\ldots,
+$$
+where $d_{nk}\in\{0,\dots,9\}$ is the $k$-th decimal digit of the $n$-th number.
+
+---
+
+## The diagonal construction
+
+**Acharya Bhaskar:** Now build a new decimal sequence $(e_k)_{k\ge1}$ by changing the $k$-th digit of the $k$-th listed number. For each $k$ define
+$$
+e_k :=
+\begin{cases}
+d_{kk}+1 &\text{if } d_{kk}\in\{0,1,\dots,8\},\\[4pt]
+0 &\text{if } d_{kk}=9.
+\end{cases}
+$$
+Thus $e_k\in\{0,\dots,9\}$ and, crucially, $e_k\neq d_{kk}$ for every $k$.
+
+Let
+$$
+y := 0.e_1 e_2 e_3 \ldots .
+$$
+
+---
+
+## Why this is a contradiction
+
+**Lila:** How do we know $y$ is not on the list?
+
+**Acharya Bhaskar:** For each $n$, the $n$-th digit of $y$ equals $e_n$, which by construction differs from $d_{nn}$, the $n$-th digit of $x^{(n)}$. Therefore $y\neq x^{(n)}$ for every $n$. In other words, $y$ is a point of $[0,1]$ not appearing in the supposed complete list. This contradicts the assumption that $[0,1]$ was countable.
+
+Hence $[0,1]$, and therefore $\mathbb{R}$, is uncountable. ∎
+
+---
+
+## Short remarks
+
+- Avoiding the infinite-$9$ expansions was necessary so that each listed number had a unique expansion; our choice of the terminating expansion makes the diagonal flip unambiguous.  
+- The same argument works with any base $b\ge2$; in base $b$ choose a digit different from the diagonal one (for example add $1$ modulo $b$) to guarantee the new number differs on every diagonal position.

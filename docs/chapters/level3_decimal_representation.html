@@ -179,6 +179,14 @@ window.Quarto = {
   <li><a href="#example-find-the-decimal-repersentation-of-x-tfrac27" id="toc-example-find-the-decimal-repersentation-of-x-tfrac27" class="nav-link" data-scroll-target="#example-find-the-decimal-repersentation-of-x-tfrac27"><span class="header-section-number">4.2.1</span> Example: Find the decimal repersentation of <span class="math inline">\(x = \tfrac{2}{7}\)</span></a></li>
   <li><a href="#a-subtlety-non-uniqueness" id="toc-a-subtlety-non-uniqueness" class="nav-link" data-scroll-target="#a-subtlety-non-uniqueness"><span class="header-section-number">4.2.2</span> A subtlety: non-uniqueness</a></li>
   </ul></li>
+  <li><a href="#cantors-diagonal-argument-uncountability-of-01" id="toc-cantors-diagonal-argument-uncountability-of-01" class="nav-link" data-scroll-target="#cantors-diagonal-argument-uncountability-of-01"><span class="header-section-number">5</span> Cantor’s Diagonal Argument — Uncountability of <span class="math inline">\([0,1]\)</span></a>
+  <ul class="collapse">
+  <li><a href="#a-canonical-choice-of-decimal-expansion" id="toc-a-canonical-choice-of-decimal-expansion" class="nav-link" data-scroll-target="#a-canonical-choice-of-decimal-expansion"><span class="header-section-number">5.1</span> A canonical choice of decimal expansion</a></li>
+  <li><a href="#assume-a-listing" id="toc-assume-a-listing" class="nav-link" data-scroll-target="#assume-a-listing"><span class="header-section-number">5.2</span> Assume a listing</a></li>
+  <li><a href="#the-diagonal-construction" id="toc-the-diagonal-construction" class="nav-link" data-scroll-target="#the-diagonal-construction"><span class="header-section-number">5.3</span> The diagonal construction</a></li>
+  <li><a href="#why-this-is-a-contradiction" id="toc-why-this-is-a-contradiction" class="nav-link" data-scroll-target="#why-this-is-a-contradiction"><span class="header-section-number">5.4</span> Why this is a contradiction</a></li>
+  <li><a href="#short-remarks" id="toc-short-remarks" class="nav-link" data-scroll-target="#short-remarks"><span class="header-section-number">5.5</span> Short remarks</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -252,6 +260,7 @@ x = 0.101_2 = \tfrac{1}{2} + 0 + \tfrac{1}{8} = \tfrac{5}{8}.
 <hr>
 <p><strong>Lila:</strong> That’s beautiful! Binary digits are nothing but a record of the successive bisections that trap the number.</p>
 <p><strong>Acharya Bhaskar:</strong> Exactly, and this construction shows how every <span class="math inline">\(x \in [0,1]\)</span> can be encoded as an infinite binary string. It connects the geometry of intervals with the arithmetic of expansions.</p>
+<hr>
 </section>
 <section id="decimal-representation-via-01" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="decimal-representation-via-01"><span class="header-section-number">4.2</span> Decimal Representation via [0,1]</h2>
@@ -316,6 +325,60 @@ x = \sum_{n=1}^{\infty} \frac{d_n}{10^n}.
 <hr>
 <p><strong>Lila:</strong> That clears it up! Decimal representation is really just like binary, except we use partitions into ten instead of two, with a small quirk about repeating <span class="math inline">\(9\)</span>s.</p>
 <p><strong>Acharya Bhaskar:</strong> Exactly, Lila. And this connection between <em>interval subdivisions</em> and <em>digit expansions</em> is a powerful idea in real analysis.</p>
+</section>
+</section>
+<section id="cantors-diagonal-argument-uncountability-of-01" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Cantor’s Diagonal Argument — Uncountability of <span class="math inline">\([0,1]\)</span></h1>
+<p><strong>Lila:</strong> Acharya, please give Cantor’s diagonal proof but using <strong>decimal</strong> expansions.</p>
+<p><strong>Acharya Bhaskar:</strong> Certainly. I will keep the presentation short and rigorous.</p>
+<hr>
+<section id="a-canonical-choice-of-decimal-expansion" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="a-canonical-choice-of-decimal-expansion"><span class="header-section-number">5.1</span> A canonical choice of decimal expansion</h2>
+<p><strong>Acharya Bhaskar:</strong> First a technical but important point. Some numbers admit two decimal expansions, for example <span class="math display">\[
+0.5000\ldots = 0.4999\ldots.
+\]</span> To avoid ambiguity we fix a canonical rule: whenever a number has two decimal expansions, we choose the one that terminates (the expansion ending in infinitely many zeros). Equivalently, we do <strong>not</strong> use expansions that end with an infinite tail of <span class="math inline">\(9\)</span>’s.</p>
+<p>With this rule, every <span class="math inline">\(x\in[0,1]\)</span> has a unique decimal expansion <span class="math display">\[
+x = 0.d_1 d_2 d_3\ldots\qquad (d_i\in\{0,1,\dots,9\}).
+\]</span></p>
+<hr>
+</section>
+<section id="assume-a-listing" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="assume-a-listing"><span class="header-section-number">5.2</span> Assume a listing</h2>
+<p><strong>Acharya Bhaskar:</strong> Suppose, for contradiction, that <span class="math inline">\([0,1]\)</span> is countable. Then there is a list <span class="math display">\[
+x^{(1)},\; x^{(2)},\; x^{(3)},\; \dots
+\]</span> and, by our canonical rule, write each <span class="math inline">\(x^{(n)}\)</span> as <span class="math display">\[
+x^{(n)} = 0.d_{n1} d_{n2} d_{n3}\ldots,
+\]</span> where <span class="math inline">\(d_{nk}\in\{0,\dots,9\}\)</span> is the <span class="math inline">\(k\)</span>-th decimal digit of the <span class="math inline">\(n\)</span>-th number.</p>
+<hr>
+</section>
+<section id="the-diagonal-construction" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="the-diagonal-construction"><span class="header-section-number">5.3</span> The diagonal construction</h2>
+<p><strong>Acharya Bhaskar:</strong> Now build a new decimal sequence <span class="math inline">\((e_k)_{k\ge1}\)</span> by changing the <span class="math inline">\(k\)</span>-th digit of the <span class="math inline">\(k\)</span>-th listed number. For each <span class="math inline">\(k\)</span> define <span class="math display">\[
+e_k :=
+\begin{cases}
+d_{kk}+1 &amp;\text{if } d_{kk}\in\{0,1,\dots,8\},\\[4pt]
+0 &amp;\text{if } d_{kk}=9.
+\end{cases}
+\]</span> Thus <span class="math inline">\(e_k\in\{0,\dots,9\}\)</span> and, crucially, <span class="math inline">\(e_k\neq d_{kk}\)</span> for every <span class="math inline">\(k\)</span>.</p>
+<p>Let <span class="math display">\[
+y := 0.e_1 e_2 e_3 \ldots .
+\]</span></p>
+<hr>
+</section>
+<section id="why-this-is-a-contradiction" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="why-this-is-a-contradiction"><span class="header-section-number">5.4</span> Why this is a contradiction</h2>
+<p><strong>Lila:</strong> How do we know <span class="math inline">\(y\)</span> is not on the list?</p>
+<p><strong>Acharya Bhaskar:</strong> For each <span class="math inline">\(n\)</span>, the <span class="math inline">\(n\)</span>-th digit of <span class="math inline">\(y\)</span> equals <span class="math inline">\(e_n\)</span>, which by construction differs from <span class="math inline">\(d_{nn}\)</span>, the <span class="math inline">\(n\)</span>-th digit of <span class="math inline">\(x^{(n)}\)</span>. Therefore <span class="math inline">\(y\neq x^{(n)}\)</span> for every <span class="math inline">\(n\)</span>. In other words, <span class="math inline">\(y\)</span> is a point of <span class="math inline">\([0,1]\)</span> not appearing in the supposed complete list. This contradicts the assumption that <span class="math inline">\([0,1]\)</span> was countable.</p>
+<p>Hence <span class="math inline">\([0,1]\)</span>, and therefore <span class="math inline">\(\mathbb{R}\)</span>, is uncountable. ∎</p>
+<hr>
+</section>
+<section id="short-remarks" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="short-remarks"><span class="header-section-number">5.5</span> Short remarks</h2>
+<ul>
+<li>Avoiding the infinite-<span class="math inline">\(9\)</span> expansions was necessary so that each listed number had a unique expansion; our choice of the terminating expansion makes the diagonal flip unambiguous.<br>
+</li>
+<li>The same argument works with any base <span class="math inline">\(b\ge2\)</span>; in base <span class="math inline">\(b\)</span> choose a digit different from the diagonal one (for example add <span class="math inline">\(1\)</span> modulo <span class="math inline">\(b\)</span>) to guarantee the new number differs on every diagonal position.</li>
+</ul>
 
 
 </section>

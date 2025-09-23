@@ -168,5 +168,55 @@
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Level 3: Binary and Decimal Representation via [0,1]</span>"
     ]
+  },
+  {
+    "objectID": "chapters/level3_decimal_representation.html#a-canonical-choice-of-decimal-expansion",
+    "href": "chapters/level3_decimal_representation.html#a-canonical-choice-of-decimal-expansion",
+    "title": "4  Level 3: Binary and Decimal Representation via [0,1]",
+    "section": "5.1 A canonical choice of decimal expansion",
+    "text": "5.1 A canonical choice of decimal expansion\nAcharya Bhaskar: First a technical but important point. Some numbers admit two decimal expansions, for example \\[\n0.5000\\ldots = 0.4999\\ldots.\n\\] To avoid ambiguity we fix a canonical rule: whenever a number has two decimal expansions, we choose the one that terminates (the expansion ending in infinitely many zeros). Equivalently, we do not use expansions that end with an infinite tail of \\(9\\)’s.\nWith this rule, every \\(x\\in[0,1]\\) has a unique decimal expansion \\[\nx = 0.d_1 d_2 d_3\\ldots\\qquad (d_i\\in\\{0,1,\\dots,9\\}).\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Level 3: Binary and Decimal Representation via [0,1]</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level3_decimal_representation.html#assume-a-listing",
+    "href": "chapters/level3_decimal_representation.html#assume-a-listing",
+    "title": "4  Level 3: Binary and Decimal Representation via [0,1]",
+    "section": "5.2 Assume a listing",
+    "text": "5.2 Assume a listing\nAcharya Bhaskar: Suppose, for contradiction, that \\([0,1]\\) is countable. Then there is a list \\[\nx^{(1)},\\; x^{(2)},\\; x^{(3)},\\; \\dots\n\\] and, by our canonical rule, write each \\(x^{(n)}\\) as \\[\nx^{(n)} = 0.d_{n1} d_{n2} d_{n3}\\ldots,\n\\] where \\(d_{nk}\\in\\{0,\\dots,9\\}\\) is the \\(k\\)-th decimal digit of the \\(n\\)-th number.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Level 3: Binary and Decimal Representation via [0,1]</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level3_decimal_representation.html#the-diagonal-construction",
+    "href": "chapters/level3_decimal_representation.html#the-diagonal-construction",
+    "title": "4  Level 3: Binary and Decimal Representation via [0,1]",
+    "section": "5.3 The diagonal construction",
+    "text": "5.3 The diagonal construction\nAcharya Bhaskar: Now build a new decimal sequence \\((e_k)_{k\\ge1}\\) by changing the \\(k\\)-th digit of the \\(k\\)-th listed number. For each \\(k\\) define \\[\ne_k :=\n\\begin{cases}\nd_{kk}+1 &\\text{if } d_{kk}\\in\\{0,1,\\dots,8\\},\\\\[4pt]\n0 &\\text{if } d_{kk}=9.\n\\end{cases}\n\\] Thus \\(e_k\\in\\{0,\\dots,9\\}\\) and, crucially, \\(e_k\\neq d_{kk}\\) for every \\(k\\).\nLet \\[\ny := 0.e_1 e_2 e_3 \\ldots .\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Level 3: Binary and Decimal Representation via [0,1]</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level3_decimal_representation.html#why-this-is-a-contradiction",
+    "href": "chapters/level3_decimal_representation.html#why-this-is-a-contradiction",
+    "title": "4  Level 3: Binary and Decimal Representation via [0,1]",
+    "section": "5.4 Why this is a contradiction",
+    "text": "5.4 Why this is a contradiction\nLila: How do we know \\(y\\) is not on the list?\nAcharya Bhaskar: For each \\(n\\), the \\(n\\)-th digit of \\(y\\) equals \\(e_n\\), which by construction differs from \\(d_{nn}\\), the \\(n\\)-th digit of \\(x^{(n)}\\). Therefore \\(y\\neq x^{(n)}\\) for every \\(n\\). In other words, \\(y\\) is a point of \\([0,1]\\) not appearing in the supposed complete list. This contradicts the assumption that \\([0,1]\\) was countable.\nHence \\([0,1]\\), and therefore \\(\\mathbb{R}\\), is uncountable. ∎",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Level 3: Binary and Decimal Representation via [0,1]</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/level3_decimal_representation.html#short-remarks",
+    "href": "chapters/level3_decimal_representation.html#short-remarks",
+    "title": "4  Level 3: Binary and Decimal Representation via [0,1]",
+    "section": "5.5 Short remarks",
+    "text": "5.5 Short remarks\n\nAvoiding the infinite-\\(9\\) expansions was necessary so that each listed number had a unique expansion; our choice of the terminating expansion makes the diagonal flip unambiguous.\n\nThe same argument works with any base \\(b\\ge2\\); in base \\(b\\) choose a digit different from the diagonal one (for example add \\(1\\) modulo \\(b\\)) to guarantee the new number differs on every diagonal position.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Level 3: Binary and Decimal Representation via [0,1]</span>"
+    ]
   }
 ]
