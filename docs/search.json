@@ -204,7 +204,7 @@
     "href": "chapters/level3_decimal_representation.html#assume-a-listing",
     "title": "4  Level 3: Binary and Decimal Representation via [0,1]",
     "section": "5.2 Assume a listing",
-    "text": "5.2 Assume a listing\nAcharya Bhaskar: Suppose, for contradiction, that \\([0,1]\\) is countable. Then there is a list \\[\nx_1,\\; x_2,\\; x_3,\\; \\dots\n\\] and, by our canonical rule, write each \\(x_n\\) as \\[\nx_1 = 0.d_{11} d_{12} d_{13}\\ldots d_{1n} \\ldots,\\\\\nx_2 = 0.d_{21} d_{22} d_{23}\\ldots d_{2n} \\ldots,\\\\\nx_3 = 0.d_{31} d_{32} d_{33}\\ldots d_{3n} \\ldots,\\\\\n\\vdots\nx_n = 0.d_{n1} d_{n2} d_{n3}\\ldots d_{nn} \\ldots,\n\\] where \\(d_{nk}\\in\\{0,\\dots,9\\}\\) is the \\(k\\)-th decimal digit of the \\(n\\)-th number.",
+    "text": "5.2 Assume a listing\nAcharya Bhaskar: Suppose, for contradiction, that \\([0,1]\\) is countable. Then there is a list \\[\nx_1,\\; x_2,\\; x_3,\\; \\dots\n\\] and, by our canonical rule, write each \\(x_n\\) as \\[\\begin{align*}\nx_1 &= 0.d_{11} d_{12} d_{13}\\ldots d_{1n} \\ldots,\\\\\nx_2 &= 0.d_{21} d_{22} d_{23}\\ldots d_{2n} \\ldots,\\\\\nx_3 &= 0.d_{31} d_{32} d_{33}\\ldots d_{3n} \\ldots,\\\\\n&\\vdots \\\\\nx_n &= 0.d_{n1} d_{n2} d_{n3}\\ldots d_{nn} \\ldots\n\\end{align*}\\]\nwhere \\(d_{nk}\\in\\{0,\\dots,9\\}\\) is the \\(k\\)-th decimal digit of the \\(n\\)-th number.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Level 3: Binary and Decimal Representation via [0,1]</span>"
     ]

@@ -199,13 +199,14 @@ $$
 x_1,\; x_2,\; x_3,\; \dots
 $$
 and, by our canonical rule, write each $x_n$ as
-$$
-x_1 = 0.d_{11} d_{12} d_{13}\ldots d_{1n} \ldots,\\
-x_2 = 0.d_{21} d_{22} d_{23}\ldots d_{2n} \ldots,\\
-x_3 = 0.d_{31} d_{32} d_{33}\ldots d_{3n} \ldots,\\
-\vdots
-x_n = 0.d_{n1} d_{n2} d_{n3}\ldots d_{nn} \ldots,
-$$
+\begin{align*}
+x_1 &= 0.d_{11} d_{12} d_{13}\ldots d_{1n} \ldots,\\
+x_2 &= 0.d_{21} d_{22} d_{23}\ldots d_{2n} \ldots,\\
+x_3 &= 0.d_{31} d_{32} d_{33}\ldots d_{3n} \ldots,\\
+&\vdots \\
+x_n &= 0.d_{n1} d_{n2} d_{n3}\ldots d_{nn} \ldots
+\end{align*}
+
 where $d_{nk}\in\{0,\dots,9\}$ is the $k$-th decimal digit of the $n$-th number.
 
 ---
