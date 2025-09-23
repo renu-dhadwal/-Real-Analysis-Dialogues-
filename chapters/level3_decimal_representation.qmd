@@ -1,11 +1,12 @@
 # Level 3: Binary and Decimal Representation via [0,1]
 
-**Lila:** Acharya, how about the decimal representation of real numbers? We still don't know how we get that!
+**Lila:** Acharya, what about the decimal representation of real numbers? We still don’t know exactly how it is constructed.
 
-**Acharya:** That's a good question Lila! But in order to demonstrate the decinal representation, let us start with the *binary representation* of numbers.
-**Lila:** Ah! I have heard that computers use binary numbers to represent data. I am curious how real numbers can be represented using binary numbers. Does it have anything to do with the Nested Intervals Property?
-**Acharya Bhaskar:** Excellent thought, Lila. Yes, binary representation can be built by repeatedly bisecting the interval $[0,1]$. Let’s explore.
+**Acharya Bhaskar:** A very good question, Lila! To understand decimal representations properly, it is helpful to first look at the binary representation of numbers.
 
+**Lila:** Ah! I know that computers use binary numbers to represent data. But I’m curious—how can real numbers be expressed in binary? And does this have any connection with the Nested Interval Property?
+
+**Acharya Bhaskar:** Excellent thought, Lila. Indeed, binary representation arises quite naturally if we repeatedly bisect the interval $[0,1]$. Let’s explore how this works.
 ---
 
 ## Step 1: First division
