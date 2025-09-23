@@ -177,6 +177,7 @@ window.Quarto = {
   <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">3.2.2</span> 🔹 Example</a></li>
   <li><a href="#try-it-yourself-1" id="toc-try-it-yourself-1" class="nav-link" data-scroll-target="#try-it-yourself-1"><span class="header-section-number">3.2.3</span> ✅ Try it Yourself</a></li>
   </ul></li>
+  <li><a href="#uncountability-of-mathbbr" id="toc-uncountability-of-mathbbr" class="nav-link" data-scroll-target="#uncountability-of-mathbbr"><span class="header-section-number">4</span> Uncountability of <span class="math inline">\(\mathbb{R}\)</span></a></li>
   </ul>
 </nav>
     </div>
@@ -370,9 +371,44 @@ Hence, <span class="math display">\[
 \]</span>
 </details>
 </div>
-
-
 </section>
+</section>
+<section id="uncountability-of-mathbbr" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Uncountability of <span class="math inline">\(\mathbb{R}\)</span></h1>
+<p><strong>Lila:</strong> Acharya, now that we know the Nested Interval Property, can we use it to prove that the real numbers are uncountable?</p>
+<p><strong>Acharya Bhaskar:</strong> Certainly, Lila. We’ll give a clear proof by contradiction.</p>
+<p><strong>Lila:</strong> OK — what do we assume for contradiction?</p>
+<p><strong>Acharya Bhaskar:</strong> Assume <span class="math inline">\(\mathbb{R}\)</span> is countable. Then every real number in the interval <span class="math inline">\([0,1]\)</span> can be listed: <span class="math display">\[
+x_1, x_2, x_3, \dots
+\]</span> (If <span class="math inline">\(\mathbb{R}\)</span> were countable then any nonempty subinterval like <span class="math inline">\([0,1]\)</span> would also be countable, so this is legitimate.)</p>
+<p><strong>Lila:</strong> So we have a sequence that is supposed to contain every real in <span class="math inline">\([0,1]\)</span>.</p>
+<p><strong>Acharya Bhaskar:</strong> Right. Now we construct a nested sequence of closed intervals <span class="math display">\[
+I_1 \supset I_2 \supset I_3 \supset \cdots
+\]</span> with the property that <span class="math inline">\(x_n \notin I_{n+1}\)</span> for each <span class="math inline">\(n\)</span>, and with the lengths <span class="math inline">\(|I_n|\)</span> shrinking to <span class="math inline">\(0\)</span>. Start with <span class="math display">\[
+I_1 := [0,1].
+\]</span></p>
+<p><strong>Lila:</strong> How do we get <span class="math inline">\(I_2\)</span> from <span class="math inline">\(I_1\)</span> so that it avoids <span class="math inline">\(x_1\)</span>?</p>
+<p><strong>Acharya Bhaskar:</strong> Since <span class="math inline">\(x_1\)</span> is a single point in <span class="math inline">\([0,1]\)</span>, we can choose a closed subinterval <span class="math inline">\(I_2 \subset I_1\)</span> that does not contain <span class="math inline">\(x_1\)</span>. For definiteness pick <span class="math inline">\(I_2\)</span> to be one of the two halves of <span class="math inline">\([0,1]\)</span> that does not contain <span class="math inline">\(x_1\)</span> (if <span class="math inline">\(x_1\)</span> is exactly the midpoint, choose a smaller closed subinterval avoiding it). Ensure <span class="math inline">\(|I_2|\le 1/2\)</span>.</p>
+<p><strong>Lila:</strong> And then for <span class="math inline">\(x_2\)</span> we choose <span class="math inline">\(I_3 \subset I_2\)</span> avoiding <span class="math inline">\(x_2\)</span>, and so on?</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. Inductively: given <span class="math inline">\(I_n\)</span> (a nonempty closed interval), pick a closed subinterval <span class="math inline">\(I_{n+1}\subset I_n\)</span> such that <span class="math inline">\(x_n\notin I_{n+1}\)</span> and <span class="math inline">\(|I_{n+1}|\le 2^{-n}\)</span>. (There is always room to do this because removing the single point <span class="math inline">\(x_n\)</span> from <span class="math inline">\(I_n\)</span> leaves intervals we can choose from; we may take half of <span class="math inline">\(I_n\)</span> away from <span class="math inline">\(x_n\)</span>.)</p>
+<p>So we obtain a nested sequence of nonempty closed intervals whose lengths tend to zero: <span class="math display">\[
+|I_n| \le 2^{-(n-1)} \to 0 \quad (n\to\infty).
+\]</span></p>
+<p><strong>Lila:</strong> Then we use the Nested Interval Property?</p>
+<p><strong>Acharya Bhaskar:</strong> Yes. By NIP, the intersection <span class="math display">\[
+\bigcap_{n=1}^{\infty} I_n
+\]</span> is nonempty. Because the lengths <span class="math inline">\(|I_n|\)</span> go to <span class="math inline">\(0\)</span>, the intersection contains exactly one point. Call that point <span class="math inline">\(\alpha\)</span>.</p>
+<p><strong>Lila:</strong> Now why is <span class="math inline">\(\alpha\)</span> a contradiction?</p>
+<p><strong>Acharya Bhaskar:</strong> Observe: for each <span class="math inline">\(n\)</span> we deliberately ensured <span class="math inline">\(x_n\notin I_{n+1}\)</span>. Since <span class="math inline">\(\alpha\in I_{n+1}\)</span> for every <span class="math inline">\(n\)</span>, we conclude <span class="math inline">\(\alpha\neq x_n\)</span> for every <span class="math inline">\(n\)</span>. Thus <span class="math inline">\(\alpha\)</span> is a point of <span class="math inline">\([0,1]\)</span> that does not appear in the list <span class="math inline">\(x_1,x_2,\dots\)</span>, contradicting the assumption that the list enumerated all reals in <span class="math inline">\([0,1]\)</span>.</p>
+<p>Therefore our assumption that <span class="math inline">\(\mathbb{R}\)</span> (equivalently <span class="math inline">\([0,1]\)</span>) is countable is false. Hence <span class="math inline">\(\mathbb{R}\)</span> is uncountable. ∎</p>
+<details>
+<summary>
+<strong>Remark / small alternative detail</strong>
+</summary>
+One technical way to ensure the construction works cleanly is to define <span class="math inline">\(I_1=[0,1]\)</span>. At step <span class="math inline">\(n\)</span>, given the closed interval <span class="math inline">\(I_n=[a_n,b_n]\)</span>, choose two closed subintervals <span class="math inline">\([a_n,m_n]\)</span> and <span class="math inline">\([m_n,b_n]\)</span> where <span class="math inline">\(m_n=(a_n+b_n)/2\)</span>. At least one of these halves does not contain <span class="math inline">\(x_n\)</span>; take that half to be <span class="math inline">\(I_{n+1}\)</span>. Then <span class="math inline">\(|I_{n+1}|=\tfrac12|I_n|\le 2^{-n}\)</span>, and the lengths go to <span class="math inline">\(0\)</span>. The rest of the proof is unchanged.
+</details>
+
+
 </section>
 
 </main> <!-- /main -->

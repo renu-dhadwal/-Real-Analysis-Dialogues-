@@ -200,3 +200,62 @@ $$
 </details>
 :::
 
+# Uncountability of $\mathbb{R}$
+
+**Lila:** Acharya, now that we know the Nested Interval Property, can we use it to prove that the real numbers are uncountable?
+
+**Acharya Bhaskar:** Certainly, Lila. We'll give a clear proof by contradiction.
+
+**Lila:** OK — what do we assume for contradiction?
+
+**Acharya Bhaskar:** Assume $\mathbb{R}$ is countable. Then every real number in the interval $[0,1]$ can be listed:
+$$
+x_1, x_2, x_3, \dots
+$$
+(If $\mathbb{R}$ were countable then any nonempty subinterval like $[0,1]$ would also be countable, so this is legitimate.)
+
+**Lila:** So we have a sequence that is supposed to contain every real in $[0,1]$.
+
+**Acharya Bhaskar:** Right. Now we construct a nested sequence of closed intervals
+$$
+I_1 \supset I_2 \supset I_3 \supset \cdots
+$$
+with the property that $x_n \notin I_{n+1}$ for each $n$, and with the lengths $|I_n|$  shrinking to $0$. Start with
+$$
+I_1 := [0,1].
+$$
+
+**Lila:** How do we get $I_2$ from $I_1$ so that it avoids $x_1$?
+
+**Acharya Bhaskar:** Since $x_1$ is a single point in $[0,1]$, we can choose a closed subinterval $I_2 \subset I_1$ that does not contain $x_1$. For definiteness pick $I_2$ to be one of the two halves of $[0,1]$ that does not contain $x_1$ (if $x_1$ is exactly the midpoint, choose a smaller closed subinterval avoiding it). Ensure $|I_2|\le 1/2$.
+
+**Lila:** And then for $x_2$ we choose $I_3 \subset I_2$ avoiding $x_2$, and so on?
+
+**Acharya Bhaskar:** Exactly. Inductively: given $I_n$ (a nonempty closed interval), pick a closed subinterval $I_{n+1}\subset I_n$ such that $x_n\notin I_{n+1}$ and $|I_{n+1}|\le 2^{-n}$. (There is always room to do this because removing the single point $x_n$ from $I_n$ leaves intervals we can choose from; we may take half of $I_n$ away from $x_n$.)
+
+So we obtain a nested sequence of nonempty closed intervals whose lengths tend to zero:
+$$
+|I_n| \le 2^{-(n-1)} \to 0 \quad (n\to\infty).
+$$
+
+**Lila:** Then we use the Nested Interval Property?
+
+**Acharya Bhaskar:** Yes. By NIP, the intersection
+$$
+\bigcap_{n=1}^{\infty} I_n
+$$
+is nonempty. Because the lengths $|I_n|$ go to $0$, the intersection contains exactly one point. Call that point $\alpha$.
+
+**Lila:** Now why is $\alpha$ a contradiction?
+
+**Acharya Bhaskar:** Observe: for each $n$ we deliberately ensured $x_n\notin I_{n+1}$. Since $\alpha\in I_{n+1}$ for every $n$, we conclude $\alpha\neq x_n$ for every $n$. Thus $\alpha$ is a point of $[0,1]$ that does not appear in the list $x_1,x_2,\dots$, contradicting the assumption that the list enumerated all reals in $[0,1]$.
+
+Therefore our assumption that $\mathbb{R}$ (equivalently $[0,1]$) is countable is false. Hence $\mathbb{R}$ is uncountable. ∎
+
+<details>
+<summary><strong>Remark / small alternative detail</strong></summary>
+
+One technical way to ensure the construction works cleanly is to define $I_1=[0,1]$. At step $n$, given the closed interval $I_n=[a_n,b_n]$, choose two closed subintervals
+$[a_n,m_n]$ and $[m_n,b_n]$ where $m_n=(a_n+b_n)/2$. At least one of these halves does not contain $x_n$; take that half to be $I_{n+1}$. Then $|I_{n+1}|=\tfrac12|I_n|\le 2^{-n}$, and the lengths go to $0$. The rest of the proof is unchanged.
+</details>
+
