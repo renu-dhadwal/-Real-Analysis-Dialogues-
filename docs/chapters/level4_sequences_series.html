@@ -195,6 +195,7 @@ window.Quarto = {
   <li><a href="#key-techniques-for-proving-limits-of-sequences" id="toc-key-techniques-for-proving-limits-of-sequences" class="nav-link" data-scroll-target="#key-techniques-for-proving-limits-of-sequences"><span class="header-section-number">5.4.9</span> Key Techniques for Proving Limits of Sequences</a></li>
   <li><a href="#motivation-for-the-comparison-theorem" id="toc-motivation-for-the-comparison-theorem" class="nav-link" data-scroll-target="#motivation-for-the-comparison-theorem"><span class="header-section-number">5.4.10</span> Motivation for the Comparison Theorem</a></li>
   <li><a href="#theorem-controlling-a-sequence-by-another" id="toc-theorem-controlling-a-sequence-by-another" class="nav-link" data-scroll-target="#theorem-controlling-a-sequence-by-another"><span class="header-section-number">5.4.11</span> Theorem: Controlling a Sequence by Another</a></li>
+  <li><a href="#example-using-the-comparison-theorem" id="toc-example-using-the-comparison-theorem" class="nav-link" data-scroll-target="#example-using-the-comparison-theorem"><span class="header-section-number">5.4.12</span> Example: Using the Comparison Theorem</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -555,6 +556,25 @@ Click to see the proof
 <span class="math display">\[|x_n - x| \leq C a_n &lt; C \cdot \frac{\varepsilon}{C} = \varepsilon.\]</span></p>
 <p>Therefore, <span class="math inline">\(\lim_{n \to \infty} x_n = x.\)</span></p>
 </details>
+</section>
+<section id="example-using-the-comparison-theorem" class="level3" data-number="5.4.12">
+<h3 data-number="5.4.12" class="anchored" data-anchor-id="example-using-the-comparison-theorem"><span class="header-section-number">5.4.12</span> Example: Using the Comparison Theorem</h3>
+<p><strong>Lila:</strong> Can we use this theorem on an example we already know, like <span class="math inline">\(\tfrac{n}{n+1} \to 1\)</span>?</p>
+<p><strong>Acharya Bhaskar:</strong> Excellent idea. Let’s try.</p>
+<p>We want to prove<br>
+<span class="math display">\[\lim_{n \to \infty} \frac{n}{n+1} = 1.\]</span></p>
+<p>First compute the error:<br>
+<span class="math display">\[\Bigg|\frac{n}{n+1} - 1\Bigg| = \frac{1}{n+1}.\]</span></p>
+<p>Now notice that<br>
+<span class="math display">\[\frac{1}{n+1} \leq \frac{1}{n} \quad \text{for all } n \geq 1.\]</span></p>
+<p>So we can set <span class="math inline">\(a_n = \tfrac{1}{n}\)</span>, which we already know tends to <span class="math inline">\(0\)</span>, and take <span class="math inline">\(C = 1\)</span>.<br>
+Then the condition of the theorem is satisfied:<br>
+<span class="math display">\[\Bigg|\frac{n}{n+1} - 1\Bigg| \leq 1 \cdot a_n.\]</span></p>
+<p>By the theorem,<br>
+<span class="math display">\[\lim_{n \to \infty} \frac{n}{n+1} = 1.\]</span></p>
+<hr>
+<p><strong>Lila:</strong> Wow, that was much quicker than the direct <span class="math inline">\(\varepsilon\)</span>–<span class="math inline">\(N\)</span> proof we did earlier.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. This theorem saves us effort. Once you have a few standard sequences like <span class="math inline">\(\tfrac{1}{n}\)</span> or <span class="math inline">\(\tfrac{1}{n^2}\)</span> whose limits you know, you can use them as benchmarks to prove many others.</p>
 
 
 </section>

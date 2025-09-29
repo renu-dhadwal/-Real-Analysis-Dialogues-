@@ -451,3 +451,31 @@ $$|x_n - x| \leq C a_n < C \cdot \frac{\varepsilon}{C} = \varepsilon.$$
 Therefore, $\lim_{n \to \infty} x_n = x.$
 
 </details>
+
+### Example: Using the Comparison Theorem
+
+**Lila:** Can we use this theorem on an example we already know, like $\tfrac{n}{n+1} \to 1$?
+
+**Acharya Bhaskar:** Excellent idea. Let’s try.  
+
+We want to prove  
+$$\lim_{n \to \infty} \frac{n}{n+1} = 1.$$
+
+First compute the error:  
+$$\Bigg|\frac{n}{n+1} - 1\Bigg| = \frac{1}{n+1}.$$
+
+Now notice that  
+$$\frac{1}{n+1} \leq \frac{1}{n} \quad \text{for all } n \geq 1.$$
+
+So we can set $a_n = \tfrac{1}{n}$, which we already know tends to $0$, and take $C = 1$.  
+Then the condition of the theorem is satisfied:  
+$$\Bigg|\frac{n}{n+1} - 1\Bigg| \leq 1 \cdot a_n.$$
+
+By the theorem,  
+$$\lim_{n \to \infty} \frac{n}{n+1} = 1.$$
+
+---
+
+**Lila:** Wow, that was much quicker than the direct $\varepsilon$–$N$ proof we did earlier.
+
+**Acharya Bhaskar:** Exactly. This theorem saves us effort. Once you have a few standard sequences like $\tfrac{1}{n}$ or $\tfrac{1}{n^2}$ whose limits you know, you can use them as benchmarks to prove many others.
