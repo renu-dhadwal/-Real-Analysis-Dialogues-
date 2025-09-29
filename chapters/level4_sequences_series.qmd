@@ -517,7 +517,7 @@ $$\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.$$
 
 **Lila:** I remember you said that $\lim c^{1/n} = 1$ for $c > 0$. Can we prove this?
 
-### Bernoulli’s Inequality
+#### Bernoulli’s Inequality
 
 **Acharya Bhaskar:** Before we use it in our proofs, let me remind you of an important inequality.  
 
