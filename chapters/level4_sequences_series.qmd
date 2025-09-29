@@ -404,3 +404,50 @@ When proving convergence (or divergence), these strategies are especially useful
 
 These techniques will reappear often and form the backbone of rigorous $\varepsilon$–$N$ proofs.
 
+### Motivation for the Comparison Theorem
+
+**Lila:** In all these examples, we always end up bounding $|x_n - L|$ by something simpler that goes to zero.  
+Like for $\tfrac{1}{n^2+1}$, we said it was less than $\tfrac{1}{n^2}$, and since that goes to zero, the sequence also goes to zero.
+
+**Acharya Bhaskar:** Exactly. You’ve spotted a very general pattern.  
+If we can show that the error term $|x_n - x|$ is not bigger than some *controlling sequence* that shrinks to zero, then $x_n$ must also converge to $x$.
+
+**Lila:** So instead of always doing the $\varepsilon$–$N$ argument from scratch, we can reduce it to something we already know?
+
+**Acharya Bhaskar:** Yes. That’s the beauty of it.  
+We use one sequence $(a_n)$ that’s already known to converge to $0$, and if $|x_n - x|$ is squeezed under a constant multiple of $a_n$, then $x_n$ must converge to $x$.
+
+**Lila:** Ah, so this is like a systematic version of the trick we’ve been using.  
+
+**Acharya Bhaskar:** Precisely. Let me now state this as a theorem.
+
+---
+
+### Theorem: Controlling a Sequence by Another
+
+**Theorem.**  
+Let $(x_n)$ be a sequence of real numbers and let $x \in \mathbb{R}$.  
+Suppose $(a_n)$ is a sequence of positive real numbers with $\lim_{n \to \infty} a_n = 0$.  
+If there exists a constant $C > 0$ and an $m \in \mathbb{N}$ such that  
+$$|x_n - x| \leq C \, a_n \quad \text{for all } n \geq m,$$  
+then  
+$$\lim_{n \to \infty} x_n = x.$$
+
+<details>
+<summary>Click to see the proof</summary>
+
+We want to show that for every $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for all $n > N$,  
+$$|x_n - x| < \varepsilon.$$
+
+By assumption,  
+$$|x_n - x| \leq C a_n \quad \text{for all } n \geq m.$$
+
+Since $\lim_{n \to \infty} a_n = 0$, given $\varepsilon > 0$ we know there exists $N_1 \in \mathbb{N}$ such that for all $n > N_1$,  
+$$a_n < \frac{\varepsilon}{C}.$$
+
+So, for $n > \max\{m, N_1\}$, we have  
+$$|x_n - x| \leq C a_n < C \cdot \frac{\varepsilon}{C} = \varepsilon.$$
+
+Therefore, $\lim_{n \to \infty} x_n = x.$
+
+</details>

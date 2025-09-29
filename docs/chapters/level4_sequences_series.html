@@ -193,6 +193,8 @@ window.Quarto = {
   <li><a href="#an-oscillating-divergent-sequence" id="toc-an-oscillating-divergent-sequence" class="nav-link" data-scroll-target="#an-oscillating-divergent-sequence"><span class="header-section-number">5.4.7</span> An Oscillating Divergent Sequence</a></li>
   <li><a href="#summary-of-examples" id="toc-summary-of-examples" class="nav-link" data-scroll-target="#summary-of-examples"><span class="header-section-number">5.4.8</span> Summary of Examples</a></li>
   <li><a href="#key-techniques-for-proving-limits-of-sequences" id="toc-key-techniques-for-proving-limits-of-sequences" class="nav-link" data-scroll-target="#key-techniques-for-proving-limits-of-sequences"><span class="header-section-number">5.4.9</span> Key Techniques for Proving Limits of Sequences</a></li>
+  <li><a href="#motivation-for-the-comparison-theorem" id="toc-motivation-for-the-comparison-theorem" class="nav-link" data-scroll-target="#motivation-for-the-comparison-theorem"><span class="header-section-number">5.4.10</span> Motivation for the Comparison Theorem</a></li>
+  <li><a href="#theorem-controlling-a-sequence-by-another" id="toc-theorem-controlling-a-sequence-by-another" class="nav-link" data-scroll-target="#theorem-controlling-a-sequence-by-another"><span class="header-section-number">5.4.11</span> Theorem: Controlling a Sequence by Another</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -516,6 +518,43 @@ For rational functions of <span class="math inline">\(n\)</span>, compare the hi
 </ul></li>
 </ul>
 <p>These techniques will reappear often and form the backbone of rigorous <span class="math inline">\(\varepsilon\)</span>–<span class="math inline">\(N\)</span> proofs.</p>
+</section>
+<section id="motivation-for-the-comparison-theorem" class="level3" data-number="5.4.10">
+<h3 data-number="5.4.10" class="anchored" data-anchor-id="motivation-for-the-comparison-theorem"><span class="header-section-number">5.4.10</span> Motivation for the Comparison Theorem</h3>
+<p><strong>Lila:</strong> In all these examples, we always end up bounding <span class="math inline">\(|x_n - L|\)</span> by something simpler that goes to zero.<br>
+Like for <span class="math inline">\(\tfrac{1}{n^2+1}\)</span>, we said it was less than <span class="math inline">\(\tfrac{1}{n^2}\)</span>, and since that goes to zero, the sequence also goes to zero.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. You’ve spotted a very general pattern.<br>
+If we can show that the error term <span class="math inline">\(|x_n - x|\)</span> is not bigger than some <em>controlling sequence</em> that shrinks to zero, then <span class="math inline">\(x_n\)</span> must also converge to <span class="math inline">\(x\)</span>.</p>
+<p><strong>Lila:</strong> So instead of always doing the <span class="math inline">\(\varepsilon\)</span>–<span class="math inline">\(N\)</span> argument from scratch, we can reduce it to something we already know?</p>
+<p><strong>Acharya Bhaskar:</strong> Yes. That’s the beauty of it.<br>
+We use one sequence <span class="math inline">\((a_n)\)</span> that’s already known to converge to <span class="math inline">\(0\)</span>, and if <span class="math inline">\(|x_n - x|\)</span> is squeezed under a constant multiple of <span class="math inline">\(a_n\)</span>, then <span class="math inline">\(x_n\)</span> must converge to <span class="math inline">\(x\)</span>.</p>
+<p><strong>Lila:</strong> Ah, so this is like a systematic version of the trick we’ve been using.</p>
+<p><strong>Acharya Bhaskar:</strong> Precisely. Let me now state this as a theorem.</p>
+<hr>
+</section>
+<section id="theorem-controlling-a-sequence-by-another" class="level3" data-number="5.4.11">
+<h3 data-number="5.4.11" class="anchored" data-anchor-id="theorem-controlling-a-sequence-by-another"><span class="header-section-number">5.4.11</span> Theorem: Controlling a Sequence by Another</h3>
+<p><strong>Theorem.</strong><br>
+Let <span class="math inline">\((x_n)\)</span> be a sequence of real numbers and let <span class="math inline">\(x \in \mathbb{R}\)</span>.<br>
+Suppose <span class="math inline">\((a_n)\)</span> is a sequence of positive real numbers with <span class="math inline">\(\lim_{n \to \infty} a_n = 0\)</span>.<br>
+If there exists a constant <span class="math inline">\(C &gt; 0\)</span> and an <span class="math inline">\(m \in \mathbb{N}\)</span> such that<br>
+<span class="math display">\[|x_n - x| \leq C \, a_n \quad \text{for all } n \geq m,\]</span><br>
+then<br>
+<span class="math display">\[\lim_{n \to \infty} x_n = x.\]</span></p>
+<details>
+<summary>
+Click to see the proof
+</summary>
+<p>We want to show that for every <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n &gt; N\)</span>,<br>
+<span class="math display">\[|x_n - x| &lt; \varepsilon.\]</span></p>
+<p>By assumption,<br>
+<span class="math display">\[|x_n - x| \leq C a_n \quad \text{for all } n \geq m.\]</span></p>
+<p>Since <span class="math inline">\(\lim_{n \to \infty} a_n = 0\)</span>, given <span class="math inline">\(\varepsilon &gt; 0\)</span> we know there exists <span class="math inline">\(N_1 \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n &gt; N_1\)</span>,<br>
+<span class="math display">\[a_n &lt; \frac{\varepsilon}{C}.\]</span></p>
+<p>So, for <span class="math inline">\(n &gt; \max\{m, N_1\}\)</span>, we have<br>
+<span class="math display">\[|x_n - x| \leq C a_n &lt; C \cdot \frac{\varepsilon}{C} = \varepsilon.\]</span></p>
+<p>Therefore, <span class="math inline">\(\lim_{n \to \infty} x_n = x.\)</span></p>
+</details>
 
 
 </section>
