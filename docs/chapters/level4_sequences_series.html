@@ -191,6 +191,8 @@ window.Quarto = {
   <li><a href="#convergence-to-a-rational-number" id="toc-convergence-to-a-rational-number" class="nav-link" data-scroll-target="#convergence-to-a-rational-number"><span class="header-section-number">5.4.5</span> Convergence to a Rational Number</a></li>
   <li><a href="#an-example-of-divergence" id="toc-an-example-of-divergence" class="nav-link" data-scroll-target="#an-example-of-divergence"><span class="header-section-number">5.4.6</span> An Example of Divergence</a></li>
   <li><a href="#an-oscillating-divergent-sequence" id="toc-an-oscillating-divergent-sequence" class="nav-link" data-scroll-target="#an-oscillating-divergent-sequence"><span class="header-section-number">5.4.7</span> An Oscillating Divergent Sequence</a></li>
+  <li><a href="#summary-of-examples" id="toc-summary-of-examples" class="nav-link" data-scroll-target="#summary-of-examples"><span class="header-section-number">5.4.8</span> Summary of Examples</a></li>
+  <li><a href="#key-techniques-for-proving-limits-of-sequences" id="toc-key-techniques-for-proving-limits-of-sequences" class="nav-link" data-scroll-target="#key-techniques-for-proving-limits-of-sequences"><span class="header-section-number">5.4.9</span> Key Techniques for Proving Limits of Sequences</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -472,7 +474,48 @@ Click to see the explanation
 <p>Therefore, no single <span class="math inline">\(L\)</span> can satisfy the definition. The sequence does <strong>not converge</strong>.</p>
 </details>
 <p><strong>Lila:</strong> I see! Unlike <span class="math inline">\(n\)</span>, which runs off to infinity, this one just keeps bouncing forever without settling.</p>
-<p><strong>Acharya Bhaskar:</strong> Precisely. These two examples — <span class="math inline">\(x_n = n\)</span> and <span class="math inline">\(x_n = (-1)^n\)</span> — illustrate two common ways in which sequences can fail to converge.</p>
+<p><strong>Acharya Bhaskar:</strong> Precisely. These two examples : <span class="math inline">\(x_n = n\)</span> and <span class="math inline">\(x_n = (-1)^n\)</span>, illustrate two common ways in which sequences can fail to converge.</p>
+</section>
+<section id="summary-of-examples" class="level3" data-number="5.4.8">
+<h3 data-number="5.4.8" class="anchored" data-anchor-id="summary-of-examples"><span class="header-section-number">5.4.8</span> Summary of Examples</h3>
+<p>In this section, we explored several examples to understand the behavior of sequences:</p>
+<ul>
+<li>Some sequences converge to <strong>zero</strong>, such as <span class="math inline">\(\tfrac{1}{n}\)</span> and <span class="math inline">\(\tfrac{1}{n^2+1}\)</span>.<br>
+</li>
+<li>Others converge to <strong>non-zero finite limits</strong>, like <span class="math inline">\(\tfrac{n}{n+1} \to 1\)</span> and <span class="math inline">\(\tfrac{2n+3}{5n+1} \to \tfrac{2}{5}\)</span>.<br>
+</li>
+<li>Not all sequences converge:
+<ul>
+<li><span class="math inline">\(\{n\}\)</span> <strong>diverges to infinity</strong>, growing without bound.<br>
+</li>
+<li><span class="math inline">\(\{(-1)^n\}\)</span> <strong>oscillates</strong>, never settling to a single value.</li>
+</ul></li>
+</ul>
+<p>These examples show that sequences may approach a finite limit, grow without bound, or fail to settle altogether. In each case, the precise <span class="math inline">\(\varepsilon\)</span>–<span class="math inline">\(N\)</span> definition helps us make these ideas rigorous.</p>
+</section>
+<section id="key-techniques-for-proving-limits-of-sequences" class="level3" data-number="5.4.9">
+<h3 data-number="5.4.9" class="anchored" data-anchor-id="key-techniques-for-proving-limits-of-sequences"><span class="header-section-number">5.4.9</span> Key Techniques for Proving Limits of Sequences</h3>
+<p>When proving convergence (or divergence), these strategies are especially useful:</p>
+<ul>
+<li><p><strong>Inequality comparison:</strong><br>
+Show <span class="math inline">\(|x_n - L|\)</span> is bounded above by a simpler expression that you can control.<br>
+<em>Example:</em> <span class="math inline">\(\tfrac{1}{n^2+1} &lt; \tfrac{1}{n^2}\)</span>.</p></li>
+<li><p><strong>Algebraic simplification:</strong><br>
+Rearrange the difference <span class="math inline">\(x_n - L\)</span> into a form where <span class="math inline">\(n\)</span> appears in the denominator.<br>
+<em>Example:</em> <span class="math inline">\(\tfrac{n}{n+1} - 1 = \tfrac{-1}{n+1}\)</span>.</p></li>
+<li><p><strong>Dominant term analysis:</strong><br>
+For rational functions of <span class="math inline">\(n\)</span>, compare the highest powers of <span class="math inline">\(n\)</span> in numerator and denominator.<br>
+<em>Example:</em> <span class="math inline">\(\tfrac{2n+3}{5n+1} \to \tfrac{2}{5}\)</span>.</p></li>
+<li><p><strong>Divergence checks:</strong></p>
+<ul>
+<li>If <span class="math inline">\(x_n \to \infty\)</span>, prove that for every <span class="math inline">\(M &gt; 0\)</span>, eventually <span class="math inline">\(x_n &gt; M\)</span>.<br>
+<em>Example:</em> <span class="math inline">\(x_n = n\)</span>.<br>
+</li>
+<li>If <span class="math inline">\(x_n\)</span> oscillates between two or more values that stay apart, it has <strong>no limit</strong>.<br>
+<em>Example:</em> <span class="math inline">\(x_n = (-1)^n\)</span>.</li>
+</ul></li>
+</ul>
+<p>These techniques will reappear often and form the backbone of rigorous <span class="math inline">\(\varepsilon\)</span>–<span class="math inline">\(N\)</span> proofs.</p>
 
 
 </section>

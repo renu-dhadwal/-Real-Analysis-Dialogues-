@@ -365,4 +365,42 @@ Therefore, no single $L$ can satisfy the definition. The sequence does **not con
 
 **Lila:** I see! Unlike $n$, which runs off to infinity, this one just keeps bouncing forever without settling.
 
-**Acharya Bhaskar:** Precisely. These two examples — $x_n = n$ and $x_n = (-1)^n$ — illustrate two common ways in which sequences can fail to converge.
+**Acharya Bhaskar:** Precisely. These two examples : $x_n = n$ and $x_n = (-1)^n$, illustrate two common ways in which sequences can fail to converge.
+
+### Summary of Examples
+
+In this section, we explored several examples to understand the behavior of sequences:
+
+- Some sequences converge to **zero**, such as $\tfrac{1}{n}$ and $\tfrac{1}{n^2+1}$.  
+- Others converge to **non-zero finite limits**, like $\tfrac{n}{n+1} \to 1$ and $\tfrac{2n+3}{5n+1} \to \tfrac{2}{5}$.  
+- Not all sequences converge:  
+  - $\{n\}$ **diverges to infinity**, growing without bound.  
+  - $\{(-1)^n\}$ **oscillates**, never settling to a single value.  
+
+These examples show that sequences may approach a finite limit, grow without bound, or fail to settle altogether. In each case, the precise $\varepsilon$–$N$ definition helps us make these ideas rigorous.
+
+### Key Techniques for Proving Limits of Sequences
+
+When proving convergence (or divergence), these strategies are especially useful:
+
+- **Inequality comparison:**  
+  Show $|x_n - L|$ is bounded above by a simpler expression that you can control.  
+  *Example:* $\tfrac{1}{n^2+1} < \tfrac{1}{n^2}$.
+
+- **Algebraic simplification:**  
+  Rearrange the difference $x_n - L$ into a form where $n$ appears in the denominator.  
+  *Example:* $\tfrac{n}{n+1} - 1 = \tfrac{-1}{n+1}$.
+
+- **Dominant term analysis:**  
+  For rational functions of $n$, compare the highest powers of $n$ in numerator and denominator.  
+  *Example:* $\tfrac{2n+3}{5n+1} \to \tfrac{2}{5}$.
+
+
+- **Divergence checks:**  
+  - If $x_n \to \infty$, prove that for every $M > 0$, eventually $x_n > M$.  
+    *Example:* $x_n = n$.  
+  - If $x_n$ oscillates between two or more values that stay apart, it has **no limit**.  
+    *Example:* $x_n = (-1)^n$.
+
+These techniques will reappear often and form the backbone of rigorous $\varepsilon$–$N$ proofs.
+
