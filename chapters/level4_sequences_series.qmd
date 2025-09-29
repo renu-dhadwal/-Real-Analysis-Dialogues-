@@ -267,12 +267,12 @@ We want to show: for every $\varepsilon > 0$, there exists $N \in \mathbb{N}$ su
 $$\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| < \varepsilon.$$
 
 Simplify the difference:  
-\[
+$$
 \frac{2n+3}{5n+1} - \frac{2}{5}
 = \frac{5(2n+3) - 2(5n+1)}{5(5n+1)}
 = \frac{10n+15 - 10n - 2}{25n+5}
 = \frac{13}{25n+5}.
-\]
+$$
 
 So  
 $$\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| = \frac{13}{25n+5}.$$
