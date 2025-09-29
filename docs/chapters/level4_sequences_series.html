@@ -196,6 +196,7 @@ window.Quarto = {
   <li><a href="#motivation-for-the-comparison-theorem" id="toc-motivation-for-the-comparison-theorem" class="nav-link" data-scroll-target="#motivation-for-the-comparison-theorem"><span class="header-section-number">5.4.10</span> Motivation for the Comparison Theorem</a></li>
   <li><a href="#theorem-controlling-a-sequence-by-another" id="toc-theorem-controlling-a-sequence-by-another" class="nav-link" data-scroll-target="#theorem-controlling-a-sequence-by-another"><span class="header-section-number">5.4.11</span> Theorem: Controlling a Sequence by Another</a></li>
   <li><a href="#example-using-the-comparison-theorem" id="toc-example-using-the-comparison-theorem" class="nav-link" data-scroll-target="#example-using-the-comparison-theorem"><span class="header-section-number">5.4.12</span> Example: Using the Comparison Theorem</a></li>
+  <li><a href="#example-a-rational-limit-with-the-comparison-theorem" id="toc-example-a-rational-limit-with-the-comparison-theorem" class="nav-link" data-scroll-target="#example-a-rational-limit-with-the-comparison-theorem"><span class="header-section-number">5.4.13</span> Example: A Rational Limit with the Comparison Theorem</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -575,6 +576,28 @@ Then the condition of the theorem is satisfied:<br>
 <hr>
 <p><strong>Lila:</strong> Wow, that was much quicker than the direct <span class="math inline">\(\varepsilon\)</span>–<span class="math inline">\(N\)</span> proof we did earlier.</p>
 <p><strong>Acharya Bhaskar:</strong> Exactly. This theorem saves us effort. Once you have a few standard sequences like <span class="math inline">\(\tfrac{1}{n}\)</span> or <span class="math inline">\(\tfrac{1}{n^2}\)</span> whose limits you know, you can use them as benchmarks to prove many others.</p>
+</section>
+<section id="example-a-rational-limit-with-the-comparison-theorem" class="level3" data-number="5.4.13">
+<h3 data-number="5.4.13" class="anchored" data-anchor-id="example-a-rational-limit-with-the-comparison-theorem"><span class="header-section-number">5.4.13</span> Example: A Rational Limit with the Comparison Theorem</h3>
+<p><strong>Lila:</strong> Can we also use the theorem for something that looks a bit more complicated, like<br>
+<span class="math display">\[x_n = \frac{2n+3}{5n+1}?\]</span></p>
+<p><strong>Acharya Bhaskar:</strong> Certainly. We already proved directly that<br>
+<span class="math display">\[\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.\]</span><br>
+Let’s see how the comparison theorem helps.</p>
+<p>First, compute the error:<br>
+[ - = . ]</p>
+<p>So,<br>
+<span class="math display">\[\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| = \frac{13}{25n+5}.\]</span></p>
+<p>Now notice that for all <span class="math inline">\(n \geq 1\)</span>,<br>
+<span class="math display">\[\frac{13}{25n+5} \leq \frac{13}{25n} = \frac{13}{25}\cdot \frac{1}{n}.\]</span></p>
+<p>So we can set <span class="math inline">\(a_n = \tfrac{1}{n}\)</span> (which goes to <span class="math inline">\(0\)</span>) and <span class="math inline">\(C = \tfrac{13}{25}\)</span>.<br>
+Then<br>
+<span class="math display">\[|x_n - \tfrac{2}{5}| \leq C \, a_n.\]</span></p>
+<p>By the theorem,<br>
+<span class="math display">\[\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.\]</span></p>
+<hr>
+<p><strong>Lila:</strong> That really simplifies things! Instead of wrestling with inequalities, we just compare to <span class="math inline">\(\tfrac{1}{n}\)</span>.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. This method is especially powerful for rational sequences, where the error often turns into a constant times <span class="math inline">\(\tfrac{1}{n}\)</span>.</p>
 
 
 </section>
