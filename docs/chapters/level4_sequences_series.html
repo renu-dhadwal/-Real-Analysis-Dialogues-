@@ -188,6 +188,8 @@ window.Quarto = {
   <li><a href="#why-limits-matter" id="toc-why-limits-matter" class="nav-link" data-scroll-target="#why-limits-matter"><span class="header-section-number">5.4.2</span> Why limits matter</a></li>
   <li><a href="#another-example-of-convergence" id="toc-another-example-of-convergence" class="nav-link" data-scroll-target="#another-example-of-convergence"><span class="header-section-number">5.4.3</span> Another Example of Convergence</a></li>
   <li><a href="#a-nonzero-limit-example" id="toc-a-nonzero-limit-example" class="nav-link" data-scroll-target="#a-nonzero-limit-example"><span class="header-section-number">5.4.4</span> A Non–Zero Limit Example</a></li>
+  <li><a href="#convergence-to-a-rational-number" id="toc-convergence-to-a-rational-number" class="nav-link" data-scroll-target="#convergence-to-a-rational-number"><span class="header-section-number">5.4.5</span> Convergence to a Rational Number</a></li>
+  <li><a href="#an-example-of-divergence" id="toc-an-example-of-divergence" class="nav-link" data-scroll-target="#an-example-of-divergence"><span class="header-section-number">5.4.6</span> An Example of Divergence</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -384,7 +386,10 @@ then for all <span class="math inline">\(n &gt; N\)</span>,<br>
 <span class="math display">\[\lim_{n \to \infty} \frac{n}{n+1} = 1.\]</span></p>
 </details>
 <p><strong>Lila:</strong> That was nice! The sequence actually climbs closer and closer to <span class="math inline">\(1\)</span>, never quite reaching it, but the proof shows it really does converge there.</p>
-<p><strong>Acharya Bhaskar:</strong> Exactly. This illustrates an important point — limits don’t always have to be zero; the same method works for any real number. ### Convergence to a Rational Number</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. This illustrates an important point — limits don’t always have to be zero; the same method works for any real number.</p>
+</section>
+<section id="convergence-to-a-rational-number" class="level3" data-number="5.4.5">
+<h3 data-number="5.4.5" class="anchored" data-anchor-id="convergence-to-a-rational-number"><span class="header-section-number">5.4.5</span> Convergence to a Rational Number</h3>
 <p><strong>Lila:</strong> We’ve seen limits going to <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>. Can a sequence converge to some other fraction, like <span class="math inline">\(\tfrac{2}{5}\)</span>?</p>
 <p><strong>Acharya Bhaskar:</strong> Absolutely! Let’s take<br>
 <span class="math display">\[x_n = \frac{2n+3}{5n+1}.\]</span></p>
@@ -415,6 +420,28 @@ Click to see the proof
 </details>
 <p><strong>Lila:</strong> I see! The algebra looks a bit longer, but the same method works. The main trick was simplifying the difference.</p>
 <p><strong>Acharya Bhaskar:</strong> Precisely. Once you bring it into a simple form, the <span class="math inline">\(\varepsilon\)</span>–<span class="math inline">\(N\)</span> argument falls into place. This shows that sequences can converge to any real number, not just <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>.</p>
+</section>
+<section id="an-example-of-divergence" class="level3" data-number="5.4.6">
+<h3 data-number="5.4.6" class="anchored" data-anchor-id="an-example-of-divergence"><span class="header-section-number">5.4.6</span> An Example of Divergence</h3>
+<p><strong>Lila:</strong> All the examples so far show sequences settling to a finite number. But what about a sequence that <em>doesn’t</em> converge?</p>
+<p><strong>Acharya Bhaskar:</strong> Excellent question. Consider the sequence<br>
+<span class="math display">\[x_n = n.\]</span></p>
+<p><strong>Lila:</strong> That just grows bigger and bigger! So it can’t converge to a real number, right?</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. Formally, we say it <em>diverges to infinity</em>. Let’s make this precise.</p>
+<details>
+<summary>
+Click to see the explanation
+</summary>
+<p>To say that <span class="math inline">\(\lim_{n \to \infty} x_n = +\infty\)</span> means:</p>
+<p>For every real number <span class="math inline">\(M &gt; 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n &gt; N\)</span>,<br>
+<span class="math display">\[x_n &gt; M.\]</span></p>
+<p>Now, since <span class="math inline">\(x_n = n\)</span>, if you give me any <span class="math inline">\(M &gt; 0\)</span>, I can simply choose<br>
+<span class="math display">\[N = \lceil M \rceil.\]</span></p>
+<p>Then for all <span class="math inline">\(n &gt; N\)</span>, clearly <span class="math inline">\(n &gt; M\)</span>, so <span class="math inline">\(x_n &gt; M\)</span>.</p>
+<p>Thus, the sequence <span class="math inline">\(\{n\}\)</span> does not converge to a finite limit, but instead diverges to infinity.</p>
+</details>
+<p><strong>Lila:</strong> So divergence isn’t just “no limit at all.” Sometimes it means the sequence goes off to infinity in a systematic way.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. Later, we’ll also see examples where sequences oscillate and fail to have any limit at all — those are divergent in a different sense.</p>
 
 
 </section>

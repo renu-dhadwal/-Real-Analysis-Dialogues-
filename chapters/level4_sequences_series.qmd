@@ -245,6 +245,7 @@ $$\lim_{n \to \infty} \frac{n}{n+1} = 1.$$
 **Lila:** That was nice! The sequence actually climbs closer and closer to $1$, never quite reaching it, but the proof shows it really does converge there.
 
 **Acharya Bhaskar:** Exactly. This illustrates an important point — limits don’t always have to be zero; the same method works for any real number.
+
 ### Convergence to a Rational Number
 
 **Lila:** We’ve seen limits going to $0$ and $1$. Can a sequence converge to some other fraction, like $\tfrac{2}{5}$?
@@ -297,3 +298,34 @@ $$\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.$$
 
 **Acharya Bhaskar:** Precisely. Once you bring it into a simple form, the $\varepsilon$–$N$ argument falls into place. This shows that sequences can converge to any real number, not just $0$ or $1$.
 
+### An Example of Divergence
+
+**Lila:** All the examples so far show sequences settling to a finite number. But what about a sequence that *doesn’t* converge?  
+
+**Acharya Bhaskar:** Excellent question. Consider the sequence  
+$$x_n = n.$$
+
+**Lila:** That just grows bigger and bigger! So it can’t converge to a real number, right?
+
+**Acharya Bhaskar:** Exactly. Formally, we say it *diverges to infinity*. Let’s make this precise.
+
+<details>
+<summary>Click to see the explanation</summary>
+
+To say that $\lim_{n \to \infty} x_n = +\infty$ means:  
+
+For every real number $M > 0$, there exists $N \in \mathbb{N}$ such that for all $n > N$,  
+$$x_n > M.$$
+
+Now, since $x_n = n$, if you give me any $M > 0$, I can simply choose  
+$$N = \lceil M \rceil.$$  
+
+Then for all $n > N$, clearly $n > M$, so $x_n > M$.  
+
+Thus, the sequence $\{n\}$ does not converge to a finite limit, but instead diverges to infinity.  
+
+</details>
+
+**Lila:** So divergence isn’t just “no limit at all.” Sometimes it means the sequence goes off to infinity in a systematic way.  
+
+**Acharya Bhaskar:** Exactly. Later, we’ll also see examples where sequences oscillate and fail to have any limit at all — those are divergent in a different sense.  
