@@ -186,6 +186,8 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#the-formal-definition" id="toc-the-formal-definition" class="nav-link" data-scroll-target="#the-formal-definition"><span class="header-section-number">5.4.1</span> The formal definition</a></li>
   <li><a href="#why-limits-matter" id="toc-why-limits-matter" class="nav-link" data-scroll-target="#why-limits-matter"><span class="header-section-number">5.4.2</span> Why limits matter</a></li>
+  <li><a href="#another-example-of-convergence" id="toc-another-example-of-convergence" class="nav-link" data-scroll-target="#another-example-of-convergence"><span class="header-section-number">5.4.3</span> Another Example of Convergence</a></li>
+  <li><a href="#a-nonzero-limit-example" id="toc-a-nonzero-limit-example" class="nav-link" data-scroll-target="#a-nonzero-limit-example"><span class="header-section-number">5.4.4</span> A Non–Zero Limit Example</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -320,6 +322,99 @@ So if we choose <span class="math inline">\(K(\varepsilon) = \lceil \tfrac{1}{\v
 </div>
 </div>
 </div>
+</section>
+<section id="another-example-of-convergence" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="another-example-of-convergence"><span class="header-section-number">5.4.3</span> Another Example of Convergence</h3>
+<p><strong>Lila:</strong> We proved earlier that <span class="math inline">\(\lim \tfrac{1}{n} = 0\)</span>. Could you show me another example, maybe a slightly different sequence?</p>
+<p><strong>Acharya Bhaskar:</strong> Certainly! Let’s consider the sequence<br>
+<span class="math display">\[x_n = \frac{1}{n^2+1}.\]</span> I claim that <span class="math inline">\(\lim_{n \to \infty} x_n = 0\)</span>.</p>
+<p><strong>Lila:</strong> Oh, it looks similar to <span class="math inline">\(\tfrac{1}{n}\)</span>, but the denominator grows even faster. So it should also go to zero, right?</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. Let’s do a rigorous <span class="math inline">\(\varepsilon\)</span>–<span class="math inline">\(N\)</span> proof.</p>
+<details>
+<summary>
+Click to see the proof
+</summary>
+<p>We want to show that for every <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n &gt; N\)</span>,<br>
+<span class="math display">\[\Bigg|\frac{1}{n^2+1} - 0\Bigg| &lt; \varepsilon.\]</span></p>
+<p>But<br>
+<span class="math display">\[\Bigg|\frac{1}{n^2+1}\Bigg| = \frac{1}{n^2+1}.\]</span></p>
+<p>Notice that<br>
+<span class="math display">\[\frac{1}{n^2+1} &lt; \frac{1}{n^2}.\]</span></p>
+<p>So it is enough to require<br>
+<span class="math display">\[\frac{1}{n^2} &lt; \varepsilon.\]</span></p>
+<p>This means<br>
+<span class="math display">\[n^2 &gt; \frac{1}{\varepsilon}, \quad \text{or equivalently} \quad n &gt; \frac{1}{\sqrt{\varepsilon}}.\]</span></p>
+<p>Thus, if we choose<br>
+<span class="math display">\[N = \left\lceil \frac{1}{\sqrt{\varepsilon}} \right\rceil,\]</span><br>
+then for all <span class="math inline">\(n &gt; N\)</span>,<br>
+<span class="math display">\[\frac{1}{n^2+1} &lt; \varepsilon.\]</span></p>
+<p>Hence,<br>
+<span class="math display">\[\lim_{n \to \infty} \frac{1}{n^2+1} = 0.\]</span></p>
+</details>
+<p><strong>Lila:</strong> That was neat! So the idea is the same as before, but we had to be careful with the square root this time.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. You’ll see that many convergence proofs follow a similar structure. The challenge is usually in rearranging inequalities smartly.</p>
+<hr>
+</section>
+<section id="a-nonzero-limit-example" class="level3" data-number="5.4.4">
+<h3 data-number="5.4.4" class="anchored" data-anchor-id="a-nonzero-limit-example"><span class="header-section-number">5.4.4</span> A Non–Zero Limit Example</h3>
+<p><strong>Lila:</strong> So far, the examples we’ve done all go to zero. Can you show me a sequence that converges to something other than zero?</p>
+<p><strong>Acharya Bhaskar:</strong> Of course. Let’s look at<br>
+<span class="math display">\[x_n = \frac{n}{n+1}.\]</span></p>
+<p>I claim that<br>
+<span class="math display">\[\lim_{n \to \infty} \frac{n}{n+1} = 1.\]</span></p>
+<p><strong>Lila:</strong> Hmm… when <span class="math inline">\(n\)</span> is large, <span class="math inline">\(n+1\)</span> is almost the same as <span class="math inline">\(n\)</span>, so <span class="math inline">\(\tfrac{n}{n+1}\)</span> should be almost <span class="math inline">\(1\)</span>.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. Now let’s prove it formally.</p>
+<details>
+<summary>
+Click to see the proof
+</summary>
+<p>We want to show: for every <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n &gt; N\)</span>,<br>
+<span class="math display">\[\Bigg|\frac{n}{n+1} - 1\Bigg| &lt; \varepsilon.\]</span></p>
+<p>Simplify the difference:<br>
+<span class="math display">\[\Bigg|\frac{n}{n+1} - 1\Bigg| = \Bigg|\frac{n - (n+1)}{n+1}\Bigg| = \frac{1}{n+1}.\]</span></p>
+<p>So we need<br>
+<span class="math display">\[\frac{1}{n+1} &lt; \varepsilon.\]</span></p>
+<p>That is,<br>
+<span class="math display">\[n+1 &gt; \frac{1}{\varepsilon} \quad \implies \quad n &gt; \frac{1}{\varepsilon} - 1.\]</span></p>
+<p>Thus, if we choose<br>
+<span class="math display">\[N = \left\lceil \frac{1}{\varepsilon} - 1 \right\rceil,\]</span><br>
+then for all <span class="math inline">\(n &gt; N\)</span>,<br>
+<span class="math display">\[\Bigg|\frac{n}{n+1} - 1\Bigg| &lt; \varepsilon.\]</span></p>
+<p>Therefore,<br>
+<span class="math display">\[\lim_{n \to \infty} \frac{n}{n+1} = 1.\]</span></p>
+</details>
+<p><strong>Lila:</strong> That was nice! The sequence actually climbs closer and closer to <span class="math inline">\(1\)</span>, never quite reaching it, but the proof shows it really does converge there.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. This illustrates an important point — limits don’t always have to be zero; the same method works for any real number. ### Convergence to a Rational Number</p>
+<p><strong>Lila:</strong> We’ve seen limits going to <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>. Can a sequence converge to some other fraction, like <span class="math inline">\(\tfrac{2}{5}\)</span>?</p>
+<p><strong>Acharya Bhaskar:</strong> Absolutely! Let’s take<br>
+<span class="math display">\[x_n = \frac{2n+3}{5n+1}.\]</span></p>
+<p>I claim that<br>
+<span class="math display">\[\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.\]</span></p>
+<p><strong>Lila:</strong> I can guess why — the higher powers of <span class="math inline">\(n\)</span> dominate, so it’s like <span class="math inline">\(\tfrac{2n}{5n} = \tfrac{2}{5}\)</span> when <span class="math inline">\(n\)</span> is large.</p>
+<p><strong>Acharya Bhaskar:</strong> That’s the intuition. Let’s now prove it rigorously.</p>
+<details>
+<summary>
+Click to see the proof
+</summary>
+<p>We want to show: for every <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n &gt; N\)</span>,<br>
+<span class="math display">\[\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| &lt; \varepsilon.\]</span></p>
+<p>Simplify the difference:<br>
+[ - = = = . ]</p>
+<p>So<br>
+<span class="math display">\[\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| = \frac{13}{25n+5}.\]</span></p>
+<p>Now, we want<br>
+<span class="math display">\[\frac{13}{25n+5} &lt; \varepsilon.\]</span></p>
+<p>This inequality is equivalent to<br>
+<span class="math display">\[25n+5 &gt; \frac{13}{\varepsilon} \quad \implies \quad n &gt; \frac{13}{25\varepsilon} - \frac{1}{5}.\]</span></p>
+<p>So we can choose<br>
+<span class="math display">\[N = \left\lceil \frac{13}{25\varepsilon} - \frac{1}{5} \right\rceil.\]</span></p>
+<p>Then for all <span class="math inline">\(n &gt; N\)</span>, we have<br>
+<span class="math display">\[\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| &lt; \varepsilon.\]</span></p>
+<p>Therefore,<br>
+<span class="math display">\[\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.\]</span></p>
+</details>
+<p><strong>Lila:</strong> I see! The algebra looks a bit longer, but the same method works. The main trick was simplifying the difference.</p>
+<p><strong>Acharya Bhaskar:</strong> Precisely. Once you bring it into a simple form, the <span class="math inline">\(\varepsilon\)</span>–<span class="math inline">\(N\)</span> argument falls into place. This shows that sequences can converge to any real number, not just <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>.</p>
 
 
 </section>

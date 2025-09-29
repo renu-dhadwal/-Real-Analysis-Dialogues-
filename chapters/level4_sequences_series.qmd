@@ -156,3 +156,144 @@ It tells us: instead of thinking about all the infinitely many “ways” of app
 
 **Acharya Bhaskar:** Precisely, Lila. That is why we first built a strong foundation with sequences — they are the key to understanding limits of functions.
 :::
+
+### Another Example of Convergence
+
+**Lila:** We proved earlier that $\lim \tfrac{1}{n} = 0$. Could you show me another example, maybe a slightly different sequence?
+
+**Acharya Bhaskar:** Certainly! Let’s consider the sequence  
+$$x_n = \frac{1}{n^2+1}.$$
+I claim that $\lim_{n \to \infty} x_n = 0$.
+
+**Lila:** Oh, it looks similar to $\tfrac{1}{n}$, but the denominator grows even faster. So it should also go to zero, right?
+
+**Acharya Bhaskar:** Exactly. Let’s do a rigorous $\varepsilon$–$N$ proof.
+
+<details>
+<summary>Click to see the proof</summary>
+
+We want to show that for every $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for all $n > N$,  
+$$\Bigg|\frac{1}{n^2+1} - 0\Bigg| < \varepsilon.$$
+
+But  
+$$\Bigg|\frac{1}{n^2+1}\Bigg| = \frac{1}{n^2+1}.$$
+
+Notice that  
+$$\frac{1}{n^2+1} < \frac{1}{n^2}.$$
+
+So it is enough to require  
+$$\frac{1}{n^2} < \varepsilon.$$
+
+This means  
+$$n^2 > \frac{1}{\varepsilon}, \quad \text{or equivalently} \quad n > \frac{1}{\sqrt{\varepsilon}}.$$
+
+Thus, if we choose  
+$$N = \left\lceil \frac{1}{\sqrt{\varepsilon}} \right\rceil,$$  
+then for all $n > N$,  
+$$\frac{1}{n^2+1} < \varepsilon.$$
+
+Hence,  
+$$\lim_{n \to \infty} \frac{1}{n^2+1} = 0.$$
+
+</details>
+
+**Lila:** That was neat! So the idea is the same as before, but we had to be careful with the square root this time.
+
+**Acharya Bhaskar:** Exactly. You’ll see that many convergence proofs follow a similar structure. The challenge is usually in rearranging inequalities smartly.
+
+---
+
+### A Non–Zero Limit Example
+
+**Lila:** So far, the examples we’ve done all go to zero. Can you show me a sequence that converges to something other than zero?
+
+**Acharya Bhaskar:** Of course. Let’s look at  
+$$x_n = \frac{n}{n+1}.$$
+
+I claim that  
+$$\lim_{n \to \infty} \frac{n}{n+1} = 1.$$
+
+**Lila:** Hmm… when $n$ is large, $n+1$ is almost the same as $n$, so $\tfrac{n}{n+1}$ should be almost $1$.
+
+**Acharya Bhaskar:** Exactly. Now let’s prove it formally.
+
+<details>
+<summary>Click to see the proof</summary>
+
+We want to show: for every $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for all $n > N$,  
+$$\Bigg|\frac{n}{n+1} - 1\Bigg| < \varepsilon.$$
+
+Simplify the difference:  
+$$\Bigg|\frac{n}{n+1} - 1\Bigg| = \Bigg|\frac{n - (n+1)}{n+1}\Bigg| = \frac{1}{n+1}.$$
+
+So we need  
+$$\frac{1}{n+1} < \varepsilon.$$
+
+That is,  
+$$n+1 > \frac{1}{\varepsilon} \quad \implies \quad n > \frac{1}{\varepsilon} - 1.$$
+
+Thus, if we choose  
+$$N = \left\lceil \frac{1}{\varepsilon} - 1 \right\rceil,$$  
+then for all $n > N$,  
+$$\Bigg|\frac{n}{n+1} - 1\Bigg| < \varepsilon.$$
+
+Therefore,  
+$$\lim_{n \to \infty} \frac{n}{n+1} = 1.$$
+
+</details>
+
+**Lila:** That was nice! The sequence actually climbs closer and closer to $1$, never quite reaching it, but the proof shows it really does converge there.
+
+**Acharya Bhaskar:** Exactly. This illustrates an important point — limits don’t always have to be zero; the same method works for any real number.
+### Convergence to a Rational Number
+
+**Lila:** We’ve seen limits going to $0$ and $1$. Can a sequence converge to some other fraction, like $\tfrac{2}{5}$?
+
+**Acharya Bhaskar:** Absolutely! Let’s take  
+$$x_n = \frac{2n+3}{5n+1}.$$
+
+I claim that  
+$$\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.$$
+
+**Lila:** I can guess why — the higher powers of $n$ dominate, so it’s like $\tfrac{2n}{5n} = \tfrac{2}{5}$ when $n$ is large.
+
+**Acharya Bhaskar:** That’s the intuition. Let’s now prove it rigorously.
+
+<details>
+<summary>Click to see the proof</summary>
+
+We want to show: for every $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for all $n > N$,  
+$$\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| < \varepsilon.$$
+
+Simplify the difference:  
+\[
+\frac{2n+3}{5n+1} - \frac{2}{5}
+= \frac{5(2n+3) - 2(5n+1)}{5(5n+1)}
+= \frac{10n+15 - 10n - 2}{25n+5}
+= \frac{13}{25n+5}.
+\]
+
+So  
+$$\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| = \frac{13}{25n+5}.$$
+
+Now, we want  
+$$\frac{13}{25n+5} < \varepsilon.$$
+
+This inequality is equivalent to  
+$$25n+5 > \frac{13}{\varepsilon} \quad \implies \quad n > \frac{13}{25\varepsilon} - \frac{1}{5}.$$
+
+So we can choose  
+$$N = \left\lceil \frac{13}{25\varepsilon} - \frac{1}{5} \right\rceil.$$
+
+Then for all $n > N$, we have  
+$$\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| < \varepsilon.$$
+
+Therefore,  
+$$\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.$$
+
+</details>
+
+**Lila:** I see! The algebra looks a bit longer, but the same method works. The main trick was simplifying the difference.
+
+**Acharya Bhaskar:** Precisely. Once you bring it into a simple form, the $\varepsilon$–$N$ argument falls into place. This shows that sequences can converge to any real number, not just $0$ or $1$.
+
