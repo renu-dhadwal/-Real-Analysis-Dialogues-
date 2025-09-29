@@ -190,6 +190,7 @@ window.Quarto = {
   <li><a href="#a-nonzero-limit-example" id="toc-a-nonzero-limit-example" class="nav-link" data-scroll-target="#a-nonzero-limit-example"><span class="header-section-number">5.4.4</span> A Non–Zero Limit Example</a></li>
   <li><a href="#convergence-to-a-rational-number" id="toc-convergence-to-a-rational-number" class="nav-link" data-scroll-target="#convergence-to-a-rational-number"><span class="header-section-number">5.4.5</span> Convergence to a Rational Number</a></li>
   <li><a href="#an-example-of-divergence" id="toc-an-example-of-divergence" class="nav-link" data-scroll-target="#an-example-of-divergence"><span class="header-section-number">5.4.6</span> An Example of Divergence</a></li>
+  <li><a href="#an-oscillating-divergent-sequence" id="toc-an-oscillating-divergent-sequence" class="nav-link" data-scroll-target="#an-oscillating-divergent-sequence"><span class="header-section-number">5.4.7</span> An Oscillating Divergent Sequence</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -446,7 +447,32 @@ Click to see the explanation
 <p>Thus, the sequence <span class="math inline">\(\{n\}\)</span> does not converge to a finite limit, but instead diverges to infinity.</p>
 </details>
 <p><strong>Lila:</strong> So divergence isn’t just “no limit at all.” Sometimes it means the sequence goes off to infinity in a systematic way.</p>
-<p><strong>Acharya Bhaskar:</strong> Exactly. Later, we’ll also see examples where sequences oscillate and fail to have any limit at all — those are divergent in a different sense.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. There are also examples where sequences oscillate and fail to have any limit at all — those are divergent in a different sense.</p>
+</section>
+<section id="an-oscillating-divergent-sequence" class="level3" data-number="5.4.7">
+<h3 data-number="5.4.7" class="anchored" data-anchor-id="an-oscillating-divergent-sequence"><span class="header-section-number">5.4.7</span> An Oscillating Divergent Sequence</h3>
+<p><strong>Lila:</strong> You said some sequences can diverge by oscillating. Can you show me an example?</p>
+<p><strong>Acharya Bhaskar:</strong> Certainly. Consider the sequence<br>
+<span class="math display">\[x_n = (-1)^n.\]</span></p>
+<p><strong>Lila:</strong> Oh, so it goes like <span class="math inline">\(-1, +1, -1, +1, \dots\)</span> That never settles down to a single number.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. Let’s explain why it does <strong>not</strong> converge.</p>
+<details>
+<summary>
+Click to see the explanation
+</summary>
+<p>Suppose, for contradiction, that <span class="math inline">\(\lim_{n \to \infty} (-1)^n = L\)</span> for some real number <span class="math inline">\(L\)</span>.</p>
+<p>Then by the definition of convergence, for every <span class="math inline">\(\varepsilon &gt; 0\)</span> there should be an <span class="math inline">\(N\)</span> such that for all <span class="math inline">\(n &gt; N\)</span>,<br>
+<span class="math display">\[|(-1)^n - L| &lt; \varepsilon.\]</span></p>
+<p>But notice:<br>
+- If <span class="math inline">\(n\)</span> is even, <span class="math inline">\((-1)^n = 1\)</span>.<br>
+- If <span class="math inline">\(n\)</span> is odd, <span class="math inline">\((-1)^n = -1\)</span>.</p>
+<p>So the sequence keeps jumping between <span class="math inline">\(1\)</span> and <span class="math inline">\(-1\)</span>, no matter how large <span class="math inline">\(n\)</span> becomes.</p>
+<p>For example, if we take <span class="math inline">\(\varepsilon = \tfrac{1}{2}\)</span>, then the condition requires all terms <span class="math inline">\((-1)^n\)</span> to lie within an interval of radius <span class="math inline">\(\tfrac{1}{2}\)</span> around <span class="math inline">\(L\)</span>.</p>
+<p>But one subsequence is constantly <span class="math inline">\(1\)</span>, and the other is constantly <span class="math inline">\(-1\)</span>. These two points are <span class="math inline">\(2\)</span> units apart, which is much larger than <span class="math inline">\(\tfrac{1}{2}\)</span>.</p>
+<p>Therefore, no single <span class="math inline">\(L\)</span> can satisfy the definition. The sequence does <strong>not converge</strong>.</p>
+</details>
+<p><strong>Lila:</strong> I see! Unlike <span class="math inline">\(n\)</span>, which runs off to infinity, this one just keeps bouncing forever without settling.</p>
+<p><strong>Acharya Bhaskar:</strong> Precisely. These two examples — <span class="math inline">\(x_n = n\)</span> and <span class="math inline">\(x_n = (-1)^n\)</span> — illustrate two common ways in which sequences can fail to converge.</p>
 
 
 </section>

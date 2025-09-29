@@ -328,4 +328,41 @@ Thus, the sequence $\{n\}$ does not converge to a finite limit, but instead dive
 
 **Lila:** So divergence isn’t just “no limit at all.” Sometimes it means the sequence goes off to infinity in a systematic way.  
 
-**Acharya Bhaskar:** Exactly. Later, we’ll also see examples where sequences oscillate and fail to have any limit at all — those are divergent in a different sense.  
+**Acharya Bhaskar:** Exactly. There are also examples where sequences oscillate and fail to have any limit at all — those are divergent in a different sense.  
+
+### An Oscillating Divergent Sequence
+
+**Lila:** You said some sequences can diverge by oscillating. Can you show me an example?
+
+**Acharya Bhaskar:** Certainly. Consider the sequence  
+$$x_n = (-1)^n.$$
+
+**Lila:** Oh, so it goes like $-1, +1, -1, +1, \dots$ That never settles down to a single number.
+
+**Acharya Bhaskar:** Exactly. Let’s explain why it does **not** converge.
+
+<details>
+<summary>Click to see the explanation</summary>
+
+Suppose, for contradiction, that $\lim_{n \to \infty} (-1)^n = L$ for some real number $L$.  
+
+Then by the definition of convergence, for every $\varepsilon > 0$ there should be an $N$ such that for all $n > N$,  
+$$|(-1)^n - L| < \varepsilon.$$
+
+But notice:  
+- If $n$ is even, $(-1)^n = 1$.  
+- If $n$ is odd, $(-1)^n = -1$.  
+
+So the sequence keeps jumping between $1$ and $-1$, no matter how large $n$ becomes.  
+
+For example, if we take $\varepsilon = \tfrac{1}{2}$, then the condition requires all terms $(-1)^n$ to lie within an interval of radius $\tfrac{1}{2}$ around $L$.  
+
+But one subsequence is constantly $1$, and the other is constantly $-1$. These two points are $2$ units apart, which is much larger than $\tfrac{1}{2}$.  
+
+Therefore, no single $L$ can satisfy the definition. The sequence does **not converge**.
+
+</details>
+
+**Lila:** I see! Unlike $n$, which runs off to infinity, this one just keeps bouncing forever without settling.
+
+**Acharya Bhaskar:** Precisely. These two examples — $x_n = n$ and $x_n = (-1)^n$ — illustrate two common ways in which sequences can fail to converge.
