@@ -570,3 +570,56 @@ $$(1+t)^n \geq 1 + n t.$$ ✅
 **Lila:** So the inequality is really just saying that the binomial expansion always produces extra positive terms after $1 + nt$.  
 
 **Acharya Bhaskar:** Exactly. And as we’ll see, it’s very handy in bounding expressions like $(1+\varepsilon)^n$ in convergence proofs.
+Now, we can prove the main result $\lim_{n \to \infty} c^{1/n} = 1$
+
+---
+
+<details>
+<summary>Click to see the proof</summary>
+
+We want to prove: for every $\varepsilon > 0$, there exists $N$ such that for $n > N$,  
+$$|c^{1/n} - 1| < \varepsilon.$$
+
+---
+
+**Case 1: $c > 1$.**
+
+Let $\varepsilon > 0$. Consider $1+\varepsilon > 1$.  
+Then  
+$$(1+\varepsilon)^n \geq 1 + n\varepsilon \quad \text{(by Bernoulli’s inequality)}.$$
+
+So $(1+\varepsilon)^n$ grows without bound as $n \to \infty$.  
+Therefore, for sufficiently large $n$, we must have  
+$$(1+\varepsilon)^n > c.$$  
+
+That means  
+$$c^{1/n} < 1 + \varepsilon.$$  
+
+On the other hand, since $c > 1$, clearly $c^{1/n} > 1$ for all $n$.  
+
+So for large $n$:  
+$$1 < c^{1/n} < 1 + \varepsilon \quad \implies \quad |c^{1/n} - 1| < \varepsilon.$$  
+
+---
+
+**Case 2: $0 < c < 1$.**
+
+Write $c = \tfrac{1}{d}$ where $d > 1$. Then  
+$$c^{1/n} = \frac{1}{d^{1/n}}.$$  
+
+From Case 1, $d^{1/n} \to 1$, so $\tfrac{1}{d^{1/n}} \to 1$ as well.
+
+---
+
+**Case 3: $c = 1$.**  
+Trivial, since $c^{1/n} = 1$ for all $n$.
+
+---
+
+Thus, in all cases $c^{1/n} \to 1$ as $n \to \infty$. ✅
+
+</details>
+
+**Lila:** Oh! So Bernoulli’s inequality was the key — it gave us a bound that forced $c^{1/n}$ close to $1$.
+
+**Acharya Bhaskar:** Exactly. This is a nice example of how inequalities can give very clean convergence proofs.

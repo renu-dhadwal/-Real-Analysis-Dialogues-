@@ -642,7 +642,40 @@ Assume <span class="math inline">\((1+t)^n \geq 1 + n t\)</span> holds for some 
 <span class="math display">\[(1+t)^n \geq 1 + n t.\]</span> ✅</p>
 </details>
 <p><strong>Lila:</strong> So the inequality is really just saying that the binomial expansion always produces extra positive terms after <span class="math inline">\(1 + nt\)</span>.</p>
-<p><strong>Acharya Bhaskar:</strong> Exactly. And as we’ll see, it’s very handy in bounding expressions like <span class="math inline">\((1+\varepsilon)^n\)</span> in convergence proofs.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. And as we’ll see, it’s very handy in bounding expressions like <span class="math inline">\((1+\varepsilon)^n\)</span> in convergence proofs. Now, we can prove the main result <span class="math inline">\(\lim_{n \to \infty} c^{1/n} = 1\)</span></p>
+<hr>
+<details>
+<summary>
+Click to see the proof
+</summary>
+<p>We want to prove: for every <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(N\)</span> such that for <span class="math inline">\(n &gt; N\)</span>,<br>
+<span class="math display">\[|c^{1/n} - 1| &lt; \varepsilon.\]</span></p>
+<hr>
+<p><strong>Case 1: <span class="math inline">\(c &gt; 1\)</span>.</strong></p>
+<p>Let <span class="math inline">\(\varepsilon &gt; 0\)</span>. Consider <span class="math inline">\(1+\varepsilon &gt; 1\)</span>.<br>
+Then<br>
+<span class="math display">\[(1+\varepsilon)^n \geq 1 + n\varepsilon \quad \text{(by Bernoulli’s inequality)}.\]</span></p>
+<p>So <span class="math inline">\((1+\varepsilon)^n\)</span> grows without bound as <span class="math inline">\(n \to \infty\)</span>.<br>
+Therefore, for sufficiently large <span class="math inline">\(n\)</span>, we must have<br>
+<span class="math display">\[(1+\varepsilon)^n &gt; c.\]</span></p>
+<p>That means<br>
+<span class="math display">\[c^{1/n} &lt; 1 + \varepsilon.\]</span></p>
+<p>On the other hand, since <span class="math inline">\(c &gt; 1\)</span>, clearly <span class="math inline">\(c^{1/n} &gt; 1\)</span> for all <span class="math inline">\(n\)</span>.</p>
+<p>So for large <span class="math inline">\(n\)</span>:<br>
+<span class="math display">\[1 &lt; c^{1/n} &lt; 1 + \varepsilon \quad \implies \quad |c^{1/n} - 1| &lt; \varepsilon.\]</span></p>
+<hr>
+<p><strong>Case 2: <span class="math inline">\(0 &lt; c &lt; 1\)</span>.</strong></p>
+<p>Write <span class="math inline">\(c = \tfrac{1}{d}\)</span> where <span class="math inline">\(d &gt; 1\)</span>. Then<br>
+<span class="math display">\[c^{1/n} = \frac{1}{d^{1/n}}.\]</span></p>
+<p>From Case 1, <span class="math inline">\(d^{1/n} \to 1\)</span>, so <span class="math inline">\(\tfrac{1}{d^{1/n}} \to 1\)</span> as well.</p>
+<hr>
+<p><strong>Case 3: <span class="math inline">\(c = 1\)</span>.</strong><br>
+Trivial, since <span class="math inline">\(c^{1/n} = 1\)</span> for all <span class="math inline">\(n\)</span>.</p>
+<hr>
+<p>Thus, in all cases <span class="math inline">\(c^{1/n} \to 1\)</span> as <span class="math inline">\(n \to \infty\)</span>. ✅</p>
+</details>
+<p><strong>Lila:</strong> Oh! So Bernoulli’s inequality was the key — it gave us a bound that forced <span class="math inline">\(c^{1/n}\)</span> close to <span class="math inline">\(1\)</span>.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. This is a nice example of how inequalities can give very clean convergence proofs.</p>
 
 
 </section>
