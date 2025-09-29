@@ -490,9 +490,9 @@ $$\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.$$
 Let’s see how the comparison theorem helps.
 
 First, compute the error:  
-\[
+$$
 \frac{2n+3}{5n+1} - \frac{2}{5} = \frac{13}{25n+5}.
-\]
+$$
 
 So,  
 $$\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| = \frac{13}{25n+5}.$$
@@ -513,56 +513,60 @@ $$\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.$$
 
 **Acharya Bhaskar:** Exactly. This method is especially powerful for rational sequences, where the error often turns into a constant times $\tfrac{1}{n}$.
 
-### Example: Proving $\lim_{n \to \infty} c^{1/n} = 1$ for $c > 0$
+### Example: Proving $\lim_{n \to \infty} c^{1/n} = 1$ using Bernoulli’s Inequality
 
-**Lila:** I’ve seen the sequence $c^{1/n}$ before. Does it always converge to $1$ for positive $c$?
+**Lila:** I remember you said that $\lim c^{1/n} = 1$ for $c > 0$. Can we prove this?
 
-**Acharya Bhaskar:** Exactly right. No matter what positive number $c$ is, when you take its $n$-th root and let $n$ grow, the sequence converges to $1$.
+### Bernoulli’s Inequality
 
-**Lila:** Even if $c$ is really big, like $1000$?
+**Acharya Bhaskar:** Before we use it in our proofs, let me remind you of an important inequality.  
 
-**Acharya Bhaskar:** Yes. Think of it this way: the $n$-th root of any number becomes closer and closer to $1$ as $n$ grows, because taking more and more roots flattens things out.
+**Bernoulli’s Inequality.**  
+For any real number $t \geq -1$ and any natural number $n$,  
+$$(1+t)^n \geq 1 + n t.$$
 
 ---
+
+**Lila:** That looks simple, but why is it true?
+
+**Acharya Bhaskar:** Let’s prove it by induction.
 
 <details>
 <summary>Click to see the proof</summary>
 
-We want to prove that for every $\varepsilon > 0$, there exists $N$ such that for all $n > N$,  
-$$|c^{1/n} - 1| < \varepsilon.$$
+**Base case ($n=1$):**  
+$$(1+t)^1 = 1+t = 1+1\cdot t,$$  
+so the inequality is true.
 
 ---
 
-**Case 1: $c = 1$.**  
-Then $c^{1/n} = 1$ for all $n$, so the limit is trivially $1$.
+**Inductive step:**  
+Assume $(1+t)^n \geq 1 + n t$ holds for some $n \in \mathbb{N}$.  
 
----
-
-**Case 2: $c > 1$.**  
-
-Take logarithms. Define  
-$$x_n = c^{1/n}.$$  
 Then  
-$$\ln(x_n) = \frac{1}{n} \ln c.$$  
+$$(1+t)^{n+1} = (1+t)^n (1+t).$$  
 
-Since $\tfrac{1}{n} \to 0$, it follows that $\ln(x_n) \to 0$.  
-Therefore, $x_n = e^{\ln(x_n)} \to e^0 = 1$.
+By the induction hypothesis,  
+$$(1+t)^{n+1} \geq (1+nt)(1+t).$$  
+
+Expanding,  
+$$(1+nt)(1+t) = 1 + (n+1)t + n t^2.$$  
+
+Since $t^2 \geq 0$,  
+$$(1+nt)(1+t) \geq 1 + (n+1)t.$$  
+
+Therefore,  
+$$(1+t)^{n+1} \geq 1 + (n+1)t.$$  
+
+This completes the induction.
 
 ---
 
-**Case 3: $0 < c < 1$.**  
-
-Write $c = \tfrac{1}{d}$ where $d > 1$. Then  
-$$c^{1/n} = \left(\frac{1}{d}\right)^{1/n} = \frac{1}{d^{1/n}}.$$  
-
-But from Case 2, $d^{1/n} \to 1$, so $\tfrac{1}{d^{1/n}} \to \tfrac{1}{1} = 1$.
-
----
-
-Thus, in all cases $c^{1/n} \to 1$ for $c > 0$. ✅
+Thus, for all $t \geq -1$ and all $n \in \mathbb{N}$,  
+$$(1+t)^n \geq 1 + n t.$$ ✅
 
 </details>
 
-**Lila:** That’s elegant! So taking logarithms made the proof really clean.
+**Lila:** So the inequality is really just saying that the binomial expansion always produces extra positive terms after $1 + nt$.  
 
-**Acharya Bhaskar:** Exactly. Logarithms are often the right tool when exponents or roots are involved. We’ll see this trick again later.
+**Acharya Bhaskar:** Exactly. And as we’ll see, it’s very handy in bounding expressions like $(1+\varepsilon)^n$ in convergence proofs.

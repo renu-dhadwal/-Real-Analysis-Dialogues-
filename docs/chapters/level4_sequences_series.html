@@ -197,7 +197,8 @@ window.Quarto = {
   <li><a href="#theorem-controlling-a-sequence-by-another" id="toc-theorem-controlling-a-sequence-by-another" class="nav-link" data-scroll-target="#theorem-controlling-a-sequence-by-another"><span class="header-section-number">5.4.11</span> Theorem: Controlling a Sequence by Another</a></li>
   <li><a href="#example-using-the-comparison-theorem" id="toc-example-using-the-comparison-theorem" class="nav-link" data-scroll-target="#example-using-the-comparison-theorem"><span class="header-section-number">5.4.12</span> Example: Using the Comparison Theorem</a></li>
   <li><a href="#example-a-rational-limit-with-the-comparison-theorem" id="toc-example-a-rational-limit-with-the-comparison-theorem" class="nav-link" data-scroll-target="#example-a-rational-limit-with-the-comparison-theorem"><span class="header-section-number">5.4.13</span> Example: A Rational Limit with the Comparison Theorem</a></li>
-  <li><a href="#example-proving-lim_n-to-infty-c1n-1-for-c-0" id="toc-example-proving-lim_n-to-infty-c1n-1-for-c-0" class="nav-link" data-scroll-target="#example-proving-lim_n-to-infty-c1n-1-for-c-0"><span class="header-section-number">5.4.14</span> Example: Proving <span class="math inline">\(\lim_{n \to \infty} c^{1/n} = 1\)</span> for <span class="math inline">\(c &gt; 0\)</span></a></li>
+  <li><a href="#example-proving-lim_n-to-infty-c1n-1-using-bernoullis-inequality" id="toc-example-proving-lim_n-to-infty-c1n-1-using-bernoullis-inequality" class="nav-link" data-scroll-target="#example-proving-lim_n-to-infty-c1n-1-using-bernoullis-inequality"><span class="header-section-number">5.4.14</span> Example: Proving <span class="math inline">\(\lim_{n \to \infty} c^{1/n} = 1\)</span> using Bernoulli’s Inequality</a></li>
+  <li><a href="#bernoullis-inequality" id="toc-bernoullis-inequality" class="nav-link" data-scroll-target="#bernoullis-inequality"><span class="header-section-number">5.4.15</span> Bernoulli’s Inequality</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -586,7 +587,9 @@ Then the condition of the theorem is satisfied:<br>
 <span class="math display">\[\lim_{n \to \infty} \frac{2n+3}{5n+1} = \frac{2}{5}.\]</span><br>
 Let’s see how the comparison theorem helps.</p>
 <p>First, compute the error:<br>
-[ - = . ]</p>
+<span class="math display">\[
+\frac{2n+3}{5n+1} - \frac{2}{5} = \frac{13}{25n+5}.
+\]</span></p>
 <p>So,<br>
 <span class="math display">\[\Bigg|\frac{2n+3}{5n+1} - \frac{2}{5}\Bigg| = \frac{13}{25n+5}.\]</span></p>
 <p>Now notice that for all <span class="math inline">\(n \geq 1\)</span>,<br>
@@ -600,40 +603,46 @@ Then<br>
 <p><strong>Lila:</strong> That really simplifies things! Instead of wrestling with inequalities, we just compare to <span class="math inline">\(\tfrac{1}{n}\)</span>.</p>
 <p><strong>Acharya Bhaskar:</strong> Exactly. This method is especially powerful for rational sequences, where the error often turns into a constant times <span class="math inline">\(\tfrac{1}{n}\)</span>.</p>
 </section>
-<section id="example-proving-lim_n-to-infty-c1n-1-for-c-0" class="level3" data-number="5.4.14">
-<h3 data-number="5.4.14" class="anchored" data-anchor-id="example-proving-lim_n-to-infty-c1n-1-for-c-0"><span class="header-section-number">5.4.14</span> Example: Proving <span class="math inline">\(\lim_{n \to \infty} c^{1/n} = 1\)</span> for <span class="math inline">\(c &gt; 0\)</span></h3>
-<p><strong>Lila:</strong> I’ve seen the sequence <span class="math inline">\(c^{1/n}\)</span> before. Does it always converge to <span class="math inline">\(1\)</span> for positive <span class="math inline">\(c\)</span>?</p>
-<p><strong>Acharya Bhaskar:</strong> Exactly right. No matter what positive number <span class="math inline">\(c\)</span> is, when you take its <span class="math inline">\(n\)</span>-th root and let <span class="math inline">\(n\)</span> grow, the sequence converges to <span class="math inline">\(1\)</span>.</p>
-<p><strong>Lila:</strong> Even if <span class="math inline">\(c\)</span> is really big, like <span class="math inline">\(1000\)</span>?</p>
-<p><strong>Acharya Bhaskar:</strong> Yes. Think of it this way: the <span class="math inline">\(n\)</span>-th root of any number becomes closer and closer to <span class="math inline">\(1\)</span> as <span class="math inline">\(n\)</span> grows, because taking more and more roots flattens things out.</p>
+<section id="example-proving-lim_n-to-infty-c1n-1-using-bernoullis-inequality" class="level3" data-number="5.4.14">
+<h3 data-number="5.4.14" class="anchored" data-anchor-id="example-proving-lim_n-to-infty-c1n-1-using-bernoullis-inequality"><span class="header-section-number">5.4.14</span> Example: Proving <span class="math inline">\(\lim_{n \to \infty} c^{1/n} = 1\)</span> using Bernoulli’s Inequality</h3>
+<p><strong>Lila:</strong> I remember you said that <span class="math inline">\(\lim c^{1/n} = 1\)</span> for <span class="math inline">\(c &gt; 0\)</span>. Can we prove this?</p>
+</section>
+<section id="bernoullis-inequality" class="level3" data-number="5.4.15">
+<h3 data-number="5.4.15" class="anchored" data-anchor-id="bernoullis-inequality"><span class="header-section-number">5.4.15</span> Bernoulli’s Inequality</h3>
+<p><strong>Acharya Bhaskar:</strong> Before we use it in our proofs, let me remind you of an important inequality.</p>
+<p><strong>Bernoulli’s Inequality.</strong><br>
+For any real number <span class="math inline">\(t \geq -1\)</span> and any natural number <span class="math inline">\(n\)</span>,<br>
+<span class="math display">\[(1+t)^n \geq 1 + n t.\]</span></p>
 <hr>
+<p><strong>Lila:</strong> That looks simple, but why is it true?</p>
+<p><strong>Acharya Bhaskar:</strong> Let’s prove it by induction.</p>
 <details>
 <summary>
 Click to see the proof
 </summary>
-<p>We want to prove that for every <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists <span class="math inline">\(N\)</span> such that for all <span class="math inline">\(n &gt; N\)</span>,<br>
-<span class="math display">\[|c^{1/n} - 1| &lt; \varepsilon.\]</span></p>
+<p><strong>Base case (<span class="math inline">\(n=1\)</span>):</strong><br>
+<span class="math display">\[(1+t)^1 = 1+t = 1+1\cdot t,\]</span><br>
+so the inequality is true.</p>
 <hr>
-<p><strong>Case 1: <span class="math inline">\(c = 1\)</span>.</strong><br>
-Then <span class="math inline">\(c^{1/n} = 1\)</span> for all <span class="math inline">\(n\)</span>, so the limit is trivially <span class="math inline">\(1\)</span>.</p>
+<p><strong>Inductive step:</strong><br>
+Assume <span class="math inline">\((1+t)^n \geq 1 + n t\)</span> holds for some <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>Then<br>
+<span class="math display">\[(1+t)^{n+1} = (1+t)^n (1+t).\]</span></p>
+<p>By the induction hypothesis,<br>
+<span class="math display">\[(1+t)^{n+1} \geq (1+nt)(1+t).\]</span></p>
+<p>Expanding,<br>
+<span class="math display">\[(1+nt)(1+t) = 1 + (n+1)t + n t^2.\]</span></p>
+<p>Since <span class="math inline">\(t^2 \geq 0\)</span>,<br>
+<span class="math display">\[(1+nt)(1+t) \geq 1 + (n+1)t.\]</span></p>
+<p>Therefore,<br>
+<span class="math display">\[(1+t)^{n+1} \geq 1 + (n+1)t.\]</span></p>
+<p>This completes the induction.</p>
 <hr>
-<p><strong>Case 2: <span class="math inline">\(c &gt; 1\)</span>.</strong></p>
-<p>Take logarithms. Define<br>
-<span class="math display">\[x_n = c^{1/n}.\]</span><br>
-Then<br>
-<span class="math display">\[\ln(x_n) = \frac{1}{n} \ln c.\]</span></p>
-<p>Since <span class="math inline">\(\tfrac{1}{n} \to 0\)</span>, it follows that <span class="math inline">\(\ln(x_n) \to 0\)</span>.<br>
-Therefore, <span class="math inline">\(x_n = e^{\ln(x_n)} \to e^0 = 1\)</span>.</p>
-<hr>
-<p><strong>Case 3: <span class="math inline">\(0 &lt; c &lt; 1\)</span>.</strong></p>
-<p>Write <span class="math inline">\(c = \tfrac{1}{d}\)</span> where <span class="math inline">\(d &gt; 1\)</span>. Then<br>
-<span class="math display">\[c^{1/n} = \left(\frac{1}{d}\right)^{1/n} = \frac{1}{d^{1/n}}.\]</span></p>
-<p>But from Case 2, <span class="math inline">\(d^{1/n} \to 1\)</span>, so <span class="math inline">\(\tfrac{1}{d^{1/n}} \to \tfrac{1}{1} = 1\)</span>.</p>
-<hr>
-<p>Thus, in all cases <span class="math inline">\(c^{1/n} \to 1\)</span> for <span class="math inline">\(c &gt; 0\)</span>. ✅</p>
+<p>Thus, for all <span class="math inline">\(t \geq -1\)</span> and all <span class="math inline">\(n \in \mathbb{N}\)</span>,<br>
+<span class="math display">\[(1+t)^n \geq 1 + n t.\]</span> ✅</p>
 </details>
-<p><strong>Lila:</strong> That’s elegant! So taking logarithms made the proof really clean.</p>
-<p><strong>Acharya Bhaskar:</strong> Exactly. Logarithms are often the right tool when exponents or roots are involved. We’ll see this trick again later.</p>
+<p><strong>Lila:</strong> So the inequality is really just saying that the binomial expansion always produces extra positive terms after <span class="math inline">\(1 + nt\)</span>.</p>
+<p><strong>Acharya Bhaskar:</strong> Exactly. And as we’ll see, it’s very handy in bounding expressions like <span class="math inline">\((1+\varepsilon)^n\)</span> in convergence proofs.</p>
 
 
 </section>
